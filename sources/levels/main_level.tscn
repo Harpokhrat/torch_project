@@ -515,4 +515,5 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 66 )
 
+[connection signal="character_died" from="YSort/Characters/Player" to="." method="_on_Player_character_died"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

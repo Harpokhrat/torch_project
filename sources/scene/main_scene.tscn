@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ressources/musics/Loyalty_Freak_Music_-_07_-_A_really_dark_alley.mp3" type="AudioStream" id=1]
 [ext_resource path="res://sources/levels/main_level.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sources/scene/main_scene.gd" type="Script" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -20,7 +19,6 @@ void fragment()
 shader = SubResource( 1 )
 
 [node name="MainScene" type="Node2D"]
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -52,7 +50,5 @@ __meta__ = {
 stream = ExtResource( 1 )
 volume_db = -12.0
 autoplay = true
-
-[connection signal="character_died" from="MainLevel/YSort/Characters/Player" to="." method="_on_Player_character_died"]
 
 [editable path="MainLevel"]
