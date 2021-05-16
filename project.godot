@@ -38,7 +38,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="projet_torche"
+config/name="torch_project"
 run/main_scene="res://sources/levels/main_menu.tscn"
 config/icon="res://icon.png"
 
