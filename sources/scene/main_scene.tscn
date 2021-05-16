@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ressources/musics/Loyalty_Freak_Music_-_07_-_A_really_dark_alley.mp3" type="AudioStream" id=1]
+[ext_resource path="res://sources/levels/main_level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sources/scene/main_scene.gd" type="Script" id=3]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment()
+{
+	vec2 waveUV = SCREEN_UV;
+	waveUV.x += sin(TIME * 3.5 + UV.y * 7.5) * 0.0027;
+	waveUV.y += sin(TIME * 2.5 + UV.x * 8.5) * 0.0022;
+	
+	COLOR = texture(SCREEN_TEXTURE, waveUV);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MainLevel" parent="." instance=ExtResource( 2 )]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MainLevel/YSort/Characters/Player" index="7"]
+remote_path = NodePath("../../../../../Camera2D")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0, 0, 0, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -132, 172 )
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 262, 620 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -12.0
+autoplay = true
+
+[connection signal="character_died" from="MainLevel/YSort/Characters/Player" to="." method="_on_Player_character_died"]
+
+[editable path="MainLevel"]
