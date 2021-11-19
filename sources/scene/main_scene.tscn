@@ -19,6 +19,7 @@ void fragment()
 shader = SubResource( 1 )
 
 [node name="MainScene" type="Node2D"]
+position = Vector2( 3, 0 )
 __meta__ = {
 "_edit_group_": true
 }
