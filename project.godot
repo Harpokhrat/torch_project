@@ -233,6 +233,7 @@ throw={
 2d_render/layer_1="World"
 2d_render/layer_2="Characters"
 2d_render/layer_3="Effects"
+2d_render/layer_4="windows"
 2d_physics/layer_1="World"
 2d_physics/layer_2="Characters"
 2d_physics/layer_9="Player"
