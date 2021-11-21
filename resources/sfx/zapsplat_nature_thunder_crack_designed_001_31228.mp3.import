@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_nature_thunder_crack_designed_001_31228.mp3-1e80dfd7b64ca100c700fe41c42982d8.mp3str"
+
+[deps]
+
+source_file="res://resources/sfx/zapsplat_nature_thunder_crack_designed_001_31228.mp3"
+dest_files=[ "res://.import/zapsplat_nature_thunder_crack_designed_001_31228.mp3-1e80dfd7b64ca100c700fe41c42982d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

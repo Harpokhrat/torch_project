@@ -1,15 +1,13 @@
 extends StaticBody2D
-
 class_name Window
-
-onready var thunder: AudioStreamPlayer2D = $Thunder
-onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
 signal thunder_done
 
+onready var animationPlayer: AnimationPlayer = $AnimationPlayer
+
 
 func play_thunder() -> void:
-	animationPlayer.play("Thunder")
+	animationPlayer.play("thunder")
 
 
 func thunder_is_done() -> void:
