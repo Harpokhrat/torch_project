@@ -472,6 +472,7 @@ shape = SubResource( 41 )
 [node name="Lamp" type="Light2D" parent="." index="5"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
+range_item_cull_mask = 3
 shadow_enabled = true
 
 [node name="LampDetection" type="Area2D" parent="Lamp" index="0"]
