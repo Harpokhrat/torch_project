@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/characters/monsters/monster.gd" type="Script" id=2]
@@ -471,9 +471,6 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
-[sub_resource type="CircleShape2D" id=29]
-radius = 225.0
-
 [sub_resource type="CapsuleShape2D" id=28]
 radius = 5.0
 height = 12.0
@@ -525,23 +522,13 @@ parameters/playback = SubResource( 19 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
 
-[node name="WatchArea" type="Area2D" parent="." index="4"]
-visible = false
-position = Vector2( 0, -16 )
-collision_layer = 0
-collision_mask = 256
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WatchArea" index="0"]
-shape = SubResource( 29 )
-
-[node name="Sight" type="RayCast2D" parent="." index="5"]
+[node name="Sight" type="RayCast2D" parent="." index="4"]
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 257
 collide_with_areas = true
 
-[node name="LightArea" type="Area2D" parent="." index="6"]
+[node name="LightArea" type="Area2D" parent="." index="5"]
 collision_layer = 512
 collision_mask = 0
 monitoring = false
@@ -551,20 +538,29 @@ script = ExtResource( 8 )
 position = Vector2( 0, -13 )
 shape = SubResource( 28 )
 
-[node name="Pivot" type="Node2D" parent="." index="7"]
+[node name="Pivot" type="Node2D" parent="." index="6"]
 position = Vector2( 0, -13 )
 
-[node name="HitBox" parent="Pivot" index="0" instance=ExtResource( 5 )]
+[node name="WatchArea" type="Area2D" parent="Pivot" index="0"]
+visible = false
+collision_layer = 0
+collision_mask = 256
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pivot/WatchArea" index="0"]
+polygon = PoolVector2Array( -8, -16, 128, -128, 160, -64, 160, 0, 160, 64, 128, 128, -8, 16 )
+
+[node name="HitBox" parent="Pivot" index="1" instance=ExtResource( 5 )]
 
 [node name="CollisionShape2D" parent="Pivot/HitBox" index="0"]
 position = Vector2( 12, 0 )
 shape = SubResource( 25 )
 
-[node name="StepParticles" parent="." index="8" instance=ExtResource( 9 )]
+[node name="StepParticles" parent="." index="7" instance=ExtResource( 9 )]
 
-[node name="StepParticles2" parent="." index="9" instance=ExtResource( 9 )]
+[node name="StepParticles2" parent="." index="8" instance=ExtResource( 9 )]
 
-[node name="StateMachine" parent="." index="10"]
+[node name="StateMachine" parent="." index="9"]
 initial_state = NodePath("Stroll")
 
 [node name="Stroll" type="Node2D" parent="StateMachine" index="1"]
@@ -585,12 +581,12 @@ script = ExtResource( 7 )
 [node name="Timer" type="Timer" parent="StateMachine/Wonder" index="0"]
 wait_time = 10.0
 
-[node name="DebugPath" type="Line2D" parent="." index="11"]
+[node name="DebugPath" type="Line2D" parent="." index="10"]
 width = 3.0
 script = SubResource( 30 )
 
-[connection signal="area_entered" from="WatchArea" to="." method="_on_WatchArea_area_entered"]
-[connection signal="area_exited" from="WatchArea" to="." method="_on_WatchArea_area_exited"]
 [connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
+[connection signal="area_entered" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_entered"]
+[connection signal="area_exited" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_exited"]
 
 [editable path="Pivot/HitBox"]
