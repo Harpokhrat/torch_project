@@ -15,11 +15,11 @@ func enter(msg:= {}) -> void:
 	player_previous_position = player.global_position
 
 
-func state_physics_process(delta: float) -> void:
+func state_process(delta: float) -> void:
 	offset_vector = motion.mouse_position.normalized() * offset_range
 	
 	motion.position = player.global_position + offset_vector
 	
 	player_previous_position = player.global_position
 	
-	.state_physics_process(delta)
+	.state_process(delta)

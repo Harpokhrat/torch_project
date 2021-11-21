@@ -17,7 +17,7 @@ func enter(msg:= {}) -> void:
 		motion.zoom = msg["zoom"]
 
 
-func state_physics_process(delta: float) -> void:
+func state_process(delta: float) -> void:
 	motion.actual_position = lerp(motion.actual_position, motion.position, delta * position_speed)
 	var pixel_position: = motion.actual_position.round()
 	var subpixel_position: = pixel_position - motion.actual_position
