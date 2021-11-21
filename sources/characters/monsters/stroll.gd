@@ -59,7 +59,5 @@ func stroll() -> void:
 		target_position = rand_vector
 		
 		timer.start(rand_range(3, 10))
-		
-		print(target_position)
 	
 	_update_path()

@@ -17,7 +17,8 @@ func _ready() -> void:
 	if navigation == null:
 		raise()
 	
-	path_follow = get_node(path_follow_path)
+	if path_follow_path != "":
+		path_follow = get_node(path_follow_path)
 	
 	motion = MonsterMotionData.new()
 	var motion_states = state_machine.get_children()

@@ -3,23 +3,23 @@
 [ext_resource path="res://resources/tilemaps/interior.png" type="Texture" id=1]
 
 [sub_resource type="NavigationPolygon" id=87]
-vertices = PoolVector2Array( 10, 48, 36, 48, 36, 66, 10, 66 )
+vertices = PoolVector2Array( 15, 54, 36, 54, 36, 66, 15, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=88]
-vertices = PoolVector2Array( 36, 66, 10, 66, 10, 0, 36, 0 )
+vertices = PoolVector2Array( 36, 66, 15, 66, 15, 0, 36, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=89]
-vertices = PoolVector2Array( 36, 0, 10, 0, 10, 56, 36, 56 )
+vertices = PoolVector2Array( 36, 0, 15, 0, 15, 54, 36, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=90]
-vertices = PoolVector2Array( 36, 56, 10, 56, 10, 48, 36, 48 )
+vertices = PoolVector2Array( 36, 54, 15, 54, 15, 52, 36, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=91]
-vertices = PoolVector2Array( 0, 48, 36, 48, 36, 66, 0, 66 )
+vertices = PoolVector2Array( 0, 54, 36, 54, 36, 66, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=92]
@@ -27,167 +27,167 @@ vertices = PoolVector2Array( 0, 0, 36, 0, 36, 66, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=93]
-vertices = PoolVector2Array( 36, 0, 0, 0, 0, 56, 36, 56 )
+vertices = PoolVector2Array( 36, 0, 0, 0, 0, 54, 36, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=94]
-vertices = PoolVector2Array( 0, 48, 36, 48, 36, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 52, 36, 52, 36, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=95]
-vertices = PoolVector2Array( 0, 48, 26, 48, 26, 66, 0, 66 )
+vertices = PoolVector2Array( 0, 54, 21, 54, 21, 66, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=96]
-vertices = PoolVector2Array( 0, 66, 26, 66, 26, 0, 0, 0 )
+vertices = PoolVector2Array( 0, 66, 21, 66, 21, 0, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=97]
-vertices = PoolVector2Array( 0, 0, 26, 0, 26, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 0, 21, 0, 21, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=98]
-vertices = PoolVector2Array( 0, 48, 26, 48, 26, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 52, 21, 52, 21, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=99]
-vertices = PoolVector2Array( 26, 66, 10, 66, 10, 48, 26, 48 )
+vertices = PoolVector2Array( 21, 66, 15, 66, 15, 54, 21, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=100]
-vertices = PoolVector2Array( 26, 66, 10, 66, 10, 0, 26, 0 )
+vertices = PoolVector2Array( 21, 66, 15, 66, 15, 0, 21, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=101]
-vertices = PoolVector2Array( 10, 0, 26, 0, 26, 56, 10, 56 )
+vertices = PoolVector2Array( 15, 0, 21, 0, 21, 54, 15, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=102]
-vertices = PoolVector2Array( 26, 56, 10, 56, 10, 48, 26, 48 )
+vertices = PoolVector2Array( 21, 54, 15, 54, 15, 52, 21, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=103]
-vertices = PoolVector2Array( 26, 56, 36, 56, 36, 48, 10, 48, 10, 66, 26, 66 )
+vertices = PoolVector2Array( 21, 54, 36, 54, 36, 52, 15, 52, 15, 66, 21, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=104]
-vertices = PoolVector2Array( 26, 66, 26, 56, 36, 56, 36, 0, 10, 0, 10, 66 )
+vertices = PoolVector2Array( 21, 66, 21, 54, 36, 54, 36, 0, 15, 0, 15, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=105]
-vertices = PoolVector2Array( 36, 50, 36, 66, 10, 66, 10, 0, 26, 0, 26, 50 )
+vertices = PoolVector2Array( 36, 54, 36, 66, 15, 66, 15, 0, 21, 0, 21, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=106]
-vertices = PoolVector2Array( 26, 0, 26, 48, 36, 48, 36, 56, 10, 56, 10, 0 )
+vertices = PoolVector2Array( 21, 0, 21, 52, 36, 52, 36, 54, 15, 54, 15, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=107]
-vertices = PoolVector2Array( 36, 48, 36, 56, 26, 56, 26, 66, 10, 66, 10, 0, 26, 0, 26, 48 )
+vertices = PoolVector2Array( 36, 52, 36, 54, 21, 54, 21, 66, 15, 66, 15, 0, 21, 0, 21, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=108]
-vertices = PoolVector2Array( 0, 66, 0, 48, 36, 48, 36, 56, 26, 56, 26, 66 )
+vertices = PoolVector2Array( 0, 66, 0, 52, 36, 52, 36, 54, 21, 54, 21, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=109]
-vertices = PoolVector2Array( 26, 66, 26, 56, 36, 56, 36, 0, 0, 0, 0, 66 )
+vertices = PoolVector2Array( 21, 66, 21, 54, 36, 54, 36, 0, 0, 0, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=110]
-vertices = PoolVector2Array( 0, 0, 26, 0, 26, 48, 36, 48, 36, 66, 0, 66 )
+vertices = PoolVector2Array( 0, 0, 21, 0, 21, 52, 36, 52, 36, 66, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=111]
-vertices = PoolVector2Array( 26, 0, 26, 48, 36, 48, 36, 56, 0, 56, 0, 0 )
+vertices = PoolVector2Array( 21, 0, 21, 52, 36, 52, 36, 54, 0, 54, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=112]
-vertices = PoolVector2Array( 0, 0, 0, 66, 26, 66, 26, 56, 36, 56, 36, 48, 26, 48, 26, 0 )
+vertices = PoolVector2Array( 0, 0, 0, 66, 21, 66, 21, 54, 36, 54, 36, 52, 21, 52, 21, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=113]
-vertices = PoolVector2Array( 0, 48, 36, 48, 36, 66, 10, 66, 10, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 52, 36, 52, 36, 66, 15, 66, 15, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=114]
-vertices = PoolVector2Array( 0, 56, 10, 56, 10, 66, 36, 66, 36, 0, 0, 0 )
+vertices = PoolVector2Array( 0, 54, 15, 54, 15, 66, 36, 66, 36, 0, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=115]
-vertices = PoolVector2Array( 10, 0, 36, 0, 36, 66, 0, 66, 0, 48, 10, 48 )
+vertices = PoolVector2Array( 15, 0, 36, 0, 36, 66, 0, 66, 0, 52, 15, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=116]
-vertices = PoolVector2Array( 0, 48, 10, 48, 10, 0, 36, 0, 36, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 52, 15, 52, 15, 0, 36, 0, 36, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=117]
-vertices = PoolVector2Array( 10, 0, 36, 0, 36, 66, 10, 66, 10, 56, 0, 56, 0, 48, 10, 48 )
+vertices = PoolVector2Array( 15, 0, 36, 0, 36, 66, 15, 66, 15, 54, 0, 54, 0, 52, 15, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=118]
-vertices = PoolVector2Array( 0, 48, 26, 48, 26, 66, 10, 66, 10, 56, 0, 56 )
+vertices = PoolVector2Array( 0, 52, 21, 52, 21, 66, 15, 66, 15, 54, 0, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=119]
-vertices = PoolVector2Array( 10, 66, 26, 66, 26, 0, 0, 0, 0, 56, 10, 56 )
+vertices = PoolVector2Array( 15, 66, 21, 66, 21, 0, 0, 0, 0, 54, 15, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=120]
-vertices = PoolVector2Array( 10, 0, 26, 0, 26, 66, 0, 66, 0, 48, 10, 48 )
+vertices = PoolVector2Array( 15, 0, 21, 0, 21, 66, 0, 66, 0, 52, 15, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=121]
-vertices = PoolVector2Array( 10, 0, 10, 48, 0, 48, 0, 56, 26, 56, 26, 0 )
+vertices = PoolVector2Array( 15, 0, 15, 52, 0, 52, 0, 54, 21, 54, 21, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
 
 [sub_resource type="NavigationPolygon" id=122]
-vertices = PoolVector2Array( 0, 56, 10, 56, 10, 66, 26, 66, 26, 0, 10, 0, 10, 48, 0, 48 )
+vertices = PoolVector2Array( 0, 54, 15, 54, 15, 66, 21, 66, 21, 0, 15, 0, 15, 52, 0, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=123]
-vertices = PoolVector2Array( 0, 56, 10, 56, 10, 66, 26, 66, 26, 56, 36, 56, 36, 48, 0, 48 )
+vertices = PoolVector2Array( 0, 54, 15, 54, 15, 66, 21, 66, 21, 54, 36, 54, 36, 52, 0, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=124]
-vertices = PoolVector2Array( 0, 56, 10, 56, 10, 66, 26, 66, 26, 56, 36, 56, 36, 0, 0, 0 )
+vertices = PoolVector2Array( 0, 54, 15, 54, 15, 66, 21, 66, 21, 54, 36, 54, 36, 0, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=125]
-vertices = PoolVector2Array( 36, 66, 0, 66, 0, 48, 10, 48, 10, 0, 26, 0, 26, 48, 36, 48 )
+vertices = PoolVector2Array( 36, 66, 0, 66, 0, 52, 15, 52, 15, 0, 21, 0, 21, 52, 36, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=126]
-vertices = PoolVector2Array( 36, 56, 0, 56, 0, 48, 10, 48, 10, 0, 26, 0, 26, 48, 36, 48 )
+vertices = PoolVector2Array( 36, 54, 0, 54, 0, 52, 15, 52, 15, 0, 21, 0, 21, 52, 36, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=127]
-vertices = PoolVector2Array( 10, 66, 26, 66, 26, 56, 36, 56, 36, 48, 26, 48, 26, 0, 10, 0, 10, 48, 0, 48, 0, 56, 10, 56 )
+vertices = PoolVector2Array( 15, 66, 21, 66, 21, 54, 36, 54, 36, 52, 21, 52, 21, 0, 15, 0, 15, 52, 0, 52, 0, 54, 15, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ) ]
 
 [sub_resource type="NavigationPolygon" id=128]
-vertices = PoolVector2Array( 0, 48, 10, 48, 10, 0, 36, 0, 36, 56, 26, 56, 26, 66, 0, 66 )
+vertices = PoolVector2Array( 0, 52, 15, 52, 15, 0, 36, 0, 36, 54, 21, 54, 21, 66, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=129]
-vertices = PoolVector2Array( 10, 66, 36, 66, 36, 48, 26, 48, 26, 0, 0, 0, 0, 56, 10, 56 )
+vertices = PoolVector2Array( 15, 66, 36, 66, 36, 52, 21, 52, 21, 0, 0, 0, 0, 54, 15, 54 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 
 [sub_resource type="NavigationPolygon" id=130]
-vertices = PoolVector2Array( 36, 48, 26, 48, 26, 0, 10, 0, 10, 48, 0, 48, 0, 56, 10, 56, 10, 66, 36, 66 )
+vertices = PoolVector2Array( 36, 52, 21, 52, 21, 0, 15, 0, 15, 52, 0, 52, 0, 54, 15, 54, 15, 66, 36, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ) ]
 
 [sub_resource type="NavigationPolygon" id=131]
-vertices = PoolVector2Array( 0, 56, 10, 56, 10, 66, 26, 66, 26, 56, 36, 56, 36, 0, 10, 0, 10, 48, 0, 48 )
+vertices = PoolVector2Array( 0, 54, 15, 54, 15, 66, 21, 66, 21, 54, 36, 54, 36, 0, 15, 0, 15, 52, 0, 52 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ) ]
 
 [sub_resource type="NavigationPolygon" id=132]
-vertices = PoolVector2Array( 26, 66, 26, 56, 36, 56, 36, 48, 26, 48, 26, 0, 10, 0, 10, 48, 0, 48, 0, 66 )
+vertices = PoolVector2Array( 21, 66, 21, 54, 36, 54, 36, 52, 21, 52, 21, 0, 15, 0, 15, 52, 0, 52, 0, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ) ]
 
 [sub_resource type="NavigationPolygon" id=133]
-vertices = PoolVector2Array( 26, 66, 26, 56, 36, 56, 36, 48, 26, 48, 26, 0, 0, 0, 0, 56, 10, 56, 10, 66 )
+vertices = PoolVector2Array( 21, 64, 21, 54, 36, 54, 36, 52, 21, 52, 21, 0, 0, 0, 0, 54, 15, 54, 15, 66 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ) ]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
