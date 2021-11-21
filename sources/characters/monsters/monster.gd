@@ -1,19 +1,23 @@
 extends Character
 class_name Monster
 
-export(NodePath) var navigation_path: = NodePath()
+export(NodePath) var navigation_path
+export(NodePath) var path_follow_path
 
 onready var pivot: = $Pivot
 onready var sight: = $Sight
 
 var motion: MonsterMotionData
 var player: Player
+var path_follow: PathFollow2D
 
 
 func _ready() -> void:
 	var navigation: Navigation2D = get_node(navigation_path)
 	if navigation == null:
 		raise()
+	
+	path_follow = get_node(path_follow_path)
 	
 	motion = MonsterMotionData.new()
 	var motion_states = state_machine.get_children()

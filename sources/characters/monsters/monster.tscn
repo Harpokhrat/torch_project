@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/characters/monsters/monster.gd" type="Script" id=2]
@@ -482,6 +482,18 @@ height = 12.0
 radius = 9.0
 height = 10.0
 
+[sub_resource type="GDScript" id=30]
+script/source = "extends Line2D
+
+
+func _ready() -> void:
+	set_as_toplevel(true)
+
+
+func _process(delta: float) -> void:
+	points = owner.state_machine.state.navigation_path
+"
+
 [node name="Monster" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
@@ -560,7 +572,6 @@ script = ExtResource( 6 )
 max_speed = 30.0
 
 [node name="Timer" type="Timer" parent="StateMachine/Stroll" index="0"]
-wait_time = 5.0
 one_shot = true
 
 [node name="Chasing" type="Node2D" parent="StateMachine" index="2"]
@@ -573,6 +584,10 @@ script = ExtResource( 7 )
 
 [node name="Timer" type="Timer" parent="StateMachine/Wonder" index="0"]
 wait_time = 10.0
+
+[node name="DebugPath" type="Line2D" parent="." index="11"]
+width = 3.0
+script = SubResource( 30 )
 
 [connection signal="area_entered" from="WatchArea" to="." method="_on_WatchArea_area_entered"]
 [connection signal="area_exited" from="WatchArea" to="." method="_on_WatchArea_area_exited"]

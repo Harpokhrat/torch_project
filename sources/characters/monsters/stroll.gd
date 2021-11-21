@@ -4,12 +4,19 @@ export(float) var stroll_distance: = 100.0
 
 onready var timer: = $Timer
 
+var initial_position: = Vector2.ZERO
+
+
+func _ready() -> void:
+	initial_position = global_position
+
 
 func enter(msg:= {}) -> void:
 	.enter(msg)
 	
 	var _a: = timer.connect("timeout", self, "stroll")
-	timer.start()
+	
+	timer.start(rand_range(1, 3))
 
 
 func exit() -> void:
@@ -29,12 +36,12 @@ func state_physics_process(delta: float) -> void:
 func stroll() -> void:
 	var rand_x: = rand_range(-stroll_distance, stroll_distance)
 	var rand_y: = rand_range(-stroll_distance, stroll_distance)
-	var rand_vector: = Vector2(rand_x, rand_y)
-	if rand_vector.length() > stroll_distance:
-		rand_vector = rand_vector.normalized() * stroll_distance
+	var rand_vector: Vector2 = Vector2(rand_x, rand_y) + monster.global_position
+	if (rand_vector - initial_position).length() > stroll_distance:
+		rand_vector =  (rand_vector - initial_position).normalized() * stroll_distance
 	
-	target_position = monster.global_position + rand_vector
+	target_position = rand_vector
+	
+	timer.start(rand_range(1, 3))
 	
 	_update_path()
-	
-	timer.start()
