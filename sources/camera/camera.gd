@@ -11,6 +11,7 @@ var game_size: = Vector2(480.0, 270.0)
 onready var window_scale: float = (OS.window_size / game_size).x
 
 var player: Player
+var motion: CameraMotionData
 
 
 func _ready() -> void:
@@ -31,7 +32,7 @@ func _ready() -> void:
 	
 	player = get_node(player_path)
 	
-	var motion: = CameraMotionData.new()
+	motion = CameraMotionData.new()
 	var nodes: = state_machine.get_children()
 	for node in nodes:
 		nodes.append_array(node.get_children())
@@ -50,8 +51,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			var center_mouse_position: = screen_mouse_position - (game_size / 2.0)
 			var local_mouse_position: = center_mouse_position + global_position - player.global_position
 			player.motion.target_direction = local_mouse_position
+			
+			motion.mouse_position = center_mouse_position
 		else:
 			player.motion.target_direction = get_local_mouse_position()
+			
+			motion.mouse_position = get_local_mouse_position() - (game_size / 2.0)
 
 
 func _get_configuration_warning() -> String:

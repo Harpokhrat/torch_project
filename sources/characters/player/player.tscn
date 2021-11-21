@@ -475,8 +475,10 @@ texture = ExtResource( 8 )
 shadow_enabled = true
 
 [node name="LampDetection" type="Area2D" parent="Lamp" index="0"]
+visible = false
 collision_layer = 0
 collision_mask = 512
+monitorable = false
 script = ExtResource( 9 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampDetection" index="0"]

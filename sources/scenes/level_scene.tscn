@@ -6,7 +6,7 @@
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 shader_param/camera_offset = Vector2( 0, 0 )
-shader_param/fear_amount = 1.0
+shader_param/fear_amount = 0.5
 
 [node name="LevelScene" type="Node2D"]
 script = ExtResource( 1 )
