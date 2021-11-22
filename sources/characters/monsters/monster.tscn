@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/characters/monsters/monster.gd" type="Script" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://sources/characters/monsters/stroll.gd" type="Script" id=6]
 [ext_resource path="res://sources/characters/monsters/wonder.gd" type="Script" id=7]
 [ext_resource path="res://sources/characters/monsters/light_area.gd" type="Script" id=8]
-[ext_resource path="res://sources/effects/step_particles.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sources/characters/monsters/stress_area.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=24]
@@ -28,54 +27,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 31 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("StepParticles:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("StepParticles:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("StepParticles2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("StepParticles2:emitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -166,53 +117,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 1, 6, 7, 8, 9, 10 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("StepParticles:position")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -3, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("StepParticles:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("StepParticles2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("StepParticles2:emitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+}, {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+} ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -231,53 +151,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 20, 26, 27, 28, 29, 30, 29 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("StepParticles:position")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -2, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("StepParticles:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("StepParticles2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -2, -1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("StepParticles2:emitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+}, {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+} ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -296,53 +185,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 33, 35, 36, 37, 38, 39, 32 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("StepParticles:position")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("StepParticles:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("StepParticles2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 2, -1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("StepParticles2:emitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+}, {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+} ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -361,53 +219,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 14, 15, 16, 17, 18, 19, 17 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("StepParticles:position")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 5, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("StepParticles:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("StepParticles2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -4, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("StepParticles2:emitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+}, {
+"args": [ Vector2( 0, 0 ) ],
+"method": "step"
+} ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=10]
@@ -575,11 +402,7 @@ visible = false
 position = Vector2( 12, 0 )
 shape = SubResource( 25 )
 
-[node name="StepParticles" parent="." index="8" instance=ExtResource( 9 )]
-
-[node name="StepParticles2" parent="." index="9" instance=ExtResource( 9 )]
-
-[node name="StateMachine" parent="." index="10"]
+[node name="StateMachine" parent="." index="8"]
 initial_state = NodePath("Stroll")
 
 [node name="Stroll" type="Node2D" parent="StateMachine" index="1"]
@@ -600,7 +423,7 @@ script = ExtResource( 7 )
 [node name="Timer" type="Timer" parent="StateMachine/Wonder" index="0"]
 wait_time = 10.0
 
-[node name="DebugPath" type="Line2D" parent="." index="11"]
+[node name="DebugPath" type="Line2D" parent="." index="9"]
 width = 3.0
 script = SubResource( 30 )
 

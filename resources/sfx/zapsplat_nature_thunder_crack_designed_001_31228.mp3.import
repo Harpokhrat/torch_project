@@ -11,5 +11,5 @@ dest_files=[ "res://.import/zapsplat_nature_thunder_crack_designed_001_31228.mp3
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

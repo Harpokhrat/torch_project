@@ -12,4 +12,4 @@ dest_files=[ "res://.import/MusicInGame.ogg-7a52e3a72b97a115e2081214284ca707.ogg
 [params]
 
 loop=true
-loop_offset=0.0
+loop_offset=0

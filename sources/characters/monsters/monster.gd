@@ -7,6 +7,7 @@ export(NodePath) var path_follow_path
 onready var pivot: = $Pivot
 onready var sight: = $Sight
 
+var step_effect_prototype: = preload("res://sources/effects/step_effect.tscn")
 var motion: MonsterMotionData
 var player: Player
 var path_follow: PathFollow2D
@@ -51,6 +52,13 @@ func is_target_visible(target: Node2D) -> bool:
 	var parent_test: bool = (collider != null and collider.get_parent() == target)
 	
 	return parent_test
+
+
+func step(pos: Vector2) -> void:
+	var step_effect: Node2D = step_effect_prototype.instance()
+	_globals.add_effect(step_effect)
+	
+	step_effect.global_position = global_position + pos
 
 
 func _on_WatchArea_area_entered(hurtbox: HurtBox) -> void:
