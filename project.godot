@@ -109,6 +109,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://sources/utils/state_machine/state_machine.gd"
 }, {
+"base": "Area2D",
+"class": "StressArea",
+"language": "GDScript",
+"path": "res://sources/characters/monsters/stress_area.gd"
+}, {
 "base": "Line2D",
 "class": "VerletRope",
 "language": "GDScript",
@@ -140,6 +145,7 @@ _global_script_class_icons={
 "Plug": "",
 "State": "",
 "StateMachine": "",
+"StressArea": "",
 "VerletRope": "",
 "Window": ""
 }
