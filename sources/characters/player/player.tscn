@@ -12,6 +12,7 @@
 [ext_resource path="res://sources/characters/player/player_state_machine.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/player/rope/VerletRope2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sources/characters/player/player_hurt_box.gd" type="Script" id=12]
+[ext_resource path="res://resources/lights/Lamp.png" type="Texture" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 1.0
@@ -437,7 +438,6 @@ hframes = 17
 frame = 13
 
 [node name="CollisionShape2D" parent="." index="1"]
-visible = false
 position = Vector2( 0, -1 )
 rotation = 1.5708
 shape = SubResource( 1 )
@@ -484,7 +484,7 @@ script = ExtResource( 9 )
 
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
 position = Vector2( 0, -11 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 range_item_cull_mask = 3
 shadow_enabled = true
 
@@ -495,7 +495,13 @@ collision_mask = 512
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampFlare/LampDetection" index="0"]
-polygon = PoolVector2Array( 5, 13, 0, 13, -6, 11, -9, 8, -12, 4, -12, -4, -9, -8, -6, -11, 0, -12, 5, -12, 47, -97, 64, -88, 88, -64, 104, -40, 112, 0, 104, 40, 88, 64, 64, 88, 47, 97 )
+polygon = PoolVector2Array( 0, 0, 56, -104, 80, -80, 96, -56, 104, -32, 107, 0, 104, 32, 96, 56, 80, 80, 56, 104 )
+
+[node name="Light2D" type="Light2D" parent="." index="6"]
+position = Vector2( 0, -11 )
+texture = ExtResource( 8 )
+energy = 0.5
+mode = 2
 
 [node name="VerletRope" parent="." index="7" instance=ExtResource( 11 )]
 
