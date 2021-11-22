@@ -424,6 +424,7 @@ script = ExtResource( 7 )
 wait_time = 10.0
 
 [node name="DebugPath" type="Line2D" parent="." index="9"]
+visible = false
 width = 3.0
 script = SubResource( 30 )
 

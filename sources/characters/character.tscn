@@ -34,6 +34,7 @@ anim_player = NodePath("../AnimationPlayer")
 script = ExtResource( 1 )
 
 [node name="StateName" type="Label" parent="StateMachine"]
+visible = false
 material = SubResource( 2 )
 margin_left = -20.0
 margin_top = -54.0
