@@ -538,6 +538,9 @@ script = ExtResource( 8 )
 position = Vector2( 0, -13 )
 shape = SubResource( 28 )
 
+[node name="Timer" type="Timer" parent="LightArea" index="1"]
+wait_time = 2.0
+
 [node name="Pivot" type="Node2D" parent="." index="6"]
 position = Vector2( 0, -13 )
 
@@ -586,6 +589,7 @@ width = 3.0
 script = SubResource( 30 )
 
 [connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
+[connection signal="timeout" from="LightArea/Timer" to="LightArea" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_entered"]
 [connection signal="area_exited" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_exited"]
 
