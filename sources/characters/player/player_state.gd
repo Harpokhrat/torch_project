@@ -48,6 +48,7 @@ func state_physics_process(delta: float) -> void:
 	var move_direction: = get_input_direction()
 	motion.velocity = calculate_velocity(motion.velocity, move_direction, delta)
 	motion.velocity = player.move_and_slide(motion.velocity)
+	player.check_collision_with_rope_length_limit()
 
 
 func calculate_velocity(current_velocity: Vector2, direction: Vector2, delta: float) -> Vector2:

@@ -230,4 +230,7 @@ func _on_LastParticle_collision(body: CollisionObject2D, collision_point: Vector
 		verlet_pos_constraints.check_lasso_with_collision(body, collision_point)
 		if body is StaticBody2D or body.owner is StaticBody2D:
 			verlet_pos_constraints.fix_last_area(collision_point)
-				
+
+
+func _on_UnplugTimer_timeout() -> void:
+	end()
