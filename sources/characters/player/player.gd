@@ -31,6 +31,8 @@ func _ready() -> void:
 	rope.last_particle.player_hurtbox = self
 	rope.player_radius = $CollisionShape2D.shape.radius
 	
+	lamp.power(false)
+	
 	state_machine.start()
 
 
