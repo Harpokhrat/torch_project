@@ -5,6 +5,7 @@ class_name Player
 signal player_hit
 
 onready var lamp: = $Lamp
+onready var rope: = $VerletRope
 
 var motion: PlayerMotionData
 

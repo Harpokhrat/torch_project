@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sources/characters/player/rope/VerletRope.gd" type="Script" id=1]
+[ext_resource path="res://sources/characters/player/rope/LastParticle.gd" type="Script" id=2]
+[ext_resource path="res://sources/characters/player/rope/VerletParticleArea.gdns" type="Script" id=3]
+[ext_resource path="res://addons/donut_collision_polygon2D/donut_collision_polygon2D.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 1.0
+
+[node name="VerletRope" type="Line2D"]
+width = 7.0
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+rope_length = 2.0
+simulation_particles = 120
+iterations = 75
+impulse_factor = 200.0
+simulate = false
+draw = false
+
+[node name="Area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="LastParticle" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="LastParticle"]
+collision_mask = 0
+collide_with_areas = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="LastParticle"]
+collision_mask = 0
+collide_with_areas = true
+
+[node name="Area2D" type="Area2D" parent="LastParticle"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LastParticle/Area2D"]
+shape = SubResource( 2 )
+
+[node name="LengthLimit" type="KinematicBody2D" parent="."]
+collision_layer = 32768
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LengthLimit"]
+polygon = PoolVector2Array( 1.04092e-14, -170, 32.4375, -166.877, 63.6831, -157.621, 92.5886, -142.574, 120.208, -120.208, 140.936, -95.0628, 156.486, -66.4243, 166.285, -35.345, 170, 0, 166.877, 32.4375, 157.621, 63.6831, 142.574, 92.5886, 120.208, 120.208, 95.0628, 140.936, 66.4243, 156.486, 35.345, 166.285, 1.04092e-14, 170, -32.4375, 166.877, -63.6831, 157.621, -92.5886, 142.574, -120.208, 120.208, -140.936, 95.0628, -156.486, 66.4243, -166.285, 35.345, -170, 2.08183e-14, -166.877, -32.4375, -157.621, -63.6831, -142.574, -92.5886, -120.208, -120.208, -95.0628, -140.936, -66.4243, -156.486, -35.345, -166.285, -3.12275e-14, -170, -2.75536e-14, -150, -31.1868, -146.722, -58.6097, -138.076, -83.8789, -124.356, -106.066, -106.066, -125.801, -81.6959, -139.078, -56.191, -147.244, -28.6213, -150, 1.83691e-14, -146.722, 31.1868, -138.076, 58.6097, -124.356, 83.8789, -106.066, 106.066, -81.6959, 125.801, -56.191, 139.078, -28.6213, 147.244, 9.18455e-15, 150, 31.1868, 146.722, 58.6097, 138.076, 83.8789, 124.356, 106.066, 106.066, 125.801, 81.6959, 139.078, 56.191, 147.244, 28.6213, 150, 0, 146.722, -31.1868, 138.076, -58.6097, 124.356, -83.8789, 106.066, -106.066, 81.6959, -125.801, 56.191, -139.078, 28.6213, -147.244, 9.18455e-15, -150, 0.0001, -170 )
+script = ExtResource( 4 )
+radius = 150.0
+width = 20.0
+
+[connection signal="collision" from="LastParticle" to="." method="_on_LastParticle_collision"]
+[connection signal="area_entered" from="LastParticle/Area2D" to="LastParticle" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="LastParticle/Area2D" to="LastParticle" method="_on_Area2D_body_entered"]

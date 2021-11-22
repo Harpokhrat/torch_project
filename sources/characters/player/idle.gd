@@ -12,3 +12,8 @@ func state_physics_process(delta: float) -> void:
 	
 	if motion.velocity.length() > 0.0:
 		transition_to("Walk")
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		player.rope.plug()
