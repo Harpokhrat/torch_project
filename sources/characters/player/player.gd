@@ -21,6 +21,8 @@ func _ready() -> void:
 			node.player = self
 			node.motion = motion
 	
+	rope.last_particle.player_hurtbox = self
+	
 	state_machine.start()
 
 

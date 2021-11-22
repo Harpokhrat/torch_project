@@ -21,7 +21,7 @@ onready var length_limit_collision := $LengthLimit/CollisionPolygon2D
 
 export(bool) var debug := false setget set_debug
 export(float) var rope_length: float = 5.0
-export(float) var max_length: float = 1500
+export(float) var max_length: float = 1500 setget set_max_length
 export(float) var player_radius: float = 100.0
  
 export(int, 3, 500) var simulation_particles: int = 9 
@@ -39,6 +39,13 @@ export(int) var nb_particles_sharing_area : int = 10
 var throw_direction : Vector3
 onready var orig_color := default_color
 var loose := true
+
+
+func set_max_length(value: float) -> void:
+	max_length = value
+	if not is_inside_tree():
+		yield(self, "ready")
+	length_limit_collision.radius = max_length
 
 
 func set_debug(value: bool) -> void:

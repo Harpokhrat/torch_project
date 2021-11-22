@@ -129,9 +129,9 @@ bool apply_box_constraints(const Transform2D& shape_transform, Vector2 extents, 
 	const auto radius = extents.y * max_scale * (1 + sqrt(2)) * 0.5;
 	auto direction = position - center;
 	const auto distance = direction.length();
-	if (distance > radius) {
-		return false;
-	}
+	//if (distance > radius) {
+	//	return false;
+	//}
 
 	if (diff.x < diff.y) {
 		local_position.y = extents.y * sign(local_position.y);
