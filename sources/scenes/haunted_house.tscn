@@ -9,4 +9,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Viewport" parent="ViewportContainer" index="0"]
+audio_listener_enable_2d = true
+
 [node name="HauntedHouse" parent="ViewportContainer/Viewport" index="0" instance=ExtResource( 2 )]
