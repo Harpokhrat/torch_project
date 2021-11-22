@@ -523,19 +523,20 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Sight" type="RayCast2D" parent="." index="4"]
+visible = false
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 257
 collide_with_areas = true
 
 [node name="LightArea" type="Area2D" parent="." index="5"]
+position = Vector2( 0, -13 )
 collision_layer = 512
 collision_mask = 0
 monitoring = false
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightArea" index="0"]
-position = Vector2( 0, -13 )
 shape = SubResource( 28 )
 
 [node name="Timer" type="Timer" parent="LightArea" index="1"]
@@ -554,6 +555,7 @@ monitorable = false
 polygon = PoolVector2Array( -8, -16, 128, -128, 160, -64, 160, 0, 160, 64, 128, 128, -8, 16 )
 
 [node name="HitBox" parent="Pivot" index="1" instance=ExtResource( 5 )]
+visible = false
 
 [node name="CollisionShape2D" parent="Pivot/HitBox" index="0"]
 position = Vector2( 12, 0 )
