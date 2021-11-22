@@ -547,6 +547,7 @@ shape = SubResource( 28 )
 wait_time = 2.0
 
 [node name="StressArea" type="Area2D" parent="." index="6"]
+visible = false
 collision_layer = 0
 collision_mask = 256
 monitorable = false
