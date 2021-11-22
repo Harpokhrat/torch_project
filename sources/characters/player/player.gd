@@ -8,6 +8,7 @@ onready var lamp: = $Lamp
 onready var rope: = $VerletRope
 onready var lamp_flare: = $Lamp/LampFlare
 onready var unplug_timer: = $UnplugTimer
+onready var plug_detection_area: = $PlugDetectionArea
 
 var motion: PlayerMotionData
 var unplug_direction: = Vector2.ZERO
@@ -24,6 +25,7 @@ func _ready() -> void:
 			node.motion = motion
 	
 	rope.last_particle.player_hurtbox = self
+	rope.player_radius = $CollisionShape2D.shape.radius
 	
 	state_machine.start()
 
