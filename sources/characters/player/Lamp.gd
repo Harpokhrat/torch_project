@@ -1,5 +1,4 @@
-extends Area2D
-
+extends Light2D
 
 
 func _on_LampDetection_area_entered(light_area: LightArea) -> void:
