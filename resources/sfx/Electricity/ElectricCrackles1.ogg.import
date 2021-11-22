@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ElectricCrackles1.ogg-ab1ca965be4187e6b70e120a386e1108.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Electricity/ElectricCrackles1.ogg"
+dest_files=[ "res://.import/ElectricCrackles1.ogg-ab1ca965be4187e6b70e120a386e1108.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
