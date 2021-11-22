@@ -49,10 +49,10 @@ if env['platform'] == '':
 if env['platform'] == "osx":
     env['target_path'] += 'osx/'
     cpp_library += '.osx'
-    env["CC"] = "emcc"
-    env["CXX"] = "em++"
-    env["AR"] = "emar"
-    env["RANLIB"] = "emranlib"
+    env['CXX'] = '/usr/local/osxcross/bin/o64-clang++'
+    env['AR'] = '/usr/local/osxcross/bin/x86_64-apple-darwin20.4-ar'
+    env['RANLIB'] = '/usr/local/osxcross/bin/x86_64-apple-darwin20.4-ranlib'
+    env['target_name'] = env['target_name'] + ".dylib"
     env.Append(CCFLAGS=['-arch', 'x86_64'])
     env.Append(CXXFLAGS=['-std=c++17'])
     env.Append(LINKFLAGS=['-arch', 'x86_64'])
