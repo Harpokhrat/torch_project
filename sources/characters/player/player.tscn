@@ -479,7 +479,13 @@ shape = SubResource( 41 )
 wait_time = 2.0
 one_shot = true
 
-[node name="Lamp" type="Node2D" parent="." index="6"]
+[node name="Light2D" type="Light2D" parent="." index="6"]
+position = Vector2( 0, -11 )
+texture = ExtResource( 8 )
+energy = 0.5
+mode = 2
+
+[node name="Lamp" type="Node2D" parent="." index="7"]
 script = ExtResource( 9 )
 
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
@@ -497,13 +503,7 @@ monitorable = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampFlare/LampDetection" index="0"]
 polygon = PoolVector2Array( 0, 0, 56, -104, 80, -80, 96, -56, 104, -32, 107, 0, 104, 32, 96, 56, 80, 80, 56, 104 )
 
-[node name="Light2D" type="Light2D" parent="." index="6"]
-position = Vector2( 0, -11 )
-texture = ExtResource( 8 )
-energy = 0.5
-mode = 2
-
-[node name="VerletRope" parent="." index="7" instance=ExtResource( 11 )]
+[node name="VerletRope" parent="." index="8" instance=ExtResource( 11 )]
 
 [node name="PlugDetectionArea" type="Area2D" parent="." index="8"]
 collision_layer = 0

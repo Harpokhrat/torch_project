@@ -1,6 +1,14 @@
 extends Node2D
 
+onready var lamp_flare: = $LampFlare
+onready var detection: = $LampFlare/LampDetection/CollisionPolygon2D
+
 var detected_areas: Dictionary = {}
+
+
+func power(value: bool) -> void:
+	lamp_flare.enabled = value
+	detection.disabled = not value
 
 
 func _process(_delta: float) -> void:
