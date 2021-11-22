@@ -49,3 +49,7 @@ func check_collision_with_rope_length_limit() -> void:
 			return
 	if !unplug_timer.is_stopped() and motion.move_direction.dot(unplug_direction) <= 0.95:
 		unplug_timer.stop()
+
+
+func _on_VerletRope_plugged(boolean: bool) -> void:
+	lamp.power(boolean)

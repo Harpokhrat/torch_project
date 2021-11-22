@@ -2,7 +2,7 @@
 extends Line2D
 class_name VerletRope
 
-signal hit(body)
+signal plugged(boolean)
 
 enum { LOOSE, TIGHT, LASSO, CHECK_LONE_KINEMATIC, LONE_KINEMATIC, LAST_FIXED }
 
@@ -141,6 +141,7 @@ func plug() -> void:
 	verlet_pos_constraints.begin_simulation(Vector2.ONE * 1000, 0, 1, 1)
 	verlet_pos_constraints.fix_last_area(global_transform.origin)
 	show()
+	emit_signal("plugged", true)
 
 
 func end() -> void:
@@ -160,6 +161,7 @@ func activate_areas(enable: bool):
 
 
 func _ready() -> void:
+	joint_mode = Line2D.LINE_JOINT_BEVEL
 	_create_rope()
 	verlet_pos_constraints.connect("state_changed", self, "_on_rope_state_changed")
 	activate_areas(false)
@@ -234,3 +236,4 @@ func _on_LastParticle_collision(body: CollisionObject2D, collision_point: Vector
 
 func _on_UnplugTimer_timeout() -> void:
 	end()
+	emit_signal("plugged", false)
