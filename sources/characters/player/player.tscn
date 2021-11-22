@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/characters/NESS.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://sources/characters/player/Lamp.gd" type="Script" id=9]
 [ext_resource path="res://sources/characters/player/player_state_machine.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/player/rope/VerletRope2D.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sources/characters/player/player_hurt_box.gd" type="Script" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 1.0
@@ -465,6 +466,7 @@ parameters/Walk/blend_position = Vector2( -0.360973, 0.368146 )
 
 [node name="HurtBox" parent="." index="4" instance=ExtResource( 7 )]
 visible = false
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 position = Vector2( 0, -9 )

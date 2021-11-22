@@ -3,7 +3,7 @@ extends Node2D
 var detected_areas: Dictionary = {}
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for light_area in detected_areas.keys():
 		detected_areas[light_area].cast_to = (light_area.global_position - global_position) * 1.1
 		var collider: Node2D = detected_areas[light_area].get_collider()
@@ -29,4 +29,4 @@ func _on_LampDetection_area_exited(light_area: LightArea) -> void:
 		
 		if detected_areas.has(light_area):
 			detected_areas[light_area].queue_free()
-			detected_areas.erase(light_area)
+			var _a: = detected_areas.erase(light_area)
