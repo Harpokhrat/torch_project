@@ -8,7 +8,7 @@
 [ext_resource path="res://sources/characters/player/walk.gd" type="Script" id=6]
 [ext_resource path="res://sources/utils/colliders/hurt_box.tscn" type="PackedScene" id=7]
 [ext_resource path="res://resources/lights/character_light.png" type="Texture" id=8]
-[ext_resource path="res://sources/characters/player/lamp_detection.gd" type="Script" id=9]
+[ext_resource path="res://sources/characters/player/Lamp.gd" type="Script" id=9]
 [ext_resource path="res://sources/characters/player/player_state_machine.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/player/rope/VerletRope2D.tscn" type="PackedScene" id=11]
 
@@ -470,20 +470,22 @@ visible = false
 position = Vector2( 0, -9 )
 shape = SubResource( 41 )
 
-[node name="Lamp" type="Light2D" parent="." index="5"]
+[node name="Lamp" type="Node2D" parent="." index="5"]
+script = ExtResource( 9 )
+
+[node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
 range_item_cull_mask = 3
 shadow_enabled = true
 
-[node name="LampDetection" type="Area2D" parent="Lamp" index="0"]
+[node name="LampDetection" type="Area2D" parent="Lamp/LampFlare" index="0"]
 visible = false
 collision_layer = 0
 collision_mask = 512
 monitorable = false
-script = ExtResource( 9 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampDetection" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampFlare/LampDetection" index="0"]
 polygon = PoolVector2Array( 5, 13, 0, 13, -6, 11, -9, 8, -12, 4, -12, -4, -9, -8, -6, -11, 0, -12, 5, -12, 47, -97, 64, -88, 88, -64, 104, -40, 112, 0, 104, 40, 88, 64, 64, 88, 47, 97 )
 
 [node name="VerletRope" parent="." index="6" instance=ExtResource( 11 )]
@@ -501,7 +503,7 @@ script = ExtResource( 6 )
 [node name="Hit" type="Node2D" parent="StateMachine" index="3"]
 script = ExtResource( 3 )
 
-[connection signal="area_entered" from="Lamp/LampDetection" to="Lamp/LampDetection" method="_on_LampDetection_area_entered"]
-[connection signal="area_exited" from="Lamp/LampDetection" to="Lamp/LampDetection" method="_on_LampDetection_area_exited"]
+[connection signal="area_entered" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_entered"]
+[connection signal="area_exited" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_exited"]
 
 [editable path="HurtBox"]

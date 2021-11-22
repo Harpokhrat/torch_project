@@ -6,6 +6,7 @@ signal player_hit
 
 onready var lamp: = $Lamp
 onready var rope: = $VerletRope
+onready var lamp_flare: = $Lamp/LampFlare
 
 var motion: PlayerMotionData
 
@@ -27,4 +28,4 @@ func _process(_delta: float) -> void:
 	animation_tree.set("parameters/Idle/blend_position", motion.facing_direction)
 	animation_tree.set("parameters/Walk/blend_position", motion.facing_direction)
 	
-	lamp.rotation = motion.facing_direction.angle()
+	lamp_flare.rotation = motion.facing_direction.angle()
