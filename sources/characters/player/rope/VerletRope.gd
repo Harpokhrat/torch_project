@@ -131,7 +131,7 @@ func throw(vec: Vector2, clockwise: float, spin_speed: float, impulse_speed: flo
 	show()
 
 
-func plug() -> void:
+func plug(at: Vector2) -> void:
 	loose = false
 	last_particle.initialize()
 	call_deferred("activate_areas", true)
@@ -139,7 +139,7 @@ func plug() -> void:
 	draw = true
 	simulate = true
 	verlet_pos_constraints.begin_simulation(Vector2.ONE * 1000, 0, 1, 1)
-	verlet_pos_constraints.fix_last_area(global_transform.origin)
+	verlet_pos_constraints.fix_last_area(at)
 	show()
 	emit_signal("plugged", true)
 
