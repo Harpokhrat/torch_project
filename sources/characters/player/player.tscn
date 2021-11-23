@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/characters/NESS.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://sources/characters/player/rope/VerletRope2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sources/characters/player/player_hurt_box.gd" type="Script" id=12]
 [ext_resource path="res://resources/lights/Lamp.png" type="Texture" id=13]
+[ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player1.ogg" type="AudioStream" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 1.0
@@ -177,6 +178,10 @@ tracks/0/keys = {
 "values": [ 11 ]
 }
 
+[sub_resource type="AudioStreamRandomPitch" id=43]
+audio_stream = ExtResource( 14 )
+random_pitch = 1.5
+
 [sub_resource type="Animation" id=4]
 resource_name = "walk_down"
 length = 0.5
@@ -193,6 +198,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -212,6 +229,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 2, 3 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
+}
 
 [sub_resource type="Animation" id=18]
 resource_name = "walk_down_right"
@@ -229,6 +258,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 15, 16 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
 }
 
 [sub_resource type="Animation" id=13]
@@ -248,6 +289,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 4, 5 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "walk_right"
@@ -265,6 +318,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 13, 14 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -284,6 +349,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 8, 9 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
+}
 
 [sub_resource type="Animation" id=15]
 resource_name = "walk_up_left"
@@ -302,6 +379,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 6, 7 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
+}
 
 [sub_resource type="Animation" id=16]
 resource_name = "walk_up_right"
@@ -319,6 +408,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 11, 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Footsteps:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 43 ) ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=25]
@@ -428,7 +529,7 @@ height = 8.0
 [sub_resource type="CircleShape2D" id=42]
 radius = 15.0
 
-[sub_resource type="CircleShape2D" id=43]
+[sub_resource type="CircleShape2D" id=44]
 radius = 13.0
 
 [node name="Player" instance=ExtResource( 1 )]
@@ -472,24 +573,28 @@ parameters/playback = SubResource( 20 )
 parameters/Idle/blend_position = Vector2( -0.573245, -0.0431035 )
 parameters/Walk/blend_position = Vector2( -0.360973, 0.368146 )
 
-[node name="HurtBox" parent="." index="4" instance=ExtResource( 7 )]
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." index="4"]
+stream = SubResource( 43 )
+
+[node name="HurtBox" parent="." index="5" instance=ExtResource( 7 )]
+visible = false
 script = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 position = Vector2( 0, -9 )
 shape = SubResource( 41 )
 
-[node name="UnplugTimer" type="Timer" parent="." index="5"]
+[node name="UnplugTimer" type="Timer" parent="." index="6"]
 wait_time = 2.0
 one_shot = true
 
-[node name="Light2D" type="Light2D" parent="." index="6"]
+[node name="Light2D" type="Light2D" parent="." index="7"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
 energy = 0.5
 mode = 2
 
-[node name="Lamp" type="Node2D" parent="." index="7"]
+[node name="Lamp" type="Node2D" parent="." index="8"]
 script = ExtResource( 9 )
 
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
@@ -510,8 +615,7 @@ monitorable = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampFlare/LampDetection" index="0"]
 polygon = PoolVector2Array( 0, 0, 56, -104, 80, -80, 96, -56, 104, -32, 107, 0, 104, 32, 96, 56, 80, 80, 56, 104 )
 
-[node name="PlugDetectionArea" type="Area2D" parent="." index="8"]
-visible = false
+[node name="PlugDetectionArea" type="Area2D" parent="." index="9"]
 position = Vector2( 0, -11 )
 collision_layer = 0
 collision_mask = 1024
@@ -519,21 +623,20 @@ collision_mask = 1024
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlugDetectionArea" index="0"]
 shape = SubResource( 42 )
 
-[node name="InteractionDetectionArea" type="Area2D" parent="." index="9"]
-visible = false
+[node name="InteractionDetectionArea" type="Area2D" parent="." index="10"]
 position = Vector2( 0, -11 )
 collision_layer = 0
 collision_mask = 2048
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetectionArea" index="0"]
-shape = SubResource( 43 )
+shape = SubResource( 44 )
 
-[node name="VerletRope" parent="." index="10" instance=ExtResource( 11 )]
+[node name="VerletRope" parent="." index="11" instance=ExtResource( 11 )]
 width = 2.0
 joint_mode = 1
 
-[node name="StateMachine" parent="." index="11"]
+[node name="StateMachine" parent="." index="12"]
 script = ExtResource( 10 )
 initial_state = NodePath("Idle")
 
