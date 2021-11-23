@@ -34,8 +34,44 @@ func state_unhandled_input(event: InputEvent) -> void:
 			or (event.is_action_released("view_down") and motion.target_direction.y > 0):
 		motion.target_direction.y = event.get_action_strength("view_down") - event.get_action_strength("view_up")
 	
-	elif event.is_action_pressed("throw"):
-		throw()
+	elif event.is_action_pressed("interact"):
+		interact()
+	
+	elif event.is_action_pressed("unplug"):
+		player.unplug()
+
+
+func interact() -> void:
+	var overlapping_plugs : Array = player.plug_detection_area.get_overlapping_areas()
+	if overlapping_plugs.size() > 0:
+		var ind: = nearest(overlapping_plugs)
+		player.rope.plug(overlapping_plugs[ind].global_position)
+		return
+	
+	var overlapping_interactive_areas: Array = player.interaction_detection_area.get_overlapping_areas()
+	var interactive_objects: = []
+	for area in overlapping_interactive_areas:
+		if area.owner is InteractiveObject:
+			interactive_objects.append(area.owner)
+	
+	if interactive_objects.size() != 0:
+		var ind: = nearest(interactive_objects)
+		interactive_objects[ind].interact()
+
+
+func nearest(list: Array) -> int:
+	if list.size() == 0:
+		return -1
+	
+	var ind: = 0
+	var distance: float = (list[0].global_position - player.global_position).length()
+	for i in range(1, list.size()):
+		var d: float = (list[i].global_position - player.global_position).length()
+		if d < distance:
+			ind = i
+			distance = d
+	
+	return ind
 
 
 func state_physics_process(delta: float) -> void:
@@ -79,7 +115,3 @@ func hit(hitbox: HitBox) -> void:
 	transition_to("Hit", {"hitbox": hitbox})
 	
 	player.signal_hit()
-
-
-func throw() -> void:
-	transition_to("Throw")

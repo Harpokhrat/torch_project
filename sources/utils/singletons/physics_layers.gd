@@ -16,7 +16,8 @@ var rope_collider: = PhysicsLayer.new(3)
 # Areas
 var player: = PhysicsLayer.new(9)
 var monsters: = PhysicsLayer.new(10)
-var interactive_objects: = PhysicsLayer.new(11)
+var plugs: = PhysicsLayer.new(11)
+var interactive_objects: = PhysicsLayer.new(12)
 
 var rope_length_limit: = PhysicsLayer.new(16)
 
@@ -31,6 +32,7 @@ func _ready() -> void:
 	
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(player.bit)) == "Player")
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(monsters.bit)) == "Monsters")
+	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(plugs.bit)) == "Plugs")
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(interactive_objects.bit)) == "InteractiveObjects")
 	
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(rope_length_limit.bit)) == "RopeLengthLimit")

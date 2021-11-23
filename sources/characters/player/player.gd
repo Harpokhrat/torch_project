@@ -9,6 +9,7 @@ onready var rope: = $VerletRope
 onready var lamp_flare: = $Lamp/LampFlare
 onready var unplug_timer: = $UnplugTimer
 onready var plug_detection_area: = $PlugDetectionArea
+onready var interaction_detection_area: = $InteractionDetectionArea
 
 var motion: PlayerMotionData
 var unplug_direction: = Vector2.ZERO
@@ -55,6 +56,11 @@ func check_collision_with_rope_length_limit() -> void:
 			return
 	if !unplug_timer.is_stopped() and motion.move_direction.dot(unplug_direction) <= 0.95:
 		unplug_timer.stop()
+
+
+func unplug() -> void:
+	rope.unplug()
+	unplug_timer.stop()
 
 
 func _on_VerletRope_plugged(boolean: bool) -> void:

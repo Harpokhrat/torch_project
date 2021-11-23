@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/characters/NESS.png" type="Texture" id=2]
@@ -428,6 +428,9 @@ height = 8.0
 [sub_resource type="CircleShape2D" id=42]
 radius = 15.0
 
+[sub_resource type="CircleShape2D" id=43]
+radius = 13.0
+
 [node name="Player" instance=ExtResource( 1 )]
 collision_mask = 32771
 script = ExtResource( 4 )
@@ -507,16 +510,27 @@ monitorable = false
 polygon = PoolVector2Array( 0, 0, 56, -104, 80, -80, 96, -56, 104, -32, 107, 0, 104, 32, 96, 56, 80, 80, 56, 104 )
 
 [node name="PlugDetectionArea" type="Area2D" parent="." index="8"]
+visible = false
+position = Vector2( 0, -11 )
 collision_layer = 0
 collision_mask = 1024
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlugDetectionArea" index="0"]
 shape = SubResource( 42 )
 
-[node name="VerletRope" parent="." index="9" instance=ExtResource( 11 )]
+[node name="InteractionDetectionArea" type="Area2D" parent="." index="9"]
+visible = false
+position = Vector2( 0, -11 )
+collision_layer = 0
+collision_mask = 2048
+monitorable = false
 
-[node name="StateMachine" parent="." index="10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetectionArea" index="0"]
+shape = SubResource( 43 )
+
+[node name="VerletRope" parent="." index="10" instance=ExtResource( 11 )]
+
+[node name="StateMachine" parent="." index="11"]
 script = ExtResource( 10 )
 initial_state = NodePath("Idle")
 
