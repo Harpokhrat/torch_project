@@ -209,7 +209,9 @@ func _physics_process(delta: float) -> void:
 			var limit_length_ratio := limit_rope_length_size / max_length
 			length_limit.scale = Vector2.ONE * limit_length_ratio
 			
-			default_color = lerp(orig_color, Color.black, pow(1 - limit_length_ratio, 2))
+			limit_length_ratio = clamp((verlet_pos_constraints.total_length / max_length - 0.9) / 0.1, 0, 1)
+			
+			default_color = lerp(orig_color, Color(5, 0.5, 0.5), limit_length_ratio)
 			
 			length_limit_collision.set_deferred("disabled", false)
 		else:

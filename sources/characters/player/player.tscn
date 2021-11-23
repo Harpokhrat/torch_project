@@ -530,6 +530,8 @@ monitorable = false
 shape = SubResource( 43 )
 
 [node name="VerletRope" parent="." index="10" instance=ExtResource( 11 )]
+width = 2.0
+joint_mode = 1
 
 [node name="StateMachine" parent="." index="11"]
 script = ExtResource( 10 )
