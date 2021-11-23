@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://sources/characters/character_state.gd"
 }, {
+"base": "Area2D",
+"class": "DialogArea",
+"language": "GDScript",
+"path": "res://sources/dialog/dialog_area.gd"
+}, {
 "base": "CollisionPolygon2D",
 "class": "DonutCollisionPolygon2D",
 "language": "GDScript",
@@ -136,6 +141,7 @@ _global_script_class_icons={
 "CameraStateMachine": "",
 "Character": "",
 "CharacterState": "",
+"DialogArea": "",
 "DonutCollisionPolygon2D": "",
 "HitBox": "",
 "HurtBox": "",
@@ -280,7 +286,7 @@ unplug={
 2d_render/layer_1="World"
 2d_render/layer_2="Characters"
 2d_render/layer_3="Effects"
-2d_render/layer_4="windows"
+2d_render/layer_4="Windows"
 2d_physics/layer_1="World"
 2d_physics/layer_2="Characters"
 2d_physics/layer_3="RopeCollider"
