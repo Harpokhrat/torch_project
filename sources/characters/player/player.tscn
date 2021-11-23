@@ -595,11 +595,10 @@ energy = 0.5
 mode = 2
 
 [node name="Lamp" type="Node2D" parent="." index="8"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, -13 )
 script = ExtResource( 9 )
 
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
-position = Vector2( 0, -13 )
 texture = ExtResource( 13 )
 range_item_cull_mask = 3
 shadow_enabled = true

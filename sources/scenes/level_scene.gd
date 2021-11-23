@@ -14,7 +14,7 @@ func _ready() -> void:
 	_globals.viewport_container = $ViewportContainer
 	_globals.viewport = $ViewportContainer/Viewport
 	
-	_globals.connect("dialog", self, "new_dialog")
+	var _a: = _globals.connect("dialog", self, "new_dialog")
 
 
 func new_dialog(d: String, f: Dictionary) -> void:

@@ -2,6 +2,7 @@ extends Node
 
 signal effect_to_add(effect)
 signal node_in_level_to_add(node)
+# warning-ignore:unused_signal
 signal dialog(dialog, flags)
 
 var viewport_container: ViewportContainer = null
