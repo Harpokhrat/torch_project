@@ -29,3 +29,6 @@ func state_physics_process(delta: float) -> void:
 	target_position = monster.player.global_position
 	
 	.state_physics_process(delta)
+	
+	if !motion.is_lighted_up:
+		monster.step(Vector2.ZERO)
