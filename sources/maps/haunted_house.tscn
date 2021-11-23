@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sources/maps/tilemaps/interior.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/maps/map.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://sources/objects/window4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sources/objects/front_plug.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sources/objects/side_plug.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sources/interactive_objects/front_locked_door.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.5, 47.5 )
@@ -406,3 +407,6 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/StaticBody2D32" index="0"]
 position = Vector2( 71.5, 8.5 )
 shape = SubResource( 5 )
+
+[node name="FrontLockedDoor" parent="." index="5" instance=ExtResource( 11 )]
+position = Vector2( 83, -22 )

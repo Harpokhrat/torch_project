@@ -144,6 +144,11 @@ func plug(at: Vector2) -> void:
 	emit_signal("plugged", true)
 
 
+func unplug() -> void:
+	end()
+	emit_signal("plugged", false)
+
+
 func end() -> void:
 	last_particle.enabled = false
 	draw = false
@@ -235,5 +240,4 @@ func _on_LastParticle_collision(body: CollisionObject2D, collision_point: Vector
 
 
 func _on_UnplugTimer_timeout() -> void:
-	end()
-	emit_signal("plugged", false)
+	unplug()

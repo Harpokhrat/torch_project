@@ -3,7 +3,7 @@ extends HurtBox
 var stress_areas: = []
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var stress_level: = 0.0
 	for area in stress_areas:
 		var distance: float = (area.global_position - global_position).length()
