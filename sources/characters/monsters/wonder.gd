@@ -1,12 +1,15 @@
 extends MonsterState
 
 onready var timer: = $Timer
+export(int) var sup_distance := 20
 
 
 func enter(msg: Dictionary = {}) -> void:
 	.enter(msg)
 	
 	target_position = msg["position"]
+	var direction: = (target_position - global_position).normalized()
+	target_position = target_position + direction * sup_distance
 	_update_path()
 
 	var _a: = timer.connect("timeout", self, "end_wonder")
@@ -25,11 +28,11 @@ func state_physics_process(delta: float) -> void:
 		return
 	
 	if navigation_path.size() == 0:
-		transition_to("Stroll")
+		transition_to("Inspect")
 		return
 	
 	.state_physics_process(delta)
 
 
 func end_wonder() -> void:
-	transition_to("Stroll")
+	transition_to("Inspect")

@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 func _on_LampDetection_area_entered(light_area: LightArea) -> void:
 	if light_area:
 		detected_areas[light_area] = RayCast2D.new()
-		detected_areas[light_area].collision_mask = PhysicsLayers.add_physics_layer(PhysicsLayers.world.number, PhysicsLayers.monsters)
+		detected_areas[light_area].collision_mask = PhysicsLayers.add_physics_layer(PhysicsLayers.world.number, PhysicsLayers.monsters_hurtbox)
 		detected_areas[light_area].enabled = true
 		detected_areas[light_area].collide_with_areas = true
 		add_child(detected_areas[light_area])

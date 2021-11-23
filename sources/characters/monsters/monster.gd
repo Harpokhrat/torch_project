@@ -42,14 +42,14 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if player != null:
-		sight.cast_to = 1.1 * (player.global_position - global_position + Vector2(0.0, -10.0))
+		sight.cast_to = 1.1 * (player.global_position - global_position)
 	else:
 		sight.cast_to = Vector2.ZERO
 
 
 func is_target_visible(target: Node2D) -> bool:
 	var collider : Node2D = sight.get_collider()
-	var parent_test: bool = (collider != null and collider.get_parent() == target)
+	var parent_test: bool = (collider != null and collider == target)
 	
 	return parent_test
 

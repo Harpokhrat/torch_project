@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/characters/monsters/monster.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://sources/characters/monsters/stroll.gd" type="Script" id=6]
 [ext_resource path="res://sources/characters/monsters/wonder.gd" type="Script" id=7]
 [ext_resource path="res://sources/characters/monsters/light_area.gd" type="Script" id=8]
+[ext_resource path="res://sources/characters/monsters/Inspect.gd" type="Script" id=9]
 [ext_resource path="res://sources/characters/monsters/stress_area.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=24]
@@ -323,6 +324,8 @@ func _process(_delta: float) -> void:
 "
 
 [node name="Monster" instance=ExtResource( 1 )]
+collision_layer = 8
+collision_mask = 1
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
@@ -354,10 +357,9 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Sight" type="RayCast2D" parent="." index="4"]
-visible = false
 enabled = true
 cast_to = Vector2( 0, 0 )
-collision_mask = 257
+collision_mask = 17
 collide_with_areas = true
 
 [node name="LightArea" type="Area2D" parent="." index="5"]
@@ -388,7 +390,6 @@ shape = SubResource( 31 )
 position = Vector2( 0, -13 )
 
 [node name="WatchArea" type="Area2D" parent="Pivot" index="0"]
-visible = false
 collision_layer = 0
 collision_mask = 256
 monitorable = false
@@ -405,6 +406,9 @@ shape = SubResource( 25 )
 
 [node name="StateMachine" parent="." index="8"]
 initial_state = NodePath("Stroll")
+
+[node name="StateName" parent="StateMachine" index="0"]
+visible = true
 
 [node name="Stroll" type="Node2D" parent="StateMachine" index="1"]
 script = ExtResource( 6 )
@@ -424,16 +428,22 @@ script = ExtResource( 7 )
 [node name="Timer" type="Timer" parent="StateMachine/Wonder" index="0"]
 wait_time = 10.0
 
+[node name="Inspect" type="Node2D" parent="StateMachine" index="4"]
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="StateMachine/Inspect" index="0"]
+
 [node name="DebugPath" type="Line2D" parent="." index="9"]
-visible = false
 width = 3.0
 script = SubResource( 30 )
 
 [connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
+[connection signal="light" from="LightArea" to="StateMachine/Inspect" method="_on_LightArea_light"]
 [connection signal="timeout" from="LightArea/Timer" to="LightArea" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="StressArea" to="StressArea" method="_on_StressArea_area_entered"]
 [connection signal="area_exited" from="StressArea" to="StressArea" method="_on_StressArea_area_exited"]
 [connection signal="area_entered" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_entered"]
 [connection signal="area_exited" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_exited"]
+[connection signal="timeout" from="StateMachine/Inspect/Timer" to="StateMachine/Inspect" method="_on_Timer_timeout"]
 
 [editable path="Pivot/HitBox"]
