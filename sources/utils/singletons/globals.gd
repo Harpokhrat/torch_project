@@ -12,4 +12,4 @@ func add_effect(effect: Node2D) -> void:
 
 
 func add_node_to_level(node: Node2D) -> void:
-	emit_signal("node_to_add", node)
+	emit_signal("node_in_level_to_add", node)
