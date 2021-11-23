@@ -357,6 +357,7 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Sight" type="RayCast2D" parent="." index="4"]
+visible = false
 enabled = true
 cast_to = Vector2( 0, 0 )
 collision_mask = 17
@@ -390,6 +391,7 @@ shape = SubResource( 31 )
 position = Vector2( 0, -13 )
 
 [node name="WatchArea" type="Area2D" parent="Pivot" index="0"]
+visible = false
 collision_layer = 0
 collision_mask = 256
 monitorable = false
@@ -406,9 +408,6 @@ shape = SubResource( 25 )
 
 [node name="StateMachine" parent="." index="8"]
 initial_state = NodePath("Stroll")
-
-[node name="StateName" parent="StateMachine" index="0"]
-visible = true
 
 [node name="Stroll" type="Node2D" parent="StateMachine" index="1"]
 script = ExtResource( 6 )
@@ -434,6 +433,7 @@ script = ExtResource( 9 )
 [node name="Timer" type="Timer" parent="StateMachine/Inspect" index="0"]
 
 [node name="DebugPath" type="Line2D" parent="." index="9"]
+visible = false
 width = 3.0
 script = SubResource( 30 )
 
