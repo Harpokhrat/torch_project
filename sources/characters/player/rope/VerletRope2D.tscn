@@ -39,10 +39,12 @@ shape = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="LastParticle"]
+visible = false
 collision_mask = 0
 collide_with_areas = true
 
 [node name="RayCast2D2" type="RayCast2D" parent="LastParticle"]
+visible = false
 collision_mask = 0
 collide_with_areas = true
 
@@ -54,6 +56,7 @@ collision_mask = 0
 shape = SubResource( 2 )
 
 [node name="LengthLimit" type="KinematicBody2D" parent="."]
+visible = false
 collision_layer = 32768
 collision_mask = 0
 

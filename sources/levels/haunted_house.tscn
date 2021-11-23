@@ -37,7 +37,7 @@ position = Vector2( -74, 190 )
 rotation = 2.5059
 
 [node name="Player" parent="Navigation2D/YSort" index="0"]
-position = Vector2( 22, 41 )
+position = Vector2( 33, 57 )
 
 [node name="Monster" parent="Navigation2D/YSort" index="1" instance=ExtResource( 4 )]
 position = Vector2( 386, -54 )
