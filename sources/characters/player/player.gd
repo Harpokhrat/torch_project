@@ -14,6 +14,10 @@ var motion: PlayerMotionData
 var unplug_direction: = Vector2.ZERO
 
 
+func _init() -> void:
+	add_to_group("Player")
+
+
 func _ready() -> void:
 	motion = PlayerMotionData.new()
 	
