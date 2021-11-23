@@ -272,6 +272,7 @@ throw={
 2d_physics/layer_3="RopeCollider"
 2d_physics/layer_9="Player"
 2d_physics/layer_10="Monsters"
+2d_physics/layer_11="InteractiveObjects"
 2d_physics/layer_16="RopeLengthLimit"
 2d_physics/layer_17="CameraFocus"
 
