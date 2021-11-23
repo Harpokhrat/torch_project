@@ -6,7 +6,7 @@ onready var letter_timer: = $DialogBox/LetterTimer
 onready var dialog_timer: = $DialogBox/DialogTimer
 
 var dialog: = ""
-var flags: = []
+var flags: = {}
 var current_text = ""
 
 
@@ -17,7 +17,7 @@ func _ready() -> void:
 	_globals.connect("dialog", self, "new_dialog")
 
 
-func new_dialog(d: String, f: Array) -> void:
+func new_dialog(d: String, f: Dictionary) -> void:
 	letter_timer.stop()
 	dialog_timer.stop()
 	
@@ -38,10 +38,17 @@ func _on_LetterTimer_timeout() -> void:
 		letter_timer.start()
 		
 		var final_text: = ""
-		for flag in flags:
-			final_text += "[" + flag + "]"
+		for flag in flags.keys():
+			if flags[flag].length() == 0:
+				final_text += "[" + flag + "]"
+			else:
+				final_text += "[" + flag + " " + flags[flag] + "]"
+		
 		final_text += current_text
-		for flag in flags:
+		
+		var invert_flags: Array = flags.keys()
+		invert_flags.invert()
+		for flag in invert_flags:
 			final_text += "[/" + flag + "]"
 		
 		dialog_label.bbcode_text = final_text

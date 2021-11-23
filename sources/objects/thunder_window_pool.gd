@@ -1,12 +1,12 @@
 extends Node2D
 
 onready var timer: Timer = $Timer
-onready var thunder: = $Thunder
+onready var thunder: = $Thunder2
 
 var audio_resource_array: Array = [
-	"res://resources/sfx/zapsplat_nature_thunder_crack_designed_001_31228.mp3",
-	"res://resources/sfx/zapsplat_nature_thunder_crack_designed_002_31229.mp3",
-	"res://resources/sfx/zapsplat_nature_thunder_crack_designed_003_31230.mp3",
+	"res://resources/sfx/Thunder/Thunder1.ogg","res://resources/sfx/Thunder/Thunder2.ogg",
+	"res://resources/sfx/Thunder/Thunder3.ogg","res://resources/sfx/Thunder/Thunder4.ogg",
+	"res://resources/sfx/Thunder/Thunder5.ogg","res://resources/sfx/Thunder/Thunder6.ogg"
 ]
 var window_list: Array = []
 var thunder_done = 0
@@ -31,8 +31,8 @@ func _process(_delta: float) -> void:
 func _randomize_thunder() -> void:
 	thunder_done = 0
 	
-	var pitch_scale = rand_range(0.1, 2.0)
-	var volume = rand_range(-20, -10)
+	var pitch_scale = rand_range(0.9, 1.5)
+	var volume = rand_range(-6, 0)
 	
 	audio_resource_array.shuffle()
 	var audio_stream = load(audio_resource_array[0])
@@ -47,7 +47,7 @@ func _randomize_thunder() -> void:
 func _on_Timer_timeout() -> void:
 	for window in window_list:
 		window.play_thunder()
-	thunder.play()
+		thunder.play()
 
 
 func thunder_is_done() -> void:

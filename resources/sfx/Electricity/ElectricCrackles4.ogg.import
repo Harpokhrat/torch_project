@@ -11,5 +11,5 @@ dest_files=[ "res://.import/ElectricCrackles4.ogg-bd522eee1e61e6bc220fbeb8b1e0fa
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

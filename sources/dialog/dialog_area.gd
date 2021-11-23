@@ -2,7 +2,7 @@ extends Area2D
 class_name DialogArea
 
 export(String) var dialog: = ""
-export(Array, String) var flags: = ["center"]
+export(Dictionary) var flags: = {"center": ""}
 export(bool) var one_shoot: = false
 
 

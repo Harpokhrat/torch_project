@@ -400,7 +400,6 @@ monitorable = false
 polygon = PoolVector2Array( -8, -16, 128, -128, 160, -64, 160, 0, 160, 64, 128, 128, -8, 16 )
 
 [node name="HitBox" parent="Pivot" index="1" instance=ExtResource( 5 )]
-visible = false
 
 [node name="CollisionShape2D" parent="Pivot/HitBox" index="0"]
 position = Vector2( 12, 0 )
