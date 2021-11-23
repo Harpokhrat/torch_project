@@ -1,7 +1,7 @@
 extends Area2D
 class_name Plug
 
-export(float) var visibility_range: = 200.0
+export(float) var visibility_range: = 150.0
 
 onready var particles: = $Particles2D
 onready var collision: = $CollisionShape2D
@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 	
 	var factor: = 1.0 - pow(norm_distance, 5.0)
 	
-	modulate.a = factor
+	particles.modulate.a = factor
 
 
 func power(value: bool) -> void:
