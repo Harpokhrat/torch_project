@@ -473,7 +473,6 @@ parameters/Idle/blend_position = Vector2( -0.573245, -0.0431035 )
 parameters/Walk/blend_position = Vector2( -0.360973, 0.368146 )
 
 [node name="HurtBox" parent="." index="4" instance=ExtResource( 7 )]
-visible = false
 script = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
@@ -494,7 +493,7 @@ mode = 2
 script = ExtResource( 9 )
 
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
-position = Vector2( 0, -11 )
+position = Vector2( 0, 3 )
 texture = ExtResource( 13 )
 range_item_cull_mask = 3
 shadow_enabled = true
