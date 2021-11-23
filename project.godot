@@ -166,6 +166,7 @@ config/icon="res://icon.png"
 
 _globals="*res://sources/utils/singletons/globals.gd"
 PhysicsLayers="*res://sources/utils/singletons/physics_layers.gd"
+Music="*res://sources/utils/singletons/music.tscn"
 
 [display]
 
