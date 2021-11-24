@@ -13,6 +13,8 @@ onready var area := $Area
 onready var last_particle := $LastParticle
 onready var length_limit := $LengthLimit
 onready var length_limit_collision := $LengthLimit/CollisionPolygon2D
+onready var sound_cableplugin: = $CablePlugIn
+onready var sound_cableplugout: = $CablePlugOut
 
 # references: 
 # https://docs.unrealengine.com/4.26/en-US/Basics/Components/Rendering/CableComponent/
@@ -144,11 +146,13 @@ func plug(at: Vector2) -> void:
 	verlet_pos_constraints.fix_last_area(at)
 	show()
 	emit_signal("plugged", true)
+	sound_cableplugin.play()
 
 
 func unplug() -> void:
 	end()
 	emit_signal("plugged", false)
+	sound_cableplugout.play()
 
 
 func end() -> void:

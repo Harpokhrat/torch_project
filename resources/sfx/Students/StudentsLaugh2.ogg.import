@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StudentsLaugh2.ogg-c8f961ea2f0a9e262ef91af406f86507.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Students/StudentsLaugh2.ogg"
+dest_files=[ "res://.import/StudentsLaugh2.ogg-c8f961ea2f0a9e262ef91af406f86507.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

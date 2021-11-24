@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FlashlightSwitchOn.ogg-64ded7a524f761fc29f16ea8a627efdc.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Flashlight/FlashlightSwitchOn.ogg"
+dest_files=[ "res://.import/FlashlightSwitchOn.ogg-64ded7a524f761fc29f16ea8a627efdc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

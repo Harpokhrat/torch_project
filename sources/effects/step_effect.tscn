@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player5.ogg" type="AudioStream" id=1]
+[ext_resource path="res://resources/sfx/Students/StudentsFootstepCreaky.ogg" type="AudioStream" id=1]
 [ext_resource path="res://resources/particles/circle.png" type="Texture" id=2]
 [ext_resource path="res://sources/effects/step_effect.gd" type="Script" id=3]
 
@@ -43,10 +43,11 @@ explosiveness = 1.0
 process_material = SubResource( 5 )
 texture = ExtResource( 2 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="StudentFootsteps" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource( 1 )
-max_distance = 500.0
-attenuation = 2.0
+volume_db = 6.681
+max_distance = 350.0
+attenuation = 1.68179
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

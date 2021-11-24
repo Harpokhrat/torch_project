@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FlashlightCharge.ogg-0e6ea048be6b7f545ee6e7ecb4d56a25.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Flashlight/FlashlightCharge.ogg"
+dest_files=[ "res://.import/FlashlightCharge.ogg-0e6ea048be6b7f545ee6e7ecb4d56a25.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

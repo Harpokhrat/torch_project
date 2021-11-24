@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sources/objects/living/plug.gd" type="Script" id=1]
 [ext_resource path="res://resources/particles/lightning.png" type="Texture" id=2]
-[ext_resource path="res://resources/sfx/Electricity/ElectricCrackles5.ogg" type="AudioStream" id=3]
+[ext_resource path="res://resources/sfx/Electricity/ElectricCrackles1.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
@@ -48,9 +48,7 @@ process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="Electricity" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = SubResource( 6 )
-volume_db = 5.0
 autoplay = true
 max_distance = 200.0
 attenuation = 2.37841

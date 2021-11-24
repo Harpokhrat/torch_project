@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StudentsLaughYou Died.ogg-ded13ae2342d90c7c45aadc0b0e5ec11.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Students/StudentsLaughYou Died.ogg"
+dest_files=[ "res://.import/StudentsLaughYou Died.ogg-ded13ae2342d90c7c45aadc0b0e5ec11.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -21,7 +21,7 @@ func _ready() -> void:
 
 
 func _randomize_thunder() -> void:
-	var pitch_scale = rand_range(0.9, 1.5)
+	var pitch_scale = rand_range(0.9, 1.2)
 	var volume = rand_range(-6, 0)
 	
 	audio_resource_array.shuffle()

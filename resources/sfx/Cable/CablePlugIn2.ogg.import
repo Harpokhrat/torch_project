@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CablePlugIn2.ogg-a780057b3a87f121f274a0f559749176.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Cable/CablePlugIn2.ogg"
+dest_files=[ "res://.import/CablePlugIn2.ogg-a780057b3a87f121f274a0f559749176.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

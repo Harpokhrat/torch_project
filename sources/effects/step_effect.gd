@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var particles: = $Particles2D
-onready var audio: = $AudioStreamPlayer2D
+onready var audio: = $StudentFootsteps
 onready var timer: = $Timer
 
 var particle_chance: float
