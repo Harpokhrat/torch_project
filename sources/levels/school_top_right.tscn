@@ -51,7 +51,7 @@ position = Vector2( 858, -48 )
 rotation = -1.5708
 
 [node name="SideWindow3" parent="Navigation2D/YSort/RightWindowPool" index="5" instance=ExtResource( 8 )]
-position = Vector2( 1254, 168 )
+position = Vector2( 1290, 168 )
 rotation = -1.5708
 
 [node name="SideWindow5" parent="Navigation2D/YSort/RightWindowPool" index="6" instance=ExtResource( 8 )]
@@ -59,13 +59,13 @@ position = Vector2( 930, 432 )
 rotation = -1.5708
 
 [node name="SideWindow7" parent="Navigation2D/YSort/RightWindowPool" index="7" instance=ExtResource( 8 )]
-position = Vector2( 1110, 348 )
+position = Vector2( 1182, 351 )
 rotation = -1.5708
 
 [node name="LeftWindowPool" parent="Navigation2D/YSort" index="2" instance=ExtResource( 6 )]
 
 [node name="SideWindow" parent="Navigation2D/YSort/LeftWindowPool" index="3" instance=ExtResource( 8 )]
-position = Vector2( 618, 348 )
+position = Vector2( 546, 344 )
 rotation = -4.71239
 
 [node name="Doors" type="YSort" parent="Navigation2D/YSort" index="3"]
@@ -105,7 +105,7 @@ position = Vector2( 474, 102 )
 [node name="SidePlugs" type="YSort" parent="Navigation2D/YSort" index="5"]
 
 [node name="SidePlug" parent="Navigation2D/YSort/SidePlugs" index="0" instance=ExtResource( 9 )]
-position = Vector2( 798, -24 )
+position = Vector2( 762, -27 )
 
 [node name="SidePlug2" parent="Navigation2D/YSort/SidePlugs" index="1" instance=ExtResource( 9 )]
 position = Vector2( 798, 288 )
@@ -115,7 +115,7 @@ position = Vector2( 1080, 522 )
 rotation = -1.57079
 
 [node name="Player" parent="Navigation2D/YSort" index="6"]
-position = Vector2( 822, -33 )
+position = Vector2( 793, -36 )
 
 [node name="Monster" parent="Navigation2D/YSort" index="7" instance=ExtResource( 3 )]
 position = Vector2( 824, 158 )
@@ -124,4 +124,8 @@ path_follow_path = NodePath("../../Paths/Path2D/PathFollow2D")
 
 [node name="Monster2" parent="Navigation2D/YSort" index="8" instance=ExtResource( 3 )]
 position = Vector2( 1140, 161 )
+navigation_path = NodePath("../..")
+
+[node name="Monster3" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
+position = Vector2( 637, 422 )
 navigation_path = NodePath("../..")

@@ -43,7 +43,9 @@ func _process(_delta: float) -> void:
 	animation_tree.set("parameters/Idle/blend_position", motion.facing_direction)
 	animation_tree.set("parameters/Walk/blend_position", motion.facing_direction)
 	
-	lamp_flare.rotation = motion.facing_direction.angle()
+	var rotation_angle: = motion.facing_direction.angle()
+	lamp_flare.rotation = rotation_angle
+	lamp_flare.offset = Vector2(0, -13).rotated(-rotation_angle)
 
 
 func check_collision_with_rope_length_limit() -> void:
