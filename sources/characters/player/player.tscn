@@ -668,6 +668,7 @@ script = ExtResource( 3 )
 [connection signal="timeout" from="UnplugTimer" to="VerletRope" method="_on_UnplugTimer_timeout"]
 [connection signal="area_entered" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_entered"]
 [connection signal="area_exited" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_exited"]
+[connection signal="length_limit_reached" from="VerletRope" to="." method="_on_VerletRope_length_limit_reached"]
 [connection signal="plugged" from="VerletRope" to="." method="_on_VerletRope_plugged"]
 
 [editable path="HurtBox"]

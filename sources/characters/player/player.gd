@@ -13,6 +13,7 @@ onready var interaction_detection_area: = $InteractionDetectionArea
 
 var motion: PlayerMotionData
 var unplug_direction: = Vector2.ZERO
+var is_colliding_with_rope_length_limit: = false
 
 
 func _init() -> void:
@@ -30,7 +31,7 @@ func _ready() -> void:
 			node.motion = motion
 	
 	rope.set_player_hurtbox($RopeCollider)
-	rope.player_radius = $CollisionShape2D.shape.radius
+	rope.player_radius = $CollisionShape2D.shape.radius + $CollisionShape2D.shape.height / 2
 	
 	lamp.power(false)
 	
@@ -50,12 +51,13 @@ func check_collision_with_rope_length_limit() -> void:
 		var collision := get_slide_collision(i)
 		var collider := collision.collider
 		if PhysicsLayers.object_has_physics_layer(collider, PhysicsLayers.rope_length_limit):
-			unplug_direction = motion.move_direction
-			if unplug_timer.is_stopped():
-				unplug_timer.start()
+			collide_with_rope_length_limit()
 			return
-	if !unplug_timer.is_stopped() and motion.move_direction.dot(unplug_direction) <= 0.95:
-		unplug_timer.stop()
+	if is_colliding_with_rope_length_limit:
+		is_colliding_with_rope_length_limit = false
+	else:
+		if !unplug_timer.is_stopped() and motion.move_direction.dot(unplug_direction) <= 0.95:
+			unplug_timer.stop()
 
 
 func unplug() -> void:
@@ -65,3 +67,14 @@ func unplug() -> void:
 
 func _on_VerletRope_plugged(boolean: bool) -> void:
 	lamp.power(boolean)
+
+
+func collide_with_rope_length_limit() -> void:
+	unplug_direction = motion.move_direction
+	if unplug_timer.is_stopped():
+		unplug_timer.start()
+
+
+func _on_VerletRope_length_limit_reached() -> void:
+	collide_with_rope_length_limit()
+	is_colliding_with_rope_length_limit = true

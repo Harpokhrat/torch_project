@@ -3,6 +3,7 @@ extends Line2D
 class_name VerletRope
 
 signal plugged(boolean)
+signal length_limit_reached
 
 enum { LOOSE, TIGHT, LASSO, CHECK_LONE_KINEMATIC, LONE_KINEMATIC, LAST_FIXED }
 
@@ -150,6 +151,8 @@ func unplug() -> void:
 
 
 func end() -> void:
+	verlet_pos_constraints.set_initial_positions(global_transform.origin)
+	points = global_transform.xform_inv(verlet_pos_constraints.get_pos_curr())
 	last_particle.enabled = false
 	draw = false
 	simulate = false
@@ -204,6 +207,7 @@ func _physics_process(delta: float) -> void:
 			
 			var player_margin := player_radius + global_position.distance_to(limit_rope_length_center)
 			if limit_rope_length_size < player_margin:
+				emit_signal("length_limit_reached")
 				limit_rope_length_size = player_margin
 			
 			var limit_length_ratio := limit_rope_length_size / max_length
