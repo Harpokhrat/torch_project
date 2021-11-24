@@ -51,6 +51,7 @@ func check_collision_with_rope_length_limit() -> void:
 		var collision := get_slide_collision(i)
 		var collider := collision.collider
 		if PhysicsLayers.object_has_physics_layer(collider, PhysicsLayers.rope_length_limit):
+			unplug_direction = motion.move_direction
 			collide_with_rope_length_limit()
 			return
 	if is_colliding_with_rope_length_limit:
@@ -70,11 +71,11 @@ func _on_VerletRope_plugged(boolean: bool) -> void:
 
 
 func collide_with_rope_length_limit() -> void:
-	unplug_direction = motion.move_direction
 	if unplug_timer.is_stopped():
 		unplug_timer.start()
 
 
-func _on_VerletRope_length_limit_reached() -> void:
+func _on_VerletRope_length_limit_reached(direction: Vector2) -> void:
+	unplug_direction = direction
 	collide_with_rope_length_limit()
 	is_colliding_with_rope_length_limit = true

@@ -3,7 +3,7 @@ extends Line2D
 class_name VerletRope
 
 signal plugged(boolean)
-signal length_limit_reached
+signal length_limit_reached(direction)
 
 enum { LOOSE, TIGHT, LASSO, CHECK_LONE_KINEMATIC, LONE_KINEMATIC, LAST_FIXED }
 
@@ -207,7 +207,7 @@ func _physics_process(delta: float) -> void:
 			
 			var player_margin := player_radius + global_position.distance_to(limit_rope_length_center)
 			if limit_rope_length_size < player_margin:
-				emit_signal("length_limit_reached")
+				emit_signal("length_limit_reached", (global_position - limit_rope_length_center).normalized())
 				limit_rope_length_size = player_margin
 			
 			var limit_length_ratio := limit_rope_length_size / max_length
