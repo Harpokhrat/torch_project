@@ -15,9 +15,8 @@
 [ext_resource path="res://resources/lights/Lamp.png" type="Texture" id=13]
 [ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player1.ogg" type="AudioStream" id=14]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 1.0
-height = 12.0
+[sub_resource type="CircleShape2D" id=46]
+radius = 5.09902
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -549,7 +548,7 @@ frame = 13
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0, -1 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 46 )
 
 [node name="AnimationPlayer" parent="." index="2"]
 anims/RESET = SubResource( 3 )

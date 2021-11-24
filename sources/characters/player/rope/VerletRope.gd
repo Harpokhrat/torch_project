@@ -24,6 +24,7 @@ export(bool) var debug := false setget set_debug
 export(float) var rope_length: float = 5.0
 export(float) var max_length: float = 1500 setget set_max_length
 export(float) var player_radius: float = 100.0
+var player_collision: Node2D
  
 export(int, 3, 500) var simulation_particles: int = 9 
 export(int) var iterations: int = 2 setget set_iterations # low value = more sag, high value = less sag
@@ -205,7 +206,7 @@ func _physics_process(delta: float) -> void:
 			
 			var limit_rope_length_size : float = verlet_pos_constraints.get_limit_rope_length_size()
 			
-			var player_margin := player_radius + global_position.distance_to(limit_rope_length_center)
+			var player_margin := player_radius + player_collision.global_position.distance_to(limit_rope_length_center)
 			if limit_rope_length_size < player_margin:
 				emit_signal("length_limit_reached", (global_position - limit_rope_length_center).normalized())
 				limit_rope_length_size = player_margin

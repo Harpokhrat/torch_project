@@ -31,7 +31,8 @@ func _ready() -> void:
 			node.motion = motion
 	
 	rope.set_player_hurtbox($RopeCollider)
-	rope.player_radius = $CollisionShape2D.shape.radius + $CollisionShape2D.shape.height / 2
+	rope.player_radius = $CollisionShape2D.shape.radius
+	rope.player_collision = $CollisionShape2D
 	
 	lamp.power(false)
 	
