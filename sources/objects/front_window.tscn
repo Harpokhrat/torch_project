@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sources/objects/window.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/objects/window.png" type="Texture" id=2]
+[ext_resource path="res://resources/lights/front_window.png" type="Texture" id=3]
+[ext_resource path="res://sources/objects/front_window.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.5, 6.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "window_thunder"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.8, 0.9, 1, 1.4, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false ]
+}
+
+[node name="FrontWindow" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0.5, -6.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0.5, -6.5 )
+shape = SubResource( 1 )
+
+[node name="Light2D" parent="." index="2"]
+position = Vector2( 0.5, 20 )
+rotation = 3.14159
+
+[node name="Light2D2" type="Light2D" parent="." index="3"]
+visible = false
+position = Vector2( 0.5, -6.5 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Light2D2" index="0"]
+anims/RESET = SubResource( 2 )
+anims/window_thunder = SubResource( 3 )

@@ -41,6 +41,7 @@ points = PoolVector2Array( 0, 0, 6, 0, 6, 6, 0, 6 )
 0/z_index = 0
 
 [node name="Occluder" type="TileMap"]
+z_index = -2
 tile_set = SubResource( 2 )
 cell_size = Vector2( 6, 6 )
 collision_layer = 2

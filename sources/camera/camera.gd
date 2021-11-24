@@ -7,7 +7,7 @@ export(NodePath) var bottom_right_path
 
 onready var state_machine: = $StateMachine
 
-var game_size: = Vector2(480.0, 270.0)
+var game_size: = Vector2(640.0, 360.0)
 onready var window_scale: float = (OS.window_size / game_size).x
 
 var player: Player

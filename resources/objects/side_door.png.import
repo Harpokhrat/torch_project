@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BookSelf.png-2a75f2c86e431221ab60217dc844dc43.stex"
+path="res://.import/side_door.png-2988f9d0ba9f8e55ceba90158aeb9c06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/objects/BookSelf.png"
-dest_files=[ "res://.import/BookSelf.png-2a75f2c86e431221ab60217dc844dc43.stex" ]
+source_file="res://resources/objects/side_door.png"
+dest_files=[ "res://.import/side_door.png-2988f9d0ba9f8e55ceba90158aeb9c06.stex" ]
 
 [params]
 
