@@ -52,8 +52,6 @@ func calculate_velocity(current_velocity: Vector2, direction: Vector2, delta: fl
 
 
 func get_move_direction() -> Vector2:
-	if motion.is_lighted_up:
-		return Vector2.ZERO
 	return compute_move_direction()
 
 
@@ -82,8 +80,6 @@ func compute_move_direction() -> Vector2:
 
 
 func get_facing_direction() -> Vector2:
-	if motion.is_lighted_up:
-		return Vector2.ZERO
 	return compute_facing_direction()
 
 
@@ -99,3 +95,10 @@ func _update_path() -> void:
 	else:
 		navigation_path = [target_position]
 		navigation_index = 0
+
+
+func light_on(value: bool) -> void:
+	if value:
+		transition_to("InLight")
+	else:
+		push_error("Should not light off when not in special state")

@@ -75,4 +75,4 @@ func _on_WatchArea_area_exited(_area: Area2D) -> void:
 
 
 func _on_LightArea_light(value) -> void:
-	motion.is_lighted_up = value
+	state_machine.light_on(value)

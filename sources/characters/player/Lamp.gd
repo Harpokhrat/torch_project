@@ -23,12 +23,17 @@ func _process(_delta: float) -> void:
 
 func _on_LampDetection_area_entered(light_area: LightArea) -> void:
 	if light_area:
-		detected_areas[light_area] = RayCast2D.new()
-		detected_areas[light_area].collision_mask = PhysicsLayers.add_physics_layer(PhysicsLayers.light_collider.number, PhysicsLayers.monsters_hitbox)
-		detected_areas[light_area].enabled = true
-		detected_areas[light_area].collide_with_areas = true
-		add_child(detected_areas[light_area])
-		detected_areas[light_area].cast_to = (light_area.global_position - global_position) * 1.1
+		for a in detected_areas.values():
+			a.add_exception(light_area)
+		var new_raycast: = RayCast2D.new()
+		for a in detected_areas.keys():
+			new_raycast.add_exception(a)
+		new_raycast.collision_mask = PhysicsLayers.add_physics_layer(PhysicsLayers.light_collider.number, PhysicsLayers.monsters_hitbox)
+		new_raycast.enabled = true
+		new_raycast.collide_with_areas = true
+		add_child(new_raycast)
+		new_raycast.cast_to = (light_area.global_position - global_position) * 1.1
+		detected_areas[light_area] = new_raycast
 
 
 func _on_LampDetection_area_exited(light_area: LightArea) -> void:
