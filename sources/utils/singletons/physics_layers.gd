@@ -20,6 +20,7 @@ var player_hurtbox: = PhysicsLayer.new(9)
 var monsters_hitbox: = PhysicsLayer.new(10)
 var plugs: = PhysicsLayer.new(11)
 var interactive_objects: = PhysicsLayer.new(12)
+var soft_collision: = PhysicsLayer.new(13)
 
 var rope_length_limit: = PhysicsLayer.new(16)
 
@@ -38,6 +39,7 @@ func _ready() -> void:
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(monsters_hitbox.bit)) == "MonstersHitbox")
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(plugs.bit)) == "Plugs")
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(interactive_objects.bit)) == "InteractiveObjects")
+	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(soft_collision.bit)) == "SoftCollision")
 	
 	assert(ProjectSettings.get_setting("layer_names/2d_physics/layer_" + str(rope_length_limit.bit)) == "RopeLengthLimit")
 	

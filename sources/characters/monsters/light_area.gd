@@ -15,9 +15,11 @@ func light_on() -> void:
 
 
 func light_off() -> void:
-	timer.start()
+	if timer.is_stopped():
+		timer.start()
 
 
 func _on_Timer_timeout() -> void:
-	is_light_on = false
-	emit_signal("light", false)
+	if is_light_on:
+		is_light_on = false
+		emit_signal("light", false)

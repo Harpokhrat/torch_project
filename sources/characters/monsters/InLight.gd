@@ -24,7 +24,7 @@ func state_physics_process(delta: float) -> void:
 
 func light_on(value: bool) -> void:
 	if value:
-		push_error("Should not light on when in special state")
+		push_warning("Should not light on when in special state")
 	else:
 		if target_position == Vector2.ZERO:
 			transition_to("Stroll")

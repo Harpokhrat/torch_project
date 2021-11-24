@@ -296,6 +296,7 @@ unplug={
 2d_physics/layer_10="MonstersHitbox"
 2d_physics/layer_11="Plugs"
 2d_physics/layer_12="InteractiveObjects"
+2d_physics/layer_13="SoftCollision"
 2d_physics/layer_16="RopeLengthLimit"
 2d_physics/layer_17="CameraFocus"
 

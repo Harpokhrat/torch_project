@@ -6,6 +6,7 @@ export(NodePath) var path_follow_path
 
 onready var pivot: = $Pivot
 onready var sight: = $Sight
+onready var soft_collision: = $SoftCollision
 
 const step_effect_prototype: = preload("res://sources/effects/step_effect.tscn")
 
@@ -76,3 +77,11 @@ func _on_WatchArea_area_exited(_area: Area2D) -> void:
 
 func _on_LightArea_light(value) -> void:
 	state_machine.light_on(value)
+	
+
+func get_soft_collision_vector() -> Vector2:
+	var overlapping_areas = soft_collision.get_overlapping_areas()
+	if overlapping_areas.size() > 0:
+		return (global_position - overlapping_areas[0].global_position).normalized()
+	else:
+		return Vector2.ZERO

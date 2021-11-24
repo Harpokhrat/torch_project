@@ -13,12 +13,12 @@ func power(value: bool) -> void:
 
 func _process(_delta: float) -> void:
 	for light_area in detected_areas.keys():
-		detected_areas[light_area].cast_to = (light_area.global_position - global_position) * 1.1
 		var collider: Node2D = detected_areas[light_area].get_collider()
 		if collider == light_area:
 			light_area.light_on()
 		else:
 			light_area.light_off()
+		detected_areas[light_area].cast_to = (light_area.global_position - global_position) * 1.1
 
 
 func _on_LampDetection_area_entered(light_area: LightArea) -> void:

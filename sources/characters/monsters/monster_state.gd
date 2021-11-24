@@ -6,6 +6,7 @@ export(float) var friction: = 750.0
 export(float) var max_speed: = 55.0
 export(float) var rotation_speed: = 2.5
 export(float) var health_regen: = 0.1
+export(float) var soft_collision_strength: = 100
 
 # TODO: Not using Monster class because of cyclic dependency
 var monster
@@ -28,6 +29,7 @@ func state_physics_process(delta: float) -> void:
 	
 	motion.move_direction = get_move_direction()
 	motion.velocity = calculate_velocity(motion.velocity, motion.move_direction, delta)
+	motion.velocity += monster.get_soft_collision_vector() * soft_collision_strength * delta
 	motion.velocity = monster.move_and_slide(motion.velocity)
 	
 	if was_moving and motion.velocity.length() == 0.0:
@@ -101,4 +103,4 @@ func light_on(value: bool) -> void:
 	if value:
 		transition_to("InLight")
 	else:
-		push_error("Should not light off when not in special state")
+		push_warning("Should not light off when not in special state")
