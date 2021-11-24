@@ -29,7 +29,7 @@ func _ready() -> void:
 			node.player = self
 			node.motion = motion
 	
-	rope.last_particle.player_hurtbox = self
+	rope.set_player_hurtbox($RopeCollider)
 	rope.player_radius = $CollisionShape2D.shape.radius
 	
 	lamp.power(false)
