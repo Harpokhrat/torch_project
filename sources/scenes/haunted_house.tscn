@@ -1,17 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://sources/scenes/level_scene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/levels/haunted_house.tscn" type="PackedScene" id=2]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.929412, 0.929412, 0.929412, 1 )
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_color = Color( 0, 0, 0, 0.784314 )
-shadow_size = 1
-shadow_offset = Vector2( 2, 2 )
 
 [node name="HauntedHouse" instance=ExtResource( 1 )]
 
@@ -25,38 +15,3 @@ margin_bottom = 270.0
 audio_listener_enable_2d = true
 
 [node name="HauntedHouse" parent="ViewportContainer/Viewport" index="2" instance=ExtResource( 2 )]
-
-[node name="DialogBox" type="Panel" parent="." index="1"]
-visible = false
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 600.0
-margin_top = 888.0
-margin_right = 1321.0
-margin_bottom = 1038.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DialogLabel" type="RichTextLabel" parent="DialogBox" index="0"]
-margin_left = 48.0
-margin_top = 25.0
-margin_right = 671.0
-margin_bottom = 125.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/selection_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LetterTimer" type="Timer" parent="DialogBox" index="1"]
-wait_time = 0.05
-one_shot = true
-
-[node name="DialogTimer" type="Timer" parent="DialogBox" index="2"]
-one_shot = true
-
-[connection signal="timeout" from="DialogBox/LetterTimer" to="." method="_on_LetterTimer_timeout"]
-[connection signal="timeout" from="DialogBox/DialogTimer" to="." method="_on_DialogTimer_timeout"]

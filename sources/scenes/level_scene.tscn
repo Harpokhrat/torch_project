@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sources/scenes/level_scene.gd" type="Script" id=1]
 [ext_resource path="res://sources/utils/shaders/global_screen_shader.gdshader" type="Shader" id=2]
@@ -15,6 +15,16 @@ glow_levels/1 = true
 glow_levels/2 = true
 glow_levels/4 = true
 glow_hdr_threshold = 1.2
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.929412, 0.929412, 0.929412, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color( 0, 0, 0, 0.784314 )
+shadow_size = 1
+shadow_offset = Vector2( 2, 2 )
 
 [node name="LevelScene" type="Node2D"]
 script = ExtResource( 1 )
@@ -41,3 +51,39 @@ environment = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="ViewportContainer/Viewport"]
 color = Color( 0, 0, 0, 1 )
+
+[node name="DialogBox" type="Panel" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 600.0
+margin_top = 888.0
+margin_right = 1321.0
+margin_bottom = 1038.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogLabel" type="RichTextLabel" parent="DialogBox"]
+margin_left = 48.0
+margin_top = 25.0
+margin_right = 671.0
+margin_bottom = 125.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LetterTimer" type="Timer" parent="DialogBox"]
+wait_time = 0.05
+one_shot = true
+
+[node name="DialogTimer" type="Timer" parent="DialogBox"]
+wait_time = 2.5
+one_shot = true
+
+[connection signal="timeout" from="DialogBox/LetterTimer" to="." method="_on_LetterTimer_timeout"]
+[connection signal="timeout" from="DialogBox/DialogTimer" to="." method="_on_DialogTimer_timeout"]
