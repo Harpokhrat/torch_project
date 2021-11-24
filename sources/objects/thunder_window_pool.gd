@@ -41,7 +41,8 @@ func _randomize_thunder() -> void:
 	thunder.volume_db = volume
 	thunder.stream = audio_stream
 	
-	timer.start(rand_range(3, 8))
+	timer.start(1)
+#	timer.start(rand_range(3, 12))
 
 
 func _on_Timer_timeout() -> void:
