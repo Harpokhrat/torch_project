@@ -56,7 +56,7 @@ func interact() -> void:
 	
 	if interactive_objects.size() != 0:
 		var ind: = nearest(interactive_objects)
-		interactive_objects[ind].interact()
+		interactive_objects[ind].interact(player)
 
 
 func nearest(list: Array) -> int:

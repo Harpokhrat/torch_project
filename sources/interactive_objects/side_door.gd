@@ -8,7 +8,7 @@ onready var occluder: = $LightOccluder2D
 var closed: = true
 
 
-func interact(_player: Player) -> void:
+func interact(_player: Node2D) -> void:
 	if closed:
 		closed = false
 		sprite.frame = 1
