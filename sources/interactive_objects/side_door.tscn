@@ -43,3 +43,7 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightCollider" index="0"]
 position = Vector2( -9.5, -8.5 )
 shape = SubResource( 4 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="5"]
+position = Vector2( -9.5, -27 )
+scale = Vector2( 0.95, 2.7 )

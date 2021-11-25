@@ -469,6 +469,11 @@ visible = false
 width = 3.0
 script = SubResource( 30 )
 
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="12"]
+visible = false
+position = Vector2( -7.62939e-06, -7.62939e-06 )
+scale = Vector2( 25.6, 25.6 )
+
 [connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
 [connection signal="light" from="LightArea" to="StateMachine/Inspect" method="_on_LightArea_light"]
 [connection signal="timeout" from="LightArea/Timer" to="LightArea" method="_on_Timer_timeout"]
