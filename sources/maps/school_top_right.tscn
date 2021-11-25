@@ -270,7 +270,7 @@ position = Vector2( 2019, 2527 )
 [node name="RopeColliders" type="Node2D" parent="." index="5"]
 
 [node name="RopeCollider1" type="Area2D" parent="RopeColliders" index="0"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider1" index="0"]
@@ -278,7 +278,7 @@ position = Vector2( 504, -97 )
 shape = SubResource( 1 )
 
 [node name="RopeCollider2" type="Area2D" parent="RopeColliders" index="1"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider2" index="0"]
@@ -286,7 +286,7 @@ position = Vector2( 342, 33 )
 shape = SubResource( 2 )
 
 [node name="RopeCollider3" type="Area2D" parent="RopeColliders" index="2"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider3" index="0"]
@@ -294,7 +294,7 @@ position = Vector2( 702, 33 )
 shape = SubResource( 3 )
 
 [node name="RopeCollider4" type="Area2D" parent="RopeColliders" index="3"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider4" index="0"]
@@ -302,7 +302,7 @@ position = Vector2( 810, -148.5 )
 shape = SubResource( 4 )
 
 [node name="RopeCollider5" type="Area2D" parent="RopeColliders" index="4"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider5" index="0"]
@@ -310,7 +310,7 @@ position = Vector2( 1074, -37 )
 shape = SubResource( 5 )
 
 [node name="RopeCollider6" type="Area2D" parent="RopeColliders" index="5"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider6" index="0"]
@@ -318,7 +318,7 @@ position = Vector2( 954, 105 )
 shape = SubResource( 6 )
 
 [node name="RopeCollider7" type="Area2D" parent="RopeColliders" index="6"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider7" index="0"]
@@ -326,7 +326,7 @@ position = Vector2( 1300, 127.5 )
 shape = SubResource( 7 )
 
 [node name="RopeCollider8" type="Area2D" parent="RopeColliders" index="7"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider8" index="0"]
@@ -334,7 +334,7 @@ position = Vector2( 1115, 231 )
 shape = SubResource( 8 )
 
 [node name="RopeCollider9" type="Area2D" parent="RopeColliders" index="8"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider9" index="0"]
@@ -342,7 +342,7 @@ position = Vector2( 954, 303 )
 shape = SubResource( 9 )
 
 [node name="RopeCollider10" type="Area2D" parent="RopeColliders" index="9"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider10" index="0"]
@@ -350,7 +350,7 @@ position = Vector2( 1197, 396 )
 shape = SubResource( 10 )
 
 [node name="RopeCollider11" type="Area2D" parent="RopeColliders" index="10"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider11" index="0"]
@@ -358,7 +358,7 @@ position = Vector2( 954, 528 )
 shape = SubResource( 11 )
 
 [node name="RopeCollider12" type="Area2D" parent="RopeColliders" index="11"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider12" index="0"]
@@ -366,7 +366,7 @@ position = Vector2( 1587.5, 561 )
 shape = SubResource( 12 )
 
 [node name="RopeCollider13" type="Area2D" parent="RopeColliders" index="12"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider13" index="0"]
@@ -374,7 +374,7 @@ position = Vector2( 954, 786 )
 shape = SubResource( 13 )
 
 [node name="RopeCollider14" type="Area2D" parent="RopeColliders" index="13"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider14" index="0"]
@@ -382,7 +382,7 @@ position = Vector2( 1098, 890.5 )
 shape = SubResource( 14 )
 
 [node name="RopeCollider15" type="Area2D" parent="RopeColliders" index="14"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider15" index="0"]
@@ -390,7 +390,7 @@ position = Vector2( 1206, 726 )
 shape = SubResource( 15 )
 
 [node name="RopeCollider16" type="Area2D" parent="RopeColliders" index="15"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider16" index="0"]
@@ -398,7 +398,7 @@ position = Vector2( 1404, 891 )
 shape = SubResource( 16 )
 
 [node name="RopeCollider17" type="Area2D" parent="RopeColliders" index="16"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider17" index="0"]
@@ -406,7 +406,7 @@ position = Vector2( 1458, 726 )
 shape = SubResource( 17 )
 
 [node name="RopeCollider20" type="Area2D" parent="RopeColliders" index="17"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider20" index="0"]
@@ -414,7 +414,7 @@ position = Vector2( 1710, 726 )
 shape = SubResource( 17 )
 
 [node name="RopeCollider21" type="Area2D" parent="RopeColliders" index="18"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider21" index="0"]
@@ -422,7 +422,7 @@ position = Vector2( 1962, 726 )
 shape = SubResource( 17 )
 
 [node name="RopeCollider18" type="Area2D" parent="RopeColliders" index="19"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider18" index="0"]
@@ -430,7 +430,7 @@ position = Vector2( 1691.5, 891 )
 shape = SubResource( 18 )
 
 [node name="RopeCollider19" type="Area2D" parent="RopeColliders" index="20"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider19" index="0"]
@@ -438,7 +438,7 @@ position = Vector2( 1998, 891 )
 shape = SubResource( 19 )
 
 [node name="RopeCollider22" type="Area2D" parent="RopeColliders" index="21"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider22" index="0"]
@@ -446,7 +446,7 @@ position = Vector2( 2204, 726 )
 shape = SubResource( 20 )
 
 [node name="RopeCollider23" type="Area2D" parent="RopeColliders" index="22"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider23" index="0"]
@@ -454,7 +454,7 @@ position = Vector2( 2262, 891 )
 shape = SubResource( 21 )
 
 [node name="RopeCollider24" type="Area2D" parent="RopeColliders" index="23"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider24" index="0"]
@@ -462,7 +462,7 @@ position = Vector2( 2394, 1058.5 )
 shape = SubResource( 22 )
 
 [node name="RopeCollider25" type="Area2D" parent="RopeColliders" index="24"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider25" index="0"]
@@ -470,7 +470,7 @@ position = Vector2( 2523, 1118 )
 shape = SubResource( 23 )
 
 [node name="RopeCollider26" type="Area2D" parent="RopeColliders" index="25"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider26" index="0"]
@@ -478,7 +478,7 @@ position = Vector2( 2632, 1749 )
 shape = SubResource( 24 )
 
 [node name="RopeCollider27" type="Area2D" parent="RopeColliders" index="26"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider27" index="0"]
@@ -486,7 +486,7 @@ position = Vector2( 2394, 1386 )
 shape = SubResource( 25 )
 
 [node name="RopeCollider34" type="Area2D" parent="RopeColliders" index="27"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider34" index="0"]
@@ -495,7 +495,7 @@ shape = SubResource( 25 )
 
 [node name="RopeCollider35" type="Area2D" parent="RopeColliders" index="28"]
 position = Vector2( -180, 1 )
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider35" index="0"]
@@ -503,7 +503,7 @@ position = Vector2( 2394, 2111 )
 shape = SubResource( 25 )
 
 [node name="RopeCollider29" type="Area2D" parent="RopeColliders" index="29"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider29" index="0"]
@@ -511,7 +511,7 @@ position = Vector2( 2214, 1386 )
 shape = SubResource( 25 )
 
 [node name="RopeCollider28" type="Area2D" parent="RopeColliders" index="30"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider28" index="0"]
@@ -519,7 +519,7 @@ position = Vector2( 2520, 1419 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider40" type="Area2D" parent="RopeColliders" index="31"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider40" index="0"]
@@ -527,7 +527,7 @@ position = Vector2( 2088, 1419 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider41" type="Area2D" parent="RopeColliders" index="32"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider41" index="0"]
@@ -535,7 +535,7 @@ position = Vector2( 2088, 1749 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider42" type="Area2D" parent="RopeColliders" index="33"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider42" index="0"]
@@ -543,7 +543,7 @@ position = Vector2( 2088, 2079 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider32" type="Area2D" parent="RopeColliders" index="34"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider32" index="0"]
@@ -551,7 +551,7 @@ position = Vector2( 2520, 1749 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider33" type="Area2D" parent="RopeColliders" index="35"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider33" index="0"]
@@ -559,7 +559,7 @@ position = Vector2( 2520, 2079 )
 shape = SubResource( 26 )
 
 [node name="RopeCollider30" type="Area2D" parent="RopeColliders" index="36"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider30" index="0"]
@@ -567,7 +567,7 @@ position = Vector2( 2394, 1749 )
 shape = SubResource( 27 )
 
 [node name="RopeCollider36" type="Area2D" parent="RopeColliders" index="37"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider36" index="0"]
@@ -575,7 +575,7 @@ position = Vector2( 2214, 1749 )
 shape = SubResource( 27 )
 
 [node name="RopeCollider31" type="Area2D" parent="RopeColliders" index="38"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider31" index="0"]
@@ -583,7 +583,7 @@ position = Vector2( 1818, 1089 )
 shape = SubResource( 28 )
 
 [node name="RopeCollider37" type="Area2D" parent="RopeColliders" index="39"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider37" index="0"]
@@ -591,7 +591,7 @@ position = Vector2( 2214, 1161 )
 shape = SubResource( 29 )
 
 [node name="RopeCollider38" type="Area2D" parent="RopeColliders" index="40"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider38" index="0"]
@@ -599,7 +599,7 @@ position = Vector2( 1962, 1749 )
 shape = SubResource( 30 )
 
 [node name="RopeCollider39" type="Area2D" parent="RopeColliders" index="41"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider39" index="0"]
@@ -607,7 +607,7 @@ position = Vector2( 2506.5, 2469 )
 shape = SubResource( 31 )
 
 [node name="RopeCollider43" type="Area2D" parent="RopeColliders" index="42"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider43" index="0"]
@@ -615,7 +615,7 @@ position = Vector2( 2394, 2337 )
 shape = SubResource( 32 )
 
 [node name="RopeCollider45" type="Area2D" parent="RopeColliders" index="43"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider45" index="0"]
@@ -623,7 +623,7 @@ position = Vector2( 2214, 2337 )
 shape = SubResource( 32 )
 
 [node name="RopeCollider44" type="Area2D" parent="RopeColliders" index="44"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider44" index="0"]
@@ -631,7 +631,7 @@ position = Vector2( 1818, 2409 )
 shape = SubResource( 33 )
 
 [node name="RopeCollider46" type="Area2D" parent="RopeColliders" index="45"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider46" index="0"]
@@ -639,7 +639,7 @@ position = Vector2( 2269.5, 2607 )
 shape = SubResource( 34 )
 
 [node name="RopeCollider47" type="Area2D" parent="RopeColliders" index="46"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider47" index="0"]
@@ -647,7 +647,7 @@ position = Vector2( 2214, 2772 )
 shape = SubResource( 35 )
 
 [node name="RopeCollider50" type="Area2D" parent="RopeColliders" index="47"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider50" index="0"]
@@ -655,7 +655,7 @@ position = Vector2( 1962, 2772 )
 shape = SubResource( 35 )
 
 [node name="RopeCollider53" type="Area2D" parent="RopeColliders" index="48"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider53" index="0"]
@@ -663,7 +663,7 @@ position = Vector2( 1710, 2771 )
 shape = SubResource( 35 )
 
 [node name="RopeCollider54" type="Area2D" parent="RopeColliders" index="49"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider54" index="0"]
@@ -671,7 +671,7 @@ position = Vector2( 1458, 2772 )
 shape = SubResource( 35 )
 
 [node name="RopeCollider55" type="Area2D" parent="RopeColliders" index="50"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider55" index="0"]
@@ -680,7 +680,7 @@ scale = Vector2( 0.996635, 1 )
 shape = SubResource( 35 )
 
 [node name="RopeCollider48" type="Area2D" parent="RopeColliders" index="51"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider48" index="0"]
@@ -688,7 +688,7 @@ position = Vector2( 1692.5, 3102 )
 shape = SubResource( 36 )
 
 [node name="RopeCollider49" type="Area2D" parent="RopeColliders" index="52"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider49" index="0"]
@@ -696,7 +696,7 @@ position = Vector2( 2016, 2607 )
 shape = SubResource( 37 )
 
 [node name="RopeCollider51" type="Area2D" parent="RopeColliders" index="53"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider51" index="0"]
@@ -704,7 +704,7 @@ position = Vector2( 1710, 2607 )
 shape = SubResource( 38 )
 
 [node name="RopeCollider52" type="Area2D" parent="RopeColliders" index="54"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider52" index="0"]
@@ -712,7 +712,7 @@ position = Vector2( 1404, 2607 )
 shape = SubResource( 39 )
 
 [node name="RopeCollider56" type="Area2D" parent="RopeColliders" index="55"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider56" index="0"]
@@ -720,7 +720,7 @@ position = Vector2( 1122, 2607 )
 shape = SubResource( 40 )
 
 [node name="RopeCollider57" type="Area2D" parent="RopeColliders" index="56"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider57" index="0"]
@@ -728,7 +728,7 @@ position = Vector2( 954, 2673 )
 shape = SubResource( 41 )
 
 [node name="RopeCollider58" type="Area2D" parent="RopeColliders" index="57"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider58" index="0"]
@@ -736,7 +736,7 @@ position = Vector2( 1080, 2937 )
 shape = SubResource( 42 )
 
 [node name="RopeCollider60" type="Area2D" parent="RopeColliders" index="58"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider60" index="0"]
@@ -744,7 +744,7 @@ position = Vector2( 1080, 3267 )
 shape = SubResource( 42 )
 
 [node name="RopeCollider59" type="Area2D" parent="RopeColliders" index="59"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider59" index="0"]
@@ -752,7 +752,7 @@ position = Vector2( 954, 2970 )
 shape = SubResource( 43 )
 
 [node name="RopeCollider61" type="Area2D" parent="RopeColliders" index="60"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider61" index="0"]
@@ -760,7 +760,7 @@ position = Vector2( 954, 3234 )
 shape = SubResource( 44 )
 
 [node name="RopeCollider62" type="Area2D" parent="RopeColliders" index="61"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider62" index="0"]
@@ -768,7 +768,7 @@ position = Vector2( 1300, 3366 )
 shape = SubResource( 45 )
 
 [node name="RopeCollider63" type="Area2D" parent="RopeColliders" index="62"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider63" index="0"]
@@ -776,7 +776,7 @@ position = Vector2( 706, 3436 )
 shape = SubResource( 46 )
 
 [node name="RopeCollider64" type="Area2D" parent="RopeColliders" index="63"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider64" index="0"]
@@ -784,7 +784,7 @@ position = Vector2( 954, 3393 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider67" type="Area2D" parent="RopeColliders" index="64"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider67" index="0"]
@@ -792,7 +792,7 @@ position = Vector2( 774, 3195 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider68" type="Area2D" parent="RopeColliders" index="65"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider68" index="0"]
@@ -800,7 +800,7 @@ position = Vector2( 270, 3195 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider71" type="Area2D" parent="RopeColliders" index="66"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider71" index="0"]
@@ -808,7 +808,7 @@ position = Vector2( 90, 3195 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider69" type="Area2D" parent="RopeColliders" index="67"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider69" index="0"]
@@ -816,7 +816,7 @@ position = Vector2( 774, 2865 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider70" type="Area2D" parent="RopeColliders" index="68"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider70" index="0"]
@@ -824,7 +824,7 @@ position = Vector2( 270, 2865 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider72" type="Area2D" parent="RopeColliders" index="69"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider72" index="0"]
@@ -832,7 +832,7 @@ position = Vector2( 90, 2865 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider73" type="Area2D" parent="RopeColliders" index="70"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider73" index="0"]
@@ -840,7 +840,7 @@ position = Vector2( 270, 2535 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider74" type="Area2D" parent="RopeColliders" index="71"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider74" index="0"]
@@ -848,7 +848,7 @@ position = Vector2( 90, 2535 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider81" type="Area2D" parent="RopeColliders" index="72"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider81" index="0"]
@@ -856,7 +856,7 @@ position = Vector2( 270, 2205 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider82" type="Area2D" parent="RopeColliders" index="73"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider82" index="0"]
@@ -864,7 +864,7 @@ position = Vector2( 90, 2205 )
 shape = SubResource( 47 )
 
 [node name="RopeCollider75" type="Area2D" parent="RopeColliders" index="74"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider75" index="0"]
@@ -872,7 +872,7 @@ position = Vector2( 270, 1116 )
 shape = SubResource( 53 )
 
 [node name="RopeCollider76" type="Area2D" parent="RopeColliders" index="75"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider76" index="0"]
@@ -880,7 +880,7 @@ position = Vector2( 90, 1188 )
 shape = SubResource( 73 )
 
 [node name="RopeCollider77" type="Area2D" parent="RopeColliders" index="76"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider77" index="0"]
@@ -888,7 +888,7 @@ position = Vector2( 270, 786 )
 shape = SubResource( 55 )
 
 [node name="RopeCollider78" type="Area2D" parent="RopeColliders" index="77"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider78" index="0"]
@@ -896,7 +896,7 @@ position = Vector2( 90, 858 )
 shape = SubResource( 74 )
 
 [node name="RopeCollider79" type="Area2D" parent="RopeColliders" index="78"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider79" index="0"]
@@ -904,7 +904,7 @@ position = Vector2( 270, 456 )
 shape = SubResource( 57 )
 
 [node name="RopeCollider123" type="Area2D" parent="RopeColliders" index="79"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider123" index="0"]
@@ -912,7 +912,7 @@ position = Vector2( 774, 456 )
 shape = SubResource( 57 )
 
 [node name="RopeCollider80" type="Area2D" parent="RopeColliders" index="80"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider80" index="0"]
@@ -920,7 +920,7 @@ position = Vector2( 90, 528 )
 shape = SubResource( 75 )
 
 [node name="RopeCollider65" type="Area2D" parent="RopeColliders" index="81"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider65" index="0"]
@@ -928,7 +928,7 @@ position = Vector2( 522, 3267 )
 shape = SubResource( 48 )
 
 [node name="RopeCollider66" type="Area2D" parent="RopeColliders" index="82"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider66" index="0"]
@@ -936,7 +936,7 @@ position = Vector2( -12, 3331.5 )
 shape = SubResource( 49 )
 
 [node name="RopeCollider83" type="Area2D" parent="RopeColliders" index="83"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider83" index="0"]
@@ -944,7 +944,7 @@ position = Vector2( -174, 2736.5 )
 shape = SubResource( 50 )
 
 [node name="RopeCollider84" type="Area2D" parent="RopeColliders" index="84"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider84" index="0"]
@@ -952,7 +952,7 @@ position = Vector2( -12, 2937 )
 shape = SubResource( 51 )
 
 [node name="RopeCollider96" type="Area2D" parent="RopeColliders" index="85"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider96" index="0"]
@@ -960,7 +960,7 @@ position = Vector2( -12, 2607 )
 shape = SubResource( 51 )
 
 [node name="RopeCollider97" type="Area2D" parent="RopeColliders" index="86"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider97" index="0"]
@@ -968,7 +968,7 @@ position = Vector2( -12, 2277 )
 shape = SubResource( 51 )
 
 [node name="RopeCollider85" type="Area2D" parent="RopeColliders" index="87"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider85" index="0"]
@@ -976,7 +976,7 @@ position = Vector2( 90, 3042 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider87" type="Area2D" parent="RopeColliders" index="88"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider87" index="0"]
@@ -984,7 +984,7 @@ position = Vector2( 270, 3042 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider88" type="Area2D" parent="RopeColliders" index="89"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider88" index="0"]
@@ -992,7 +992,7 @@ position = Vector2( 774, 3042 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider89" type="Area2D" parent="RopeColliders" index="90"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider89" index="0"]
@@ -1000,7 +1000,7 @@ position = Vector2( 90, 2712 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider90" type="Area2D" parent="RopeColliders" index="91"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider90" index="0"]
@@ -1008,7 +1008,7 @@ position = Vector2( 270, 2712 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider92" type="Area2D" parent="RopeColliders" index="92"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider92" index="0"]
@@ -1016,7 +1016,7 @@ position = Vector2( 90, 2382 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider93" type="Area2D" parent="RopeColliders" index="93"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider93" index="0"]
@@ -1024,7 +1024,7 @@ position = Vector2( 270, 2382 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider94" type="Area2D" parent="RopeColliders" index="94"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider94" index="0"]
@@ -1032,7 +1032,7 @@ position = Vector2( 90, 1551 )
 shape = SubResource( 70 )
 
 [node name="RopeCollider95" type="Area2D" parent="RopeColliders" index="95"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider95" index="0"]
@@ -1040,7 +1040,7 @@ position = Vector2( 270, 1656 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider110" type="Area2D" parent="RopeColliders" index="96"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider110" index="0"]
@@ -1048,7 +1048,7 @@ position = Vector2( 270, 2052 )
 shape = SubResource( 52 )
 
 [node name="RopeCollider91" type="Area2D" parent="RopeColliders" index="97"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider91" index="0"]
@@ -1056,7 +1056,7 @@ position = Vector2( 774, 1749 )
 shape = SubResource( 62 )
 
 [node name="RopeCollider86" type="Area2D" parent="RopeColliders" index="98"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider86" index="0"]
@@ -1064,7 +1064,7 @@ position = Vector2( 522, 2898 )
 shape = SubResource( 59 )
 
 [node name="RopeCollider98" type="Area2D" parent="RopeColliders" index="99"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider98" index="0"]
@@ -1073,7 +1073,7 @@ rotation = 1.57079
 shape = SubResource( 60 )
 
 [node name="RopeCollider100" type="Area2D" parent="RopeColliders" index="100"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider100" index="0"]
@@ -1082,7 +1082,7 @@ rotation = 1.57079
 shape = SubResource( 60 )
 
 [node name="RopeCollider99" type="Area2D" parent="RopeColliders" index="101"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider99" index="0"]
@@ -1090,7 +1090,7 @@ position = Vector2( 1068, 2409 )
 shape = SubResource( 61 )
 
 [node name="RopeCollider102" type="Area2D" parent="RopeColliders" index="102"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider102" index="0"]
@@ -1098,7 +1098,7 @@ position = Vector2( 1068, 1089 )
 shape = SubResource( 61 )
 
 [node name="RopeCollider101" type="Area2D" parent="RopeColliders" index="103"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider101" index="0"]
@@ -1106,7 +1106,7 @@ position = Vector2( 498, 2277 )
 shape = SubResource( 63 )
 
 [node name="RopeCollider104" type="Area2D" parent="RopeColliders" index="104"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider104" index="0"]
@@ -1114,7 +1114,7 @@ position = Vector2( 498, 1947 )
 shape = SubResource( 63 )
 
 [node name="RopeCollider105" type="Area2D" parent="RopeColliders" index="105"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider105" index="0"]
@@ -1122,7 +1122,7 @@ position = Vector2( 498, 1551 )
 shape = SubResource( 63 )
 
 [node name="RopeCollider106" type="Area2D" parent="RopeColliders" index="106"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider106" index="0"]
@@ -1130,7 +1130,7 @@ position = Vector2( 498, 1221 )
 shape = SubResource( 63 )
 
 [node name="RopeCollider107" type="Area2D" parent="RopeColliders" index="107"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider107" index="0"]
@@ -1138,7 +1138,7 @@ position = Vector2( 498, 891 )
 shape = SubResource( 63 )
 
 [node name="RopeCollider103" type="Area2D" parent="RopeColliders" index="108"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider103" index="0"]
@@ -1146,7 +1146,7 @@ position = Vector2( 522, 561 )
 shape = SubResource( 64 )
 
 [node name="RopeCollider109" type="Area2D" parent="RopeColliders" index="109"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider109" index="0"]
@@ -1154,7 +1154,7 @@ position = Vector2( 522, 231 )
 shape = SubResource( 64 )
 
 [node name="RopeCollider108" type="Area2D" parent="RopeColliders" index="110"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider108" index="0"]
@@ -1162,7 +1162,7 @@ position = Vector2( 90, 1947 )
 shape = SubResource( 65 )
 
 [node name="RopeCollider111" type="Area2D" parent="RopeColliders" index="111"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider111" index="0"]
@@ -1170,7 +1170,7 @@ position = Vector2( 30, 2079 )
 shape = SubResource( 66 )
 
 [node name="RopeCollider126" type="Area2D" parent="RopeColliders" index="112"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider126" index="0"]
@@ -1178,7 +1178,7 @@ position = Vector2( 30, 1419 )
 shape = SubResource( 66 )
 
 [node name="RopeCollider112" type="Area2D" parent="RopeColliders" index="113"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider112" index="0"]
@@ -1186,7 +1186,7 @@ position = Vector2( -120, 2079 )
 shape = SubResource( 67 )
 
 [node name="RopeCollider125" type="Area2D" parent="RopeColliders" index="114"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider125" index="0"]
@@ -1194,7 +1194,7 @@ position = Vector2( -120, 1419 )
 shape = SubResource( 67 )
 
 [node name="RopeCollider113" type="Area2D" parent="RopeColliders" index="115"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider113" index="0"]
@@ -1202,7 +1202,7 @@ position = Vector2( -570, 2142.5 )
 shape = SubResource( 68 )
 
 [node name="RopeCollider124" type="Area2D" parent="RopeColliders" index="116"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider124" index="0"]
@@ -1210,7 +1210,7 @@ position = Vector2( -570, 1355.5 )
 shape = SubResource( 68 )
 
 [node name="RopeCollider114" type="Area2D" parent="RopeColliders" index="117"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider114" index="0"]
@@ -1218,7 +1218,7 @@ position = Vector2( 270, 1842 )
 shape = SubResource( 69 )
 
 [node name="RopeCollider115" type="Area2D" parent="RopeColliders" index="118"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider115" index="0"]
@@ -1226,7 +1226,7 @@ position = Vector2( 270, 1446 )
 shape = SubResource( 71 )
 
 [node name="RopeCollider116" type="Area2D" parent="RopeColliders" index="119"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider116" index="0"]
@@ -1234,7 +1234,7 @@ position = Vector2( 270, 1293 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider118" type="Area2D" parent="RopeColliders" index="120"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider118" index="0"]
@@ -1242,7 +1242,7 @@ position = Vector2( 270, 963 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider119" type="Area2D" parent="RopeColliders" index="121"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider119" index="0"]
@@ -1250,7 +1250,7 @@ position = Vector2( 270, 633 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider120" type="Area2D" parent="RopeColliders" index="122"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider120" index="0"]
@@ -1258,7 +1258,7 @@ position = Vector2( 270, 303 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider132" type="Area2D" parent="RopeColliders" index="123"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider132" index="0"]
@@ -1266,7 +1266,7 @@ position = Vector2( 90, 303 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider121" type="Area2D" parent="RopeColliders" index="124"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider121" index="0"]
@@ -1274,7 +1274,7 @@ position = Vector2( 774, 633 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider122" type="Area2D" parent="RopeColliders" index="125"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider122" index="0"]
@@ -1282,7 +1282,7 @@ position = Vector2( 774, 303 )
 shape = SubResource( 72 )
 
 [node name="RopeCollider117" type="Area2D" parent="RopeColliders" index="126"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider117" index="0"]
@@ -1290,7 +1290,7 @@ position = Vector2( -72, 1221 )
 shape = SubResource( 76 )
 
 [node name="RopeCollider127" type="Area2D" parent="RopeColliders" index="127"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider127" index="0"]
@@ -1298,7 +1298,7 @@ position = Vector2( -148, 726 )
 shape = SubResource( 77 )
 
 [node name="RopeCollider128" type="Area2D" parent="RopeColliders" index="128"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider128" index="0"]
@@ -1306,7 +1306,7 @@ position = Vector2( -36, 891 )
 shape = SubResource( 78 )
 
 [node name="RopeCollider129" type="Area2D" parent="RopeColliders" index="129"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider129" index="0"]
@@ -1314,7 +1314,7 @@ position = Vector2( -36, 561 )
 shape = SubResource( 79 )
 
 [node name="RopeCollider130" type="Area2D" parent="RopeColliders" index="130"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider130" index="0"]
@@ -1322,7 +1322,7 @@ position = Vector2( -18, 132 )
 shape = SubResource( 80 )
 
 [node name="RopeCollider131" type="Area2D" parent="RopeColliders" index="131"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider131" index="0"]
@@ -1330,7 +1330,7 @@ position = Vector2( 150, 33 )
 shape = SubResource( 81 )
 
 [node name="RopeCollider133" type="Area2D" parent="RopeColliders" index="132"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider133" index="0"]
@@ -1338,7 +1338,7 @@ position = Vector2( 522, 561 )
 shape = SubResource( 82 )
 
 [node name="RopeCollider134" type="Area2D" parent="RopeColliders" index="133"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider134" index="0"]
@@ -1346,7 +1346,7 @@ position = Vector2( -940, 1751 )
 shape = SubResource( 83 )
 
 [node name="RopeCollider135" type="Area2D" parent="RopeColliders" index="134"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider135" index="0"]
@@ -1354,7 +1354,7 @@ position = Vector2( 68, -99 )
 shape = SubResource( 84 )
 
 [node name="RopeCollider136" type="Area2D" parent="RopeColliders" index="135"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider136" index="0"]
@@ -1362,7 +1362,7 @@ position = Vector2( 155, -202 )
 shape = SubResource( 85 )
 
 [node name="RopeCollider137" type="Area2D" parent="RopeColliders" index="136"]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RopeColliders/RopeCollider137" index="0"]
