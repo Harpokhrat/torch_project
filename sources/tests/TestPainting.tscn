@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sources/objects/Painting.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sources/characters/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sources/camera/camera.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+func _ready() -> void:
+	$Player.lamp.power(true)
+
+
+func _on_LightArea_light(_value) -> void:
+	print($Painting/HitBox/CollisionShape2D.disabled)
+"
+
+[node name="TestPainting" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Painting" parent="." instance=ExtResource( 1 )]
+position = Vector2( 46, -45 )
+
+[node name="LightArea" parent="Painting" index="2"]
+input_pickable = false
+
+[node name="Camera2D2" parent="." instance=ExtResource( 3 )]
+player_path = NodePath("../Player")
+
+[connection signal="light" from="Painting/LightArea" to="." method="_on_LightArea_light"]
+
+[editable path="Painting"]
+[editable path="Painting/HitBox"]
+[editable path="Painting/LightArea"]

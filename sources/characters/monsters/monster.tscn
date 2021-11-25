@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/characters/monsters/monster.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://sources/utils/colliders/hit_box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sources/characters/monsters/stroll.gd" type="Script" id=6]
 [ext_resource path="res://sources/characters/monsters/wonder.gd" type="Script" id=7]
-[ext_resource path="res://sources/characters/monsters/light_area.gd" type="Script" id=8]
+[ext_resource path="res://sources/characters/monsters/LightArea.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sources/characters/monsters/Inspect.gd" type="Script" id=9]
 [ext_resource path="res://sources/characters/monsters/stress_area.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/monsters/InLight.gd" type="Script" id=11]
@@ -308,10 +308,6 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
-[sub_resource type="CapsuleShape2D" id=28]
-radius = 6.0
-height = 14.0
-
 [sub_resource type="CircleShape2D" id=31]
 radius = 100.0
 
@@ -388,20 +384,7 @@ cast_to = Vector2( 0, 0 )
 collision_mask = 17
 collide_with_areas = true
 
-[node name="LightArea" type="Area2D" parent="." index="7"]
-position = Vector2( 0, -2 )
-collision_layer = 512
-collision_mask = 0
-monitoring = false
-script = ExtResource( 8 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LightArea" index="0"]
-position = Vector2( 0, -11 )
-shape = SubResource( 28 )
-
-[node name="Timer" type="Timer" parent="LightArea" index="1"]
-wait_time = 2.0
-one_shot = true
+[node name="LightArea" parent="." index="7" instance=ExtResource( 8 )]
 
 [node name="StressArea" type="Area2D" parent="." index="8"]
 visible = false
@@ -469,9 +452,6 @@ visible = false
 width = 3.0
 script = SubResource( 30 )
 
-[connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
-[connection signal="light" from="LightArea" to="StateMachine/Inspect" method="_on_LightArea_light"]
-[connection signal="timeout" from="LightArea/Timer" to="LightArea" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="StressArea" to="StressArea" method="_on_StressArea_area_entered"]
 [connection signal="area_exited" from="StressArea" to="StressArea" method="_on_StressArea_area_exited"]
 [connection signal="area_entered" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_entered"]
