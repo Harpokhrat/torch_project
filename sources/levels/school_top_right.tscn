@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sources/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/maps/school_top_right.tscn" type="PackedScene" id=2]
@@ -10,10 +10,11 @@
 [ext_resource path="res://sources/objects/side_window.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sources/objects/side_plug.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sources/objects/front_plug.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sources/objects/roof_window.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 483, 152, -17.0089, -25.1984, 17.0089, 25.1984, 861, 156, 0, 0, 0, 0, 868, 405 )
+"points": PoolVector2Array( 0, 0, 0, 0, 744, 141, -17.0089, -25.1984, 17.0089, 25.1984, 861, 156, 0, 0, 0, 0, 871, 438 )
 }
 
 [node name="SchoolTopRight" instance=ExtResource( 1 )]
@@ -26,49 +27,242 @@ _data = {
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Navigation2D/Paths/Path2D" index="0"]
-position = Vector2( 483, 152 )
-rotation = -0.0570322
+position = Vector2( 744, 141 )
+rotation = -0.0896859
 
 [node name="FrontWindowPool" parent="Navigation2D/YSort" index="0" instance=ExtResource( 6 )]
 
-[node name="FrontWindow2" parent="Navigation2D/YSort/FrontWindowPool" index="3" instance=ExtResource( 7 )]
+[node name="FrontWindow2" parent="Navigation2D/YSort/FrontWindowPool" index="2" instance=ExtResource( 7 )]
 position = Vector2( 432, 90 )
 
-[node name="FrontWindow3" parent="Navigation2D/YSort/FrontWindowPool" index="4" instance=ExtResource( 7 )]
+[node name="FrontWindow3" parent="Navigation2D/YSort/FrontWindowPool" index="3" instance=ExtResource( 7 )]
 position = Vector2( 576, 90 )
 
-[node name="FrontWindow4" parent="Navigation2D/YSort/FrontWindowPool" index="5" instance=ExtResource( 7 )]
+[node name="FrontWindow4" parent="Navigation2D/YSort/FrontWindowPool" index="4" instance=ExtResource( 7 )]
 position = Vector2( 720, 90 )
+
+[node name="FrontWindow5" parent="Navigation2D/YSort/FrontWindowPool" index="5" instance=ExtResource( 7 )]
+position = Vector2( 1407, 618 )
+
+[node name="FrontWindow6" parent="Navigation2D/YSort/FrontWindowPool" index="6" instance=ExtResource( 7 )]
+position = Vector2( 1663, 618 )
+
+[node name="FrontWindow7" parent="Navigation2D/YSort/FrontWindowPool" index="7" instance=ExtResource( 7 )]
+position = Vector2( 1921, 618 )
+
+[node name="FrontWindow8" parent="Navigation2D/YSort/FrontWindowPool" index="8" instance=ExtResource( 7 )]
+position = Vector2( 2174, 618 )
+
+[node name="FrontWindow9" parent="Navigation2D/YSort/FrontWindowPool" index="9" instance=ExtResource( 7 )]
+position = Vector2( 2323, 947 )
+
+[node name="FrontWindow10" parent="Navigation2D/YSort/FrontWindowPool" index="10" instance=ExtResource( 7 )]
+position = Vector2( 275, 89 )
+
+[node name="FrontWindow11" parent="Navigation2D/YSort/FrontWindowPool" index="11" instance=ExtResource( 7 )]
+position = Vector2( 224, -174 )
+
+[node name="FrontWindow12" parent="Navigation2D/YSort/FrontWindowPool" index="12" instance=ExtResource( 7 )]
+position = Vector2( 102, -174 )
+
+[node name="FrontWindow13" parent="Navigation2D/YSort/FrontWindowPool" index="13" instance=ExtResource( 7 )]
+position = Vector2( -28, 287 )
 
 [node name="RightWindowPool" parent="Navigation2D/YSort" index="1" instance=ExtResource( 6 )]
 
-[node name="SideWindow" parent="Navigation2D/YSort/RightWindowPool" index="3" instance=ExtResource( 8 )]
+[node name="SideWindow" parent="Navigation2D/YSort/RightWindowPool" index="2" instance=ExtResource( 8 )]
 position = Vector2( 930, 234 )
 rotation = -1.5708
 
-[node name="SideWindow2" parent="Navigation2D/YSort/RightWindowPool" index="4" instance=ExtResource( 8 )]
+[node name="SideWindow2" parent="Navigation2D/YSort/RightWindowPool" index="3" instance=ExtResource( 8 )]
 position = Vector2( 858, -48 )
 rotation = -1.5708
 
-[node name="SideWindow3" parent="Navigation2D/YSort/RightWindowPool" index="5" instance=ExtResource( 8 )]
+[node name="SideWindow3" parent="Navigation2D/YSort/RightWindowPool" index="4" instance=ExtResource( 8 )]
 position = Vector2( 1290, 168 )
 rotation = -1.5708
 
-[node name="SideWindow5" parent="Navigation2D/YSort/RightWindowPool" index="6" instance=ExtResource( 8 )]
-position = Vector2( 930, 432 )
+[node name="SideWindow4" parent="Navigation2D/YSort/RightWindowPool" index="5" instance=ExtResource( 8 )]
+position = Vector2( 2370, 1005 )
 rotation = -1.5708
 
-[node name="SideWindow7" parent="Navigation2D/YSort/RightWindowPool" index="7" instance=ExtResource( 8 )]
+[node name="SideWindow6" parent="Navigation2D/YSort/RightWindowPool" index="6" instance=ExtResource( 8 )]
+position = Vector2( 2622, 1248 )
+rotation = -1.5708
+
+[node name="SideWindow8" parent="Navigation2D/YSort/RightWindowPool" index="7" instance=ExtResource( 8 )]
+position = Vector2( 2622, 1576 )
+rotation = -1.5708
+
+[node name="SideWindow9" parent="Navigation2D/YSort/RightWindowPool" index="8" instance=ExtResource( 8 )]
+position = Vector2( 2622, 1916 )
+rotation = -1.5708
+
+[node name="SideWindow10" parent="Navigation2D/YSort/RightWindowPool" index="9" instance=ExtResource( 8 )]
+position = Vector2( 2622, 2263 )
+rotation = -1.5708
+
+[node name="SideWindow11" parent="Navigation2D/YSort/RightWindowPool" index="10" instance=ExtResource( 8 )]
+position = Vector2( 2369, 2522 )
+rotation = -1.5708
+
+[node name="SideWindow12" parent="Navigation2D/YSort/RightWindowPool" index="11" instance=ExtResource( 8 )]
+position = Vector2( 2190, 2797 )
+rotation = -1.5708
+
+[node name="SideWindow13" parent="Navigation2D/YSort/RightWindowPool" index="12" instance=ExtResource( 8 )]
+position = Vector2( 1182, 3137 )
+rotation = -1.5708
+
+[node name="SideWindow14" parent="Navigation2D/YSort/RightWindowPool" index="13" instance=ExtResource( 8 )]
+position = Vector2( 1290, 3374 )
+rotation = -1.5708
+
+[node name="SideWindow5" parent="Navigation2D/YSort/RightWindowPool" index="14" instance=ExtResource( 8 )]
+position = Vector2( 930, 559 )
+rotation = -1.5708
+
+[node name="SideWindow7" parent="Navigation2D/YSort/RightWindowPool" index="15" instance=ExtResource( 8 )]
 position = Vector2( 1182, 351 )
 rotation = -1.5708
 
 [node name="LeftWindowPool" parent="Navigation2D/YSort" index="2" instance=ExtResource( 6 )]
 
-[node name="SideWindow" parent="Navigation2D/YSort/LeftWindowPool" index="3" instance=ExtResource( 8 )]
-position = Vector2( 546, 344 )
+[node name="SideWindow" parent="Navigation2D/YSort/LeftWindowPool" index="2" instance=ExtResource( 8 )]
+position = Vector2( -138, 389 )
 rotation = -4.71239
 
-[node name="Doors" type="YSort" parent="Navigation2D/YSort" index="3"]
+[node name="SideWindow4" parent="Navigation2D/YSort/LeftWindowPool" index="3" instance=ExtResource( 8 )]
+position = Vector2( 78, -98 )
+rotation = -4.71239
+
+[node name="SideWindow5" parent="Navigation2D/YSort/LeftWindowPool" index="4" instance=ExtResource( 8 )]
+position = Vector2( 114, 168 )
+rotation = -4.71239
+
+[node name="SideWindow2" parent="Navigation2D/YSort/LeftWindowPool" index="5" instance=ExtResource( 8 )]
+position = Vector2( -138, 716 )
+rotation = -4.71239
+
+[node name="SideWindow3" parent="Navigation2D/YSort/LeftWindowPool" index="6" instance=ExtResource( 8 )]
+position = Vector2( -138, 1041 )
+rotation = -4.71239
+
+[node name="SideWindow6" parent="Navigation2D/YSort/LeftWindowPool" index="7" instance=ExtResource( 8 )]
+position = Vector2( -930, 1591 )
+rotation = -4.71239
+
+[node name="SideWindow7" parent="Navigation2D/YSort/LeftWindowPool" index="8" instance=ExtResource( 8 )]
+position = Vector2( -930, 1761 )
+rotation = -4.71239
+
+[node name="SideWindow8" parent="Navigation2D/YSort/LeftWindowPool" index="9" instance=ExtResource( 8 )]
+position = Vector2( -930, 1935 )
+rotation = -4.71239
+
+[node name="SideWindow9" parent="Navigation2D/YSort/LeftWindowPool" index="10" instance=ExtResource( 8 )]
+position = Vector2( -138, 2444 )
+rotation = -4.71239
+
+[node name="SideWindow10" parent="Navigation2D/YSort/LeftWindowPool" index="11" instance=ExtResource( 8 )]
+position = Vector2( -138, 2781 )
+rotation = -4.71239
+
+[node name="SideWindow11" parent="Navigation2D/YSort/LeftWindowPool" index="12" instance=ExtResource( 8 )]
+position = Vector2( -138, 3100 )
+rotation = -4.71239
+
+[node name="SideWindow12" parent="Navigation2D/YSort/LeftWindowPool" index="13" instance=ExtResource( 8 )]
+position = Vector2( 114, 3375 )
+rotation = -4.71239
+
+[node name="RoofWindowPool" parent="Navigation2D/YSort" index="3" instance=ExtResource( 6 )]
+
+[node name="RoofWindow" parent="Navigation2D/YSort/RoofWindowPool" index="2" instance=ExtResource( 11 )]
+position = Vector2( 397, 404 )
+
+[node name="RoofWindow2" parent="Navigation2D/YSort/RoofWindowPool" index="3" instance=ExtResource( 11 )]
+position = Vector2( 646, 401 )
+
+[node name="RoofWindow3" parent="Navigation2D/YSort/RoofWindowPool" index="4" instance=ExtResource( 11 )]
+position = Vector2( 645, 735 )
+
+[node name="RoofWindow4" parent="Navigation2D/YSort/RoofWindowPool" index="5" instance=ExtResource( 11 )]
+position = Vector2( 408, 740 )
+
+[node name="RoofWindow5" parent="Navigation2D/YSort/RoofWindowPool" index="6" instance=ExtResource( 11 )]
+position = Vector2( 538, 1070 )
+
+[node name="RoofWindow6" parent="Navigation2D/YSort/RoofWindowPool" index="7" instance=ExtResource( 11 )]
+position = Vector2( 1041, 1348 )
+
+[node name="RoofWindow7" parent="Navigation2D/YSort/RoofWindowPool" index="8" instance=ExtResource( 11 )]
+position = Vector2( 1712, 1359 )
+
+[node name="RoofWindow8" parent="Navigation2D/YSort/RoofWindowPool" index="9" instance=ExtResource( 11 )]
+position = Vector2( 1043, 2102 )
+
+[node name="RoofWindow9" parent="Navigation2D/YSort/RoofWindowPool" index="10" instance=ExtResource( 11 )]
+position = Vector2( 1690, 2086 )
+
+[node name="RoofWindow10" parent="Navigation2D/YSort/RoofWindowPool" index="11" instance=ExtResource( 11 )]
+position = Vector2( 1373, 1718 )
+
+[node name="RoofWindow11" parent="Navigation2D/YSort/RoofWindowPool" index="12" instance=ExtResource( 11 )]
+position = Vector2( -676, 1771 )
+
+[node name="RoofWindow12" parent="Navigation2D/YSort/RoofWindowPool" index="13" instance=ExtResource( 11 )]
+position = Vector2( -220, 1775 )
+
+[node name="RoofWindow13" parent="Navigation2D/YSort/RoofWindowPool" index="14" instance=ExtResource( 11 )]
+position = Vector2( 525, 1394 )
+
+[node name="RoofWindow14" parent="Navigation2D/YSort/RoofWindowPool" index="15" instance=ExtResource( 11 )]
+position = Vector2( 518, 1765 )
+
+[node name="RoofWindow15" parent="Navigation2D/YSort/RoofWindowPool" index="16" instance=ExtResource( 11 )]
+position = Vector2( 525, 2118 )
+
+[node name="RoofWindow16" parent="Navigation2D/YSort/RoofWindowPool" index="17" instance=ExtResource( 11 )]
+position = Vector2( 521, 2457 )
+
+[node name="RoofWindow17" parent="Navigation2D/YSort/RoofWindowPool" index="18" instance=ExtResource( 11 )]
+position = Vector2( 404, 2789 )
+
+[node name="RoofWindow18" parent="Navigation2D/YSort/RoofWindowPool" index="19" instance=ExtResource( 11 )]
+position = Vector2( 636, 2792 )
+
+[node name="RoofWindow19" parent="Navigation2D/YSort/RoofWindowPool" index="20" instance=ExtResource( 11 )]
+position = Vector2( 401, 3118 )
+
+[node name="RoofWindow20" parent="Navigation2D/YSort/RoofWindowPool" index="21" instance=ExtResource( 11 )]
+position = Vector2( 636, 3119 )
+
+[node name="RoofWindow21" parent="Navigation2D/YSort/RoofWindowPool" index="22" instance=ExtResource( 11 )]
+position = Vector2( 1073, 2790 )
+
+[node name="RoofWindow22" parent="Navigation2D/YSort/RoofWindowPool" index="23" instance=ExtResource( 11 )]
+position = Vector2( 1332, 2786 )
+
+[node name="RoofWindow23" parent="Navigation2D/YSort/RoofWindowPool" index="24" instance=ExtResource( 11 )]
+position = Vector2( 1578, 2789 )
+
+[node name="RoofWindow24" parent="Navigation2D/YSort/RoofWindowPool" index="25" instance=ExtResource( 11 )]
+position = Vector2( 1833, 2790 )
+
+[node name="RoofWindow25" parent="Navigation2D/YSort/RoofWindowPool" index="26" instance=ExtResource( 11 )]
+position = Vector2( 2093, 2270 )
+
+[node name="RoofWindow26" parent="Navigation2D/YSort/RoofWindowPool" index="27" instance=ExtResource( 11 )]
+position = Vector2( 2092, 1939 )
+
+[node name="RoofWindow27" parent="Navigation2D/YSort/RoofWindowPool" index="28" instance=ExtResource( 11 )]
+position = Vector2( 2093, 1591 )
+
+[node name="RoofWindow28" parent="Navigation2D/YSort/RoofWindowPool" index="29" instance=ExtResource( 11 )]
+position = Vector2( 2089, 1268 )
+
+[node name="Doors" type="YSort" parent="Navigation2D/YSort" index="4"]
 
 [node name="FrontDoor" parent="Navigation2D/YSort/Doors" index="0" instance=ExtResource( 4 )]
 position = Vector2( 846, 66 )
@@ -88,7 +282,7 @@ position = Vector2( 783, 720 )
 [node name="SideDoor5" parent="Navigation2D/YSort/Doors" index="5" instance=ExtResource( 5 )]
 position = Vector2( 963, 720 )
 
-[node name="FrontPlugs" type="YSort" parent="Navigation2D/YSort" index="4"]
+[node name="FrontPlugs" type="YSort" parent="Navigation2D/YSort" index="5"]
 
 [node name="FrontPlug" parent="Navigation2D/YSort/FrontPlugs" index="0" instance=ExtResource( 10 )]
 position = Vector2( 816, 102 )
@@ -114,7 +308,7 @@ position = Vector2( 735, 631 )
 [node name="FrontPlug8" parent="Navigation2D/YSort/FrontPlugs" index="7" instance=ExtResource( 10 )]
 position = Vector2( 993, 632 )
 
-[node name="SidePlugs" type="YSort" parent="Navigation2D/YSort" index="5"]
+[node name="SidePlugs" type="YSort" parent="Navigation2D/YSort" index="6"]
 
 [node name="SidePlug" parent="Navigation2D/YSort/SidePlugs" index="0" instance=ExtResource( 9 )]
 position = Vector2( 762, -27 )
@@ -126,29 +320,77 @@ position = Vector2( 798, 288 )
 position = Vector2( 1083, 852 )
 rotation = -1.57079
 
-[node name="SidePlug4" parent="Navigation2D/YSort/SidePlugs" index="3" instance=ExtResource( 9 )]
+[node name="SidePlug6" parent="Navigation2D/YSort/SidePlugs" index="3" instance=ExtResource( 9 )]
+position = Vector2( 1346, 852 )
+rotation = -1.57079
+
+[node name="SidePlug7" parent="Navigation2D/YSort/SidePlugs" index="4" instance=ExtResource( 9 )]
+position = Vector2( 1611, 852 )
+rotation = -1.57079
+
+[node name="SidePlug8" parent="Navigation2D/YSort/SidePlugs" index="5" instance=ExtResource( 9 )]
+position = Vector2( 1806, 852 )
+rotation = -1.57079
+
+[node name="SidePlug9" parent="Navigation2D/YSort/SidePlugs" index="6" instance=ExtResource( 9 )]
+position = Vector2( 2072, 852 )
+rotation = -1.57079
+
+[node name="SidePlug10" parent="Navigation2D/YSort/SidePlugs" index="7" instance=ExtResource( 9 )]
+position = Vector2( 1976, 1050 )
+rotation = -1.57079
+
+[node name="SidePlug4" parent="Navigation2D/YSort/SidePlugs" index="8" instance=ExtResource( 9 )]
 position = Vector2( 930, 744 )
 rotation = -3.14159
 
-[node name="SidePlug5" parent="Navigation2D/YSort/SidePlugs" index="4" instance=ExtResource( 9 )]
+[node name="SidePlug5" parent="Navigation2D/YSort/SidePlugs" index="9" instance=ExtResource( 9 )]
 position = Vector2( 799, 536 )
 
-[node name="Player" parent="Navigation2D/YSort" index="6"]
+[node name="Player" parent="Navigation2D/YSort" index="7"]
 position = Vector2( 793, -36 )
 
-[node name="Monster" parent="Navigation2D/YSort" index="7" instance=ExtResource( 3 )]
+[node name="Monster" parent="Navigation2D/YSort" index="8" instance=ExtResource( 3 )]
 position = Vector2( 824, 158 )
 navigation_path = NodePath("../..")
 path_follow_path = NodePath("../../Paths/Path2D/PathFollow2D")
 
-[node name="Monster2" parent="Navigation2D/YSort" index="8" instance=ExtResource( 3 )]
+[node name="Monster2" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
 position = Vector2( 1140, 161 )
 navigation_path = NodePath("../..")
 
-[node name="Monster3" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
+[node name="Monster3" parent="Navigation2D/YSort" index="10" instance=ExtResource( 3 )]
 position = Vector2( 1073, 414 )
 navigation_path = NodePath("../..")
 
-[node name="Monster4" parent="Navigation2D/YSort" index="10" instance=ExtResource( 3 )]
+[node name="Monster4" parent="Navigation2D/YSort" index="11" instance=ExtResource( 3 )]
 position = Vector2( 637, 736 )
+navigation_path = NodePath("../..")
+
+[node name="Monster5" parent="Navigation2D/YSort" index="12" instance=ExtResource( 3 )]
+position = Vector2( 850, 962 )
+navigation_path = NodePath("../..")
+
+[node name="Monster6" parent="Navigation2D/YSort" index="13" instance=ExtResource( 3 )]
+position = Vector2( 899, 999 )
+navigation_path = NodePath("../..")
+
+[node name="Monster7" parent="Navigation2D/YSort" index="14" instance=ExtResource( 3 )]
+position = Vector2( 828, 1026 )
+navigation_path = NodePath("../..")
+
+[node name="Monster8" parent="Navigation2D/YSort" index="15" instance=ExtResource( 3 )]
+position = Vector2( 978, 1000 )
+navigation_path = NodePath("../..")
+
+[node name="Monster10" parent="Navigation2D/YSort" index="16" instance=ExtResource( 3 )]
+position = Vector2( 895, 925 )
+navigation_path = NodePath("../..")
+
+[node name="Monster11" parent="Navigation2D/YSort" index="17" instance=ExtResource( 3 )]
+position = Vector2( 936, 1036 )
+navigation_path = NodePath("../..")
+
+[node name="Monster9" parent="Navigation2D/YSort" index="18" instance=ExtResource( 3 )]
+position = Vector2( 829, 906 )
 navigation_path = NodePath("../..")
