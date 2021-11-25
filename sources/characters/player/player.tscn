@@ -592,7 +592,8 @@ one_shot = true
 [node name="Light2D" type="Light2D" parent="." index="7"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
-energy = 0.5
+texture_scale = 1.5
+energy = 0.6
 mode = 2
 
 [node name="Lamp" type="Node2D" parent="." index="8"]
@@ -614,6 +615,7 @@ collision_mask = 512
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lamp/LampFlare/LampDetection" index="0"]
+visible = false
 polygon = PoolVector2Array( 0, 0, 56, -104, 80, -80, 96, -56, 104, -32, 107, 0, 104, 32, 96, 56, 80, 80, 56, 104 )
 
 [node name="PlugDetectionArea" type="Area2D" parent="." index="9"]
