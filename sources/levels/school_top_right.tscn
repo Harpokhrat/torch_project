@@ -82,6 +82,12 @@ position = Vector2( 966, 390 )
 [node name="SideDoor3" parent="Navigation2D/YSort/Doors" index="3" instance=ExtResource( 5 )]
 position = Vector2( 784, 390 )
 
+[node name="SideDoor4" parent="Navigation2D/YSort/Doors" index="4" instance=ExtResource( 5 )]
+position = Vector2( 783, 720 )
+
+[node name="SideDoor5" parent="Navigation2D/YSort/Doors" index="5" instance=ExtResource( 5 )]
+position = Vector2( 963, 720 )
+
 [node name="FrontPlugs" type="YSort" parent="Navigation2D/YSort" index="4"]
 
 [node name="FrontPlug" parent="Navigation2D/YSort/FrontPlugs" index="0" instance=ExtResource( 10 )]
@@ -102,6 +108,12 @@ position = Vector2( 618, 102 )
 [node name="FrontPlug6" parent="Navigation2D/YSort/FrontPlugs" index="5" instance=ExtResource( 10 )]
 position = Vector2( 474, 102 )
 
+[node name="FrontPlug7" parent="Navigation2D/YSort/FrontPlugs" index="6" instance=ExtResource( 10 )]
+position = Vector2( 735, 631 )
+
+[node name="FrontPlug8" parent="Navigation2D/YSort/FrontPlugs" index="7" instance=ExtResource( 10 )]
+position = Vector2( 993, 632 )
+
 [node name="SidePlugs" type="YSort" parent="Navigation2D/YSort" index="5"]
 
 [node name="SidePlug" parent="Navigation2D/YSort/SidePlugs" index="0" instance=ExtResource( 9 )]
@@ -111,8 +123,15 @@ position = Vector2( 762, -27 )
 position = Vector2( 798, 288 )
 
 [node name="SidePlug3" parent="Navigation2D/YSort/SidePlugs" index="2" instance=ExtResource( 9 )]
-position = Vector2( 1080, 522 )
+position = Vector2( 1083, 852 )
 rotation = -1.57079
+
+[node name="SidePlug4" parent="Navigation2D/YSort/SidePlugs" index="3" instance=ExtResource( 9 )]
+position = Vector2( 930, 744 )
+rotation = -3.14159
+
+[node name="SidePlug5" parent="Navigation2D/YSort/SidePlugs" index="4" instance=ExtResource( 9 )]
+position = Vector2( 799, 536 )
 
 [node name="Player" parent="Navigation2D/YSort" index="6"]
 position = Vector2( 793, -36 )
@@ -127,5 +146,9 @@ position = Vector2( 1140, 161 )
 navigation_path = NodePath("../..")
 
 [node name="Monster3" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
-position = Vector2( 637, 422 )
+position = Vector2( 1073, 414 )
+navigation_path = NodePath("../..")
+
+[node name="Monster4" parent="Navigation2D/YSort" index="10" instance=ExtResource( 3 )]
+position = Vector2( 637, 736 )
 navigation_path = NodePath("../..")
