@@ -10,6 +10,7 @@ func _process(_delta: float) -> void:
 		var norm_distance: float = distance / area.stress_range
 		var range_factor: = 1.0 - pow(norm_distance, 5.0)
 		stress_level += range_factor * area.stress_value
+		stress_level = clamp(stress_level, 0.0, 3.0)
 	
 	if _globals.viewport_container:
 		_globals.viewport_container.material.set_shader_param("stress_amount", stress_level)
