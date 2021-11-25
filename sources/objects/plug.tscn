@@ -54,3 +54,7 @@ volume_db = 5.0
 autoplay = true
 max_distance = 200.0
 attenuation = 2.37841
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -9.53674e-07, -9.53674e-07 )
+scale = Vector2( 1.6, 1.6 )

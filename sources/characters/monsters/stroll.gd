@@ -1,6 +1,6 @@
 extends MonsterState
 
-export(float) var stroll_distance: = 150.0
+export(float) var stroll_distance: = 50.0
 
 onready var timer: = $Timer
 
