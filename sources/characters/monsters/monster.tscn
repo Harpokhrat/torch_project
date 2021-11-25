@@ -457,9 +457,6 @@ visible = false
 position = Vector2( -7.62939e-06, -7.62939e-06 )
 scale = Vector2( 25.6, 25.6 )
 
-[connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
-[connection signal="light" from="LightArea" to="StateMachine/Inspect" method="_on_LightArea_light"]
-[connection signal="timeout" from="LightArea/Timer" to="LightArea" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="StressArea" to="StressArea" method="_on_StressArea_area_entered"]
 [connection signal="area_exited" from="StressArea" to="StressArea" method="_on_StressArea_area_exited"]
 [connection signal="area_entered" from="Pivot/WatchArea" to="." method="_on_WatchArea_area_entered"]
