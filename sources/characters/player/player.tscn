@@ -592,8 +592,7 @@ one_shot = true
 [node name="Light2D" type="Light2D" parent="." index="7"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
-texture_scale = 1.5
-energy = 0.6
+energy = 0.3
 mode = 2
 
 [node name="Lamp" type="Node2D" parent="." index="8"]
@@ -603,6 +602,7 @@ script = ExtResource( 9 )
 [node name="LampFlare" type="Light2D" parent="Lamp" index="0"]
 texture = ExtResource( 13 )
 offset = Vector2( 0, -13 )
+mode = 2
 range_item_cull_mask = 3
 shadow_enabled = true
 shadow_filter = 5
