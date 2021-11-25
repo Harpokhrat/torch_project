@@ -18,16 +18,16 @@
 extents = Vector2( 12, 11.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 41 )
+extents = Vector2( 30.25, 41 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10.5, 41 )
+extents = Vector2( 42, 41 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10.25, 41 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 66, 12.5 )
+extents = Vector2( 66, 36 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 47.5, 33 )
@@ -59,7 +59,7 @@ flags = {
 }
 
 [node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea2" index="0"]
-position = Vector2( -2.5, 29 )
+position = Vector2( 17.75, 29 )
 shape = SubResource( 3 )
 
 [node name="DialogArea3" parent="Navigation2D/Dialogs" index="2" instance=ExtResource( 12 )]
@@ -67,7 +67,7 @@ position = Vector2( 2090, 2528 )
 dialog = "Well, shit... Maybe I can find a way in the library somewhere."
 
 [node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea3" index="0"]
-position = Vector2( -0.5, -1 )
+position = Vector2( 31, -1 )
 shape = SubResource( 4 )
 
 [node name="DialogArea4" parent="Navigation2D/Dialogs" index="3" instance=ExtResource( 12 )]
@@ -89,7 +89,7 @@ flags = {
 }
 
 [node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea5" index="0"]
-position = Vector2( 52, -48.5 )
+position = Vector2( 52, -25 )
 shape = SubResource( 7 )
 
 [node name="DialogArea6" parent="Navigation2D/Dialogs" index="5" instance=ExtResource( 12 )]
@@ -479,27 +479,11 @@ navigation_path = NodePath("../..")
 position = Vector2( 850, 962 )
 navigation_path = NodePath("../..")
 
-[node name="Monster6" parent="Navigation2D/YSort" index="13" instance=ExtResource( 3 )]
-position = Vector2( 899, 999 )
-navigation_path = NodePath("../..")
-
-[node name="Monster7" parent="Navigation2D/YSort" index="14" instance=ExtResource( 3 )]
-position = Vector2( 828, 1026 )
-navigation_path = NodePath("../..")
-
-[node name="Monster8" parent="Navigation2D/YSort" index="15" instance=ExtResource( 3 )]
-position = Vector2( 978, 1000 )
-navigation_path = NodePath("../..")
-
-[node name="Monster10" parent="Navigation2D/YSort" index="16" instance=ExtResource( 3 )]
+[node name="Monster10" parent="Navigation2D/YSort" index="13" instance=ExtResource( 3 )]
 position = Vector2( 895, 925 )
 navigation_path = NodePath("../..")
 
-[node name="Monster11" parent="Navigation2D/YSort" index="17" instance=ExtResource( 3 )]
-position = Vector2( 936, 1036 )
-navigation_path = NodePath("../..")
-
-[node name="Monster9" parent="Navigation2D/YSort" index="18" instance=ExtResource( 3 )]
+[node name="Monster9" parent="Navigation2D/YSort" index="14" instance=ExtResource( 3 )]
 position = Vector2( 829, 906 )
 navigation_path = NodePath("../..")
 
