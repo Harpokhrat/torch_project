@@ -3,7 +3,7 @@ class_name DialogArea
 
 export(String) var dialog: = ""
 export(Dictionary) var flags: = {"center": ""}
-export(bool) var one_shoot: = false
+export(bool) var one_shoot: = true
 
 
 func _on_DialogArea_body_entered(player: Player) -> void:
