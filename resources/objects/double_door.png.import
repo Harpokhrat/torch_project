@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window2.png-e436ae2aa62c9de954b2d361790fa11f.stex"
+path="res://.import/double_door.png-37e8589bd316a339c1cddee6cf496248.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/objects/window2.png"
-dest_files=[ "res://.import/window2.png-e436ae2aa62c9de954b2d361790fa11f.stex" ]
+source_file="res://resources/objects/double_door.png"
+dest_files=[ "res://.import/double_door.png-37e8589bd316a339c1cddee6cf496248.stex" ]
 
 [params]
 

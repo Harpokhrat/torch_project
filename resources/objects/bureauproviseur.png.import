@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window3.png-83c94b6a0e3f0524771bf94569afe7f3.stex"
+path="res://.import/bureauproviseur.png-a8d0677f1bbc9cabd938c7bfe8b927e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/objects/window3.png"
-dest_files=[ "res://.import/window3.png-83c94b6a0e3f0524771bf94569afe7f3.stex" ]
+source_file="res://resources/objects/bureauproviseur.png"
+dest_files=[ "res://.import/bureauproviseur.png-a8d0677f1bbc9cabd938c7bfe8b927e6.stex" ]
 
 [params]
 

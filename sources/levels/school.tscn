@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://sources/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/maps/school.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://sources/interactive_objects/front_locked_door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sources/interactive_objects/side_locked_door.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sources/checkpoint/checkpoint.tscn" type="PackedScene" id=16]
+[ext_resource path="res://resources/objects/basketballcourt.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 11.5 )
@@ -42,9 +43,14 @@ _data = {
 
 [node name="School" instance=ExtResource( 1 )]
 
-[node name="School" parent="Navigation2D" index="0" instance=ExtResource( 2 )]
+[node name="Gym" type="Sprite" parent="Navigation2D" index="0"]
+position = Vector2( -432, 1768 )
+scale = Vector2( 1.55313, 1.51111 )
+texture = ExtResource( 17 )
 
-[node name="Dialogs" type="Node2D" parent="Navigation2D" index="1"]
+[node name="School" parent="Navigation2D" index="1" instance=ExtResource( 2 )]
+
+[node name="Dialogs" type="Node2D" parent="Navigation2D" index="2"]
 
 [node name="DialogArea" parent="Navigation2D/Dialogs" index="0" instance=ExtResource( 12 )]
 position = Vector2( 846, 16 )
@@ -106,7 +112,7 @@ flags = {
 position = Vector2( 4.5, 22 )
 shape = SubResource( 6 )
 
-[node name="Paths" type="Node2D" parent="Navigation2D" index="2"]
+[node name="Paths" type="Node2D" parent="Navigation2D" index="3"]
 
 [node name="Path2D" type="Path2D" parent="Navigation2D/Paths" index="0"]
 curve = SubResource( 1 )
@@ -115,7 +121,7 @@ curve = SubResource( 1 )
 position = Vector2( 744, 141 )
 rotation = -0.0896859
 
-[node name="Passages" type="Node2D" parent="Navigation2D" index="3"]
+[node name="Passages" type="Node2D" parent="Navigation2D" index="4"]
 
 [node name="PassageHole" parent="Navigation2D/Passages" index="0" instance=ExtResource( 13 )]
 position = Vector2( 1170, 649 )
@@ -141,7 +147,7 @@ position = Vector2( 1922, 1182 )
 [node name="Position2D" parent="Navigation2D/Passages/PassageHole4" index="3"]
 position = Vector2( 97, 0 )
 
-[node name="Checkpoints" type="Node2D" parent="Navigation2D" index="4"]
+[node name="Checkpoints" type="Node2D" parent="Navigation2D" index="5"]
 
 [node name="Checkpoint" parent="Navigation2D/Checkpoints" index="0" instance=ExtResource( 16 )]
 position = Vector2( 787, -65 )
