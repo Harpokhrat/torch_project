@@ -107,7 +107,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Plug",
 "language": "GDScript",
-"path": "res://sources/objects/plug.gd"
+"path": "res://sources/objects/living/plug.gd"
 }, {
 "base": "Node2D",
 "class": "State",
@@ -132,7 +132,7 @@ _global_script_classes=[ {
 "base": "StaticBody2D",
 "class": "Window",
 "language": "GDScript",
-"path": "res://sources/objects/window.gd"
+"path": "res://sources/objects/living/window.gd"
 } ]
 _global_script_class_icons={
 "CameraFocus": "",
