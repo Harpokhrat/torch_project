@@ -418,6 +418,9 @@ shape = SubResource( 25 )
 script = ExtResource( 12 )
 initial_state = NodePath("Stroll")
 
+[node name="StateName" parent="StateMachine" index="0"]
+visible = true
+
 [node name="Stroll" type="Node2D" parent="StateMachine" index="1"]
 script = ExtResource( 6 )
 max_speed = 30.0

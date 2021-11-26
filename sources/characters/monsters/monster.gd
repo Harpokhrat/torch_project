@@ -18,6 +18,10 @@ var player: Player
 var path_follow: PathFollow2D
 
 
+func _init() -> void:
+	add_to_group("Monsters")
+
+
 func _ready() -> void:
 	var navigation: Navigation2D = get_node(navigation_path)
 	if navigation == null:

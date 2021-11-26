@@ -7,6 +7,7 @@ signal dialog(dialog, flags)
 
 var viewport_container: ViewportContainer = null
 var viewport: Viewport = viewport
+var respawn_position: = Vector2(0, 0)
 
 
 func add_effect(effect: Node2D) -> void:

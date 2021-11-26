@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://sources/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/maps/school.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://sources/interactive_objects/passage_hole.tscn" type="PackedScene" id=13]
 [ext_resource path="res://sources/interactive_objects/front_locked_door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sources/interactive_objects/side_locked_door.tscn" type="PackedScene" id=15]
+[ext_resource path="res://sources/checkpoint/checkpoint.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 11.5 )
@@ -139,6 +140,17 @@ position = Vector2( 1922, 1182 )
 
 [node name="Position2D" parent="Navigation2D/Passages/PassageHole4" index="3"]
 position = Vector2( 97, 0 )
+
+[node name="Checkpoints" type="Node2D" parent="Navigation2D" index="4"]
+
+[node name="Checkpoint" parent="Navigation2D/Checkpoints" index="0" instance=ExtResource( 16 )]
+position = Vector2( 787, -65 )
+
+[node name="Checkpoint2" parent="Navigation2D/Checkpoints" index="1" instance=ExtResource( 16 )]
+position = Vector2( 1894, 1190 )
+
+[node name="Checkpoint3" parent="Navigation2D/Checkpoints" index="2" instance=ExtResource( 16 )]
+position = Vector2( 9, 2182 )
 
 [node name="FrontWindowPool" parent="Navigation2D/YSort" index="0" instance=ExtResource( 6 )]
 
@@ -481,7 +493,7 @@ rotation = -3.14159
 position = Vector2( 799, 536 )
 
 [node name="Player" parent="Navigation2D/YSort" index="8"]
-position = Vector2( 793, -36 )
+position = Vector2( 778, -49 )
 
 [node name="Monster" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
 position = Vector2( 824, 158 )

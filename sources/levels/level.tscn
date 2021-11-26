@@ -7,6 +7,10 @@
 [node name="Level" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 player_path = NodePath("../Navigation2D/YSort/Player")
 
@@ -15,3 +19,6 @@ player_path = NodePath("../Navigation2D/YSort/Player")
 [node name="YSort" type="YSort" parent="Navigation2D"]
 
 [node name="Player" parent="Navigation2D/YSort" instance=ExtResource( 2 )]
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_RespawnTimer_timeout"]
+[connection signal="player_hit" from="Navigation2D/YSort/Player" to="." method="_on_Player_player_hit"]

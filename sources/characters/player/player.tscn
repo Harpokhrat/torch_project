@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/characters/NESS.png" type="Texture" id=2]
@@ -534,6 +534,54 @@ radius = 13.0
 [sub_resource type="CircleShape2D" id=45]
 radius = 7.0
 
+[sub_resource type="Animation" id=48]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "die"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "reset_position"
+}, {
+"args": [  ],
+"method": "respawn"
+} ]
+}
+
 [node name="Player" instance=ExtResource( 1 )]
 collision_layer = 16
 collision_mask = 32777
@@ -665,6 +713,22 @@ script = ExtResource( 6 )
 [node name="Hit" type="Node2D" parent="StateMachine" index="3"]
 script = ExtResource( 3 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StateMachine/Hit" index="0"]
+anims/RESET = SubResource( 48 )
+anims/die = SubResource( 47 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="StateMachine/Hit" index="1"]
+
+[node name="ColorRect" type="ColorRect" parent="StateMachine/Hit/CanvasLayer" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="hit" from="HurtBox" to="StateMachine" method="_on_HurtBox_hit"]
 [connection signal="timeout" from="UnplugTimer" to="VerletRope" method="_on_UnplugTimer_timeout"]
 [connection signal="area_entered" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_entered"]
 [connection signal="area_exited" from="Lamp/LampFlare/LampDetection" to="Lamp" method="_on_LampDetection_area_exited"]

@@ -113,5 +113,3 @@ func _new_facing_direction() -> Vector2:
 
 func hit(hitbox: HitBox) -> void:
 	transition_to("Hit", {"hitbox": hitbox})
-	
-	player.signal_hit()
