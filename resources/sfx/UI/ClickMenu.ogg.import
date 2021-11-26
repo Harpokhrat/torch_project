@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ClickMenu.ogg-3018d213babc6db3a2159d7a918ab37b.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/UI/ClickMenu.ogg"
+dest_files=[ "res://.import/ClickMenu.ogg-3018d213babc6db3a2159d7a918ab37b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StudentsFootstepCreaky.ogg-ceb567c82a74c3b5239b8d91adeda9db.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Footsteps/StudentsFootstepCreaky.ogg"
+dest_files=[ "res://.import/StudentsFootstepCreaky.ogg-ceb567c82a74c3b5239b8d91adeda9db.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GetHit2.ogg-adc3f64ed0039896f575497828a2a5dc.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Player/GetHit2.ogg"
+dest_files=[ "res://.import/GetHit2.ogg-adc3f64ed0039896f575497828a2a5dc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

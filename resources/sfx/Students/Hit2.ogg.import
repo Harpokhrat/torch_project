@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hit2.ogg-e3cdd638c4098de0c90860e95e6cd6fb.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Students/Hit2.ogg"
+dest_files=[ "res://.import/Hit2.ogg-e3cdd638c4098de0c90860e95e6cd6fb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

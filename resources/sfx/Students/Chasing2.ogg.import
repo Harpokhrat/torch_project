@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Chasing2.ogg-b8dff89bd28d78cd9d00bac45bae2299.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Students/Chasing2.ogg"
+dest_files=[ "res://.import/Chasing2.ogg-b8dff89bd28d78cd9d00bac45bae2299.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

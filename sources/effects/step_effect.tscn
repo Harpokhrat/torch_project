@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://resources/sfx/Students/StudentsFootstepCreaky.ogg" type="AudioStream" id=1]
+[ext_resource path="res://resources/sfx/Footsteps/StudentsFootstepCreaky.ogg" type="AudioStream" id=1]
 [ext_resource path="res://resources/particles/circle.png" type="Texture" id=2]
 [ext_resource path="res://sources/effects/step_effect.gd" type="Script" id=3]
 
