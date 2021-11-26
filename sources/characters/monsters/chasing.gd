@@ -1,6 +1,7 @@
 extends MonsterState
 
 onready var timer: = $Timer
+onready var sound_chasing: = $Chasing
 
 var old_particle_chance: float
 var old_sound_chance: float
@@ -8,6 +9,7 @@ var old_sound_chance: float
 
 func enter(msg:= {}) -> void:
 	.enter(msg)
+	
 	
 	var _a = timer.connect("timeout", self, "_update_path")
 	

@@ -1,8 +1,11 @@
 extends Node2D
 
 onready var particles: = $Particles2D
-onready var audio: = $StudentFootsteps
+onready var audio: = $StudentSounds
 onready var timer: = $Timer
+var audio_resource_array: Array = [ "res://resources/sfx/Students/StudentsLaugh1.ogg",
+"res://resources/sfx/Students/StudentsLaugh2.ogg","res://resources/sfx/Footsteps/StudentsFootstepCreaky.ogg"
+]
 
 var particle_chance: float
 var sound_chance: float
@@ -15,6 +18,9 @@ func _ready() -> void:
 	
 	var s: = randf()
 	if s <= sound_chance:
+		audio_resource_array.shuffle()
+		var audio_stream = load(audio_resource_array[0])
+		audio.stream = audio_stream
 		audio.play()
 	
 	timer.start()

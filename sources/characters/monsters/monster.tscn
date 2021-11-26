@@ -12,6 +12,7 @@
 [ext_resource path="res://sources/characters/monsters/stress_area.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/monsters/InLight.gd" type="Script" id=11]
 [ext_resource path="res://sources/characters/monsters/StateMachine.gd" type="Script" id=12]
+[ext_resource path="res://resources/sfx/Students/Chasing2.ogg" type="AudioStream" id=13]
 
 [sub_resource type="CircleShape2D" id=32]
 radius = 7.0
@@ -429,6 +430,10 @@ one_shot = true
 script = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="StateMachine/Chasing" index="0"]
+
+[node name="Chasing" type="AudioStreamPlayer2D" parent="StateMachine/Chasing" index="1"]
+stream = ExtResource( 13 )
+volume_db = -6.0
 
 [node name="Wonder" type="Node2D" parent="StateMachine" index="3"]
 script = ExtResource( 7 )

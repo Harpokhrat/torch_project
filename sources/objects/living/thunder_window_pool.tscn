@@ -9,6 +9,7 @@ script = ExtResource( 1 )
 one_shot = true
 
 [node name="Thunder" type="AudioStreamPlayer" parent="."]
-volume_db = -14.0
+process_priority = 2
+volume_db = -18.37
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

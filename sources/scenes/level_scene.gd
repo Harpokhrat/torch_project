@@ -4,6 +4,7 @@ onready var dialog_box: = $DialogBox
 onready var dialog_label: = $DialogBox/DialogLabel
 onready var letter_timer: = $DialogBox/LetterTimer
 onready var dialog_timer: = $DialogBox/DialogTimer
+onready var sound_textappear: = $TextAppear
 
 var dialog: = ""
 var flags: = {}
@@ -29,6 +30,7 @@ func new_dialog(d: String, f: Dictionary) -> void:
 	current_text = ""
 	
 	letter_timer.start()
+	sound_textappear.play()
 
 
 func _on_LetterTimer_timeout() -> void:
@@ -60,3 +62,4 @@ func _on_DialogTimer_timeout() -> void:
 	dialog_box.visible = false
 	dialog_label.bbcode_text = ""
 	current_text = ""
+	sound_textappear.stop()

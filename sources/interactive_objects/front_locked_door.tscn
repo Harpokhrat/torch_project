@@ -4,6 +4,7 @@
 [ext_resource path="res://resources/objects/front_door.png" type="Texture" id=2]
 [ext_resource path="res://sources/interactive_objects/front_locked_door.gd" type="Script" id=3]
 [ext_resource path="res://sources/dialog/dialog_area.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/sfx/Door/DoorClosed.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 1 )
@@ -66,6 +67,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("DoorLocked:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -110,5 +123,9 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightCollider" index="0"]
 position = Vector2( 0, -1 )
 shape = SubResource( 7 )
+
+[node name="DoorLocked" type="AudioStreamPlayer2D" parent="." index="7"]
+stream = ExtResource( 5 )
+volume_db = -8.0
 
 [editable path="DialogArea"]
