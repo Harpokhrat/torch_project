@@ -401,30 +401,141 @@ position = Vector2( 1854, 924 )
 [node name="FrontDoor5" parent="Navigation2D/YSort/Doors" index="4" instance=ExtResource( 4 )]
 position = Vector2( 2141, 924 )
 
-[node name="SideDoor" parent="Navigation2D/YSort/Doors" index="5" instance=ExtResource( 5 )]
+[node name="FrontDoor6" parent="Navigation2D/YSort/Doors" index="5" instance=ExtResource( 4 )]
+position = Vector2( 1350, 2442 )
+
+[node name="FrontDoor7" parent="Navigation2D/YSort/Doors" index="6" instance=ExtResource( 4 )]
+position = Vector2( 1278, 2640 )
+
+[node name="FrontDoor8" parent="Navigation2D/YSort/Doors" index="7" instance=ExtResource( 4 )]
+position = Vector2( 1530, 2640 )
+
+[node name="FrontDoor9" parent="Navigation2D/YSort/Doors" index="8" instance=ExtResource( 4 )]
+position = Vector2( 1890, 2640 )
+
+[node name="FrontDoor10" parent="Navigation2D/YSort/Doors" index="9" instance=ExtResource( 4 )]
+position = Vector2( 2142, 2640 )
+
+[node name="FrontDoor11" parent="Navigation2D/YSort/Doors" index="10" instance=ExtResource( 4 )]
+position = Vector2( -18, 2112 )
+
+[node name="FrontDoor12" parent="Navigation2D/YSort/Doors" index="11" instance=ExtResource( 4 )]
+position = Vector2( -18, 1452 )
+
+[node name="FrontDoor13" parent="Navigation2D/YSort/Doors" index="12" instance=ExtResource( 4 )]
+position = Vector2( 198, 66 )
+
+[node name="SideDoor" parent="Navigation2D/YSort/Doors" index="13" instance=ExtResource( 5 )]
 position = Vector2( 966, 192 )
 
-[node name="SideDoor2" parent="Navigation2D/YSort/Doors" index="6" instance=ExtResource( 5 )]
+[node name="SideDoor2" parent="Navigation2D/YSort/Doors" index="14" instance=ExtResource( 5 )]
 position = Vector2( 966, 390 )
 
-[node name="SideDoor3" parent="Navigation2D/YSort/Doors" index="7" instance=ExtResource( 5 )]
+[node name="SideDoor3" parent="Navigation2D/YSort/Doors" index="15" instance=ExtResource( 5 )]
 position = Vector2( 784, 390 )
 
-[node name="SideDoor4" parent="Navigation2D/YSort/Doors" index="8" instance=ExtResource( 5 )]
+[node name="SideDoor4" parent="Navigation2D/YSort/Doors" index="16" instance=ExtResource( 5 )]
 position = Vector2( 783, 720 )
 
-[node name="SideDoor5" parent="Navigation2D/YSort/Doors" index="9" instance=ExtResource( 5 )]
+[node name="SideDoor5" parent="Navigation2D/YSort/Doors" index="17" instance=ExtResource( 5 )]
 position = Vector2( 963, 720 )
+
+[node name="SideDoor6" parent="Navigation2D/YSort/Doors" index="18" instance=ExtResource( 5 )]
+position = Vector2( 2223, 1248 )
+
+[node name="SideDoor7" parent="Navigation2D/YSort/Doors" index="19" instance=ExtResource( 5 )]
+position = Vector2( 2402, 1248 )
+
+[node name="SideDoor8" parent="Navigation2D/YSort/Doors" index="20" instance=ExtResource( 5 )]
+position = Vector2( 2402, 1578 )
+
+[node name="SideDoor9" parent="Navigation2D/YSort/Doors" index="21" instance=ExtResource( 5 )]
+position = Vector2( 2223, 1578 )
+
+[node name="SideDoor10" parent="Navigation2D/YSort/Doors" index="22" instance=ExtResource( 5 )]
+position = Vector2( 2222, 1974 )
+
+[node name="SideDoor11" parent="Navigation2D/YSort/Doors" index="23" instance=ExtResource( 5 )]
+position = Vector2( 2402, 1974 )
+
+[node name="SideDoor12" parent="Navigation2D/YSort/Doors" index="24" instance=ExtResource( 5 )]
+position = Vector2( 2222, 2304 )
+
+[node name="SideDoor14" parent="Navigation2D/YSort/Doors" index="25" instance=ExtResource( 5 )]
+position = Vector2( 962, 2832 )
+
+[node name="SideDoor16" parent="Navigation2D/YSort/Doors" index="26" instance=ExtResource( 5 )]
+position = Vector2( 782, 2832 )
+
+[node name="SideDoor17" parent="Navigation2D/YSort/Doors" index="27" instance=ExtResource( 5 )]
+position = Vector2( 962, 3162 )
+
+[node name="SideDoor18" parent="Navigation2D/YSort/Doors" index="28" instance=ExtResource( 5 )]
+position = Vector2( 782, 3162 )
+
+[node name="SideDoor19" parent="Navigation2D/YSort/Doors" index="29" instance=ExtResource( 5 )]
+position = Vector2( 278, 3162 )
+
+[node name="SideDoor20" parent="Navigation2D/YSort/Doors" index="30" instance=ExtResource( 5 )]
+position = Vector2( 98, 3162 )
+
+[node name="SideDoor21" parent="Navigation2D/YSort/Doors" index="31" instance=ExtResource( 5 )]
+position = Vector2( 278, 2832 )
+
+[node name="SideDoor22" parent="Navigation2D/YSort/Doors" index="32" instance=ExtResource( 5 )]
+position = Vector2( 98, 2832 )
+
+[node name="SideDoor23" parent="Navigation2D/YSort/Doors" index="33" instance=ExtResource( 5 )]
+position = Vector2( 278, 2502 )
+
+[node name="SideDoor24" parent="Navigation2D/YSort/Doors" index="34" instance=ExtResource( 5 )]
+position = Vector2( 98, 2502 )
+
+[node name="SideDoor25" parent="Navigation2D/YSort/Doors" index="35" instance=ExtResource( 5 )]
+position = Vector2( 279, 2172 )
+
+[node name="SideDoor27" parent="Navigation2D/YSort/Doors" index="36" instance=ExtResource( 5 )]
+position = Vector2( 278, 1776 )
+
+[node name="SideDoor28" parent="Navigation2D/YSort/Doors" index="37" instance=ExtResource( 5 )]
+position = Vector2( 278, 1380 )
+
+[node name="SideDoor29" parent="Navigation2D/YSort/Doors" index="38" instance=ExtResource( 5 )]
+position = Vector2( 98, 1380 )
+
+[node name="SideDoor30" parent="Navigation2D/YSort/Doors" index="39" instance=ExtResource( 5 )]
+position = Vector2( 279, 1050 )
+
+[node name="SideDoor31" parent="Navigation2D/YSort/Doors" index="40" instance=ExtResource( 5 )]
+position = Vector2( 99, 1050 )
+
+[node name="SideDoor32" parent="Navigation2D/YSort/Doors" index="41" instance=ExtResource( 5 )]
+position = Vector2( 278, 720 )
+
+[node name="SideDoor33" parent="Navigation2D/YSort/Doors" index="42" instance=ExtResource( 5 )]
+position = Vector2( 98, 720 )
+
+[node name="SideDoor34" parent="Navigation2D/YSort/Doors" index="43" instance=ExtResource( 5 )]
+position = Vector2( 278, 390 )
+
+[node name="SideDoor35" parent="Navigation2D/YSort/Doors" index="44" instance=ExtResource( 5 )]
+position = Vector2( 98, 390 )
+
+[node name="SideDoor26" parent="Navigation2D/YSort/Doors" index="45" instance=ExtResource( 5 )]
+position = Vector2( 99, 2172 )
+
+[node name="SideDoor15" parent="Navigation2D/YSort/Doors" index="46" instance=ExtResource( 5 )]
+position = Vector2( 962, 3360 )
+
+[node name="SideDoor13" parent="Navigation2D/YSort/Doors" index="47" instance=ExtResource( 5 )]
+position = Vector2( 2402, 2304 )
 
 [node name="LockedDoors" type="YSort" parent="Navigation2D/YSort" index="5"]
 
 [node name="FrontLockedDoor" parent="Navigation2D/YSort/LockedDoors" index="0" instance=ExtResource( 14 )]
 position = Vector2( 1386, 1124 )
 
-[node name="FrontLockedDoor2" parent="Navigation2D/YSort/LockedDoors" index="1" instance=ExtResource( 14 )]
-position = Vector2( 1349, 2448 )
-
-[node name="sideLockedDoor" parent="Navigation2D/YSort/LockedDoors" index="2" instance=ExtResource( 15 )]
+[node name="sideLockedDoor" parent="Navigation2D/YSort/LockedDoors" index="1" instance=ExtResource( 15 )]
 position = Vector2( 101, 1776 )
 
 [node name="FrontPlugs" type="YSort" parent="Navigation2D/YSort" index="6"]
