@@ -56,10 +56,10 @@ func _on_LetterTimer_timeout() -> void:
 		dialog_label.bbcode_text = final_text
 	else:
 		dialog_timer.start()
+		sound_textappear.stop()
 
 
 func _on_DialogTimer_timeout() -> void:
 	dialog_box.visible = false
 	dialog_label.bbcode_text = ""
 	current_text = ""
-	sound_textappear.stop()
