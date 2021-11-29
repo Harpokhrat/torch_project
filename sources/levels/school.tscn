@@ -107,7 +107,7 @@ shape = SubResource( 3 )
 
 [node name="DialogArea3" parent="Navigation2D/Dialogs" index="5" instance=ExtResource( 12 )]
 position = Vector2( 2090, 2528 )
-dialog = "Well, shit... Maybe I can find a way in the library somewhere."
+dialog = "Well, shit... Maybe I can find a way in the library somewhere in the rooms on the left."
 
 [node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea3" index="0"]
 position = Vector2( 31, -1 )
