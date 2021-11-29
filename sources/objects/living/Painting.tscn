@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://resources/characters/Game Boy Advance - Mother 3 JPN - Zombie Lady.png" type="Texture" id=1]
+[ext_resource path="res://resources/characters/portrait monstre.png" type="Texture" id=1]
 [ext_resource path="res://sources/utils/colliders/hit_box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sources/characters/monsters/LightArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sources/objects/living/Painting.gd" type="Script" id=4]
@@ -9,15 +9,62 @@
 extents = Vector2( 10, 13.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7.75, 7.75 )
+extents = Vector2( 9, 10 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "lit"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 4, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "unlit"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
 [node name="Painting" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 84, 8, 19, 21 )
+hframes = 6
+frame = 5
 
 [node name="HitBox" parent="." instance=ExtResource( 2 )]
 
@@ -31,7 +78,13 @@ shape = SubResource( 1 )
 position = Vector2( 0, 2 )
 shape = SubResource( 2 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/lit = SubResource( 4 )
+anims/unlit = SubResource( 5 )
+
 [connection signal="light" from="LightArea" to="." method="_on_LightArea_light"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="HitBox"]
 [editable path="LightArea"]
