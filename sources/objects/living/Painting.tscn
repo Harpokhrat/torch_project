@@ -5,8 +5,8 @@
 [ext_resource path="res://sources/characters/monsters/LightArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sources/objects/living/Painting.gd" type="Script" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 13.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.75, 7.75 )
@@ -22,7 +22,7 @@ region_rect = Rect2( 84, 8, 19, 21 )
 [node name="HitBox" parent="." instance=ExtResource( 2 )]
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2( 0, 17 )
+position = Vector2( 0, 20.5 )
 shape = SubResource( 1 )
 
 [node name="LightArea" parent="." instance=ExtResource( 3 )]

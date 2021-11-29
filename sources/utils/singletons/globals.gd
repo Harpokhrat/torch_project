@@ -8,6 +8,8 @@ signal dialog(dialog, flags)
 var viewport_container: ViewportContainer = null
 var viewport: Viewport = viewport
 var respawn_position: = Vector2(0, 0)
+var first_monster_lit_up: = false
+var first_painting_lit_up: = false
 
 
 func add_effect(effect: Node2D) -> void:
