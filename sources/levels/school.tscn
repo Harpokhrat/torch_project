@@ -1953,16 +1953,13 @@ rotation = 3.14159
 [node name="SideDoor" parent="Navigation2D/YSort/Library" index="33" instance=ExtResource( 5 )]
 position = Vector2( 1197, 1513 )
 
-[node name="Painting" parent="Navigation2D/YSort/Library" index="34" instance=ExtResource( 22 )]
-position = Vector2( 921, 1477 )
-
-[node name="Painting2" parent="Navigation2D/YSort/Library" index="35" instance=ExtResource( 22 )]
+[node name="Painting2" parent="Navigation2D/YSort/Library" index="34" instance=ExtResource( 22 )]
 position = Vector2( 993, 1477 )
 
-[node name="Painting3" parent="Navigation2D/YSort/Library" index="36" instance=ExtResource( 22 )]
-position = Vector2( 957, 1477 )
+[node name="Painting3" parent="Navigation2D/YSort/Library" index="35" instance=ExtResource( 22 )]
+position = Vector2( 950, 1477 )
 
-[node name="Node2D" parent="Navigation2D/YSort/Library" index="37" instance=ExtResource( 34 )]
+[node name="Node2D" parent="Navigation2D/YSort/Library" index="36" instance=ExtResource( 34 )]
 position = Vector2( 957, 1477 )
 
 [node name="BucketSign" parent="." index="3" instance=ExtResource( 26 )]

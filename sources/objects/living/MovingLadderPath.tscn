@@ -4,15 +4,14 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 101, 113, 0, 0, 0, 0, 105, -102 )
+"points": PoolVector2Array( 0, 0, 0, 0, 101, 113, 0, 0, 0, 0, 104, -65 )
 }
 
 [node name="Node2D" type="Path2D"]
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2( 106, 228 )
-rotation = -1.57831
+position = Vector2( 101, 113 )
 rotate = false
 
 [node name="MovingLadder" parent="PathFollow2D" instance=ExtResource( 1 )]
