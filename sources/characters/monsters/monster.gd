@@ -45,6 +45,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	animation_tree.set("parameters/Idle/blend_position", motion.facing_direction)
 	animation_tree.set("parameters/Walk/blend_position", motion.facing_direction)
+	animation_tree.set("parameters/Die/blend_position", motion.facing_direction)
+	animation_tree.set("parameters/Rebirth/blend_position", motion.facing_direction)
 	
 	pivot.rotation = motion.facing_direction.angle()
 
@@ -82,7 +84,7 @@ func _on_WatchArea_area_exited(_area: Area2D) -> void:
 
 func _on_LightArea_light(value) -> void:
 	state_machine.light_on(value)
-	hitbox_collision.disabled = value
+	hitbox_collision.set_deferred("disabled", value)
 	if not _globals.first_monster_lit_up:
 		_globals.first_monster_lit_up = true
 		_globals.emit_signal("dialog", "This monster seems less dangerous when I light it up!", {"center": ""})

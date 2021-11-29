@@ -29,7 +29,14 @@ func exit() -> void:
 
 
 func state_physics_process(delta: float) -> void:
+	var was_moving: = motion.velocity.length() != 0.0
+	
 	.state_physics_process(delta)
+	
+	if was_moving and motion.velocity.length() == 0.0:
+		monster.play_animation("Idle")
+	elif not was_moving and motion.velocity.length() != 0.0:
+		monster.play_animation("Walk")
 	
 	if monster.player != null and monster.is_target_visible(monster.player):
 		transition_to("Chasing")

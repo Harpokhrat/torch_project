@@ -25,17 +25,10 @@ func state_physics_process(delta: float) -> void:
 	if new_facing_direction:
 		motion.facing_direction = new_facing_direction
 	
-	var was_moving: = motion.velocity.length() != 0.0
-	
 	motion.move_direction = get_move_direction()
 	motion.velocity = calculate_velocity(motion.velocity, motion.move_direction, delta)
 	motion.velocity += monster.get_soft_collision_vector() * soft_collision_strength * delta
 	motion.velocity = monster.move_and_slide(motion.velocity)
-	
-	if was_moving and motion.velocity.length() == 0.0:
-		monster.play_animation("Idle")
-	elif not was_moving and motion.velocity.length() != 0.0:
-		monster.play_animation("Walk")
 	
 	var distance: float = (monster.global_transform.origin - target_position).length()
 	if distance <= chasing_range:

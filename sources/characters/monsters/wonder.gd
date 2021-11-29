@@ -7,6 +7,8 @@ export(int) var sup_distance := 20
 func enter(msg: Dictionary = {}) -> void:
 	.enter(msg)
 	
+	monster.play_animation("Walk")
+	
 	target_position = msg["position"]
 	var direction: = (target_position - global_position).normalized()
 	target_position = target_position + direction * sup_distance

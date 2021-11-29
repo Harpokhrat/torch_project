@@ -10,6 +10,7 @@ var old_sound_chance: float
 func enter(msg:= {}) -> void:
 	.enter(msg)
 	
+	monster.play_animation("Walk")
 	
 	var _a = timer.connect("timeout", self, "_update_path")
 	
