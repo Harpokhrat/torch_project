@@ -4,9 +4,15 @@ extends MonsterState
 func enter(msg:= {}) -> void:
 	.enter(msg)
 	
+	monster.hitbox_collision.set_deferred("disabled", true)
+	
 	target_position = Vector2.ZERO
 	
 	monster.play_animation("Die")
+
+
+func exit() -> void:
+	monster.hitbox_collision.set_deferred("disabled", false)
 
 
 func get_move_direction() -> Vector2:
@@ -15,10 +21,6 @@ func get_move_direction() -> Vector2:
 
 func get_facing_direction() -> Vector2:
 	return Vector2.ZERO
-
-
-func state_process(_delta: float) -> void:
-	pass
 
 
 func state_physics_process(delta: float) -> void:
