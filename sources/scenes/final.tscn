@@ -132,6 +132,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "final"
 anims/RESET = SubResource( 2 )
 anims/final = SubResource( 1 )
 

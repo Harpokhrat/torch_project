@@ -7,7 +7,7 @@ func _process(_delta: float) -> void:
 
 
 func load_game() -> void:
-	get_tree().change_scene("res://sources/scenes/school.tscn")
+	var _a: = get_tree().change_scene("res://sources/scenes/school.tscn")
 
 
 func _on_Timer_timeout() -> void:

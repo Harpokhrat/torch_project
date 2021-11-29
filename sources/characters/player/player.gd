@@ -10,6 +10,7 @@ onready var lamp_flare: = $Lamp/LampFlare
 onready var unplug_timer: = $UnplugTimer
 onready var plug_detection_area: = $PlugDetectionArea
 onready var interaction_detection_area: = $InteractionDetectionArea
+onready var button_press: = $ButtonPress
 
 var motion: PlayerMotionData
 var unplug_direction: = Vector2.ZERO
@@ -46,6 +47,14 @@ func _process(_delta: float) -> void:
 	var rotation_angle: = motion.facing_direction.angle()
 	lamp_flare.rotation = rotation_angle
 	lamp_flare.offset = Vector2(0, -13).rotated(-rotation_angle)
+	
+	var overlapping_plugs : Array = plug_detection_area.get_overlapping_areas()
+	var overlapping_interactive_areas: Array = interaction_detection_area.get_overlapping_areas()
+	
+	if overlapping_plugs.size() != 0 or overlapping_interactive_areas.size() != 0:
+		button_press.visible = true
+	else:
+		button_press.visible = false
 
 
 func check_collision_with_rope_length_limit() -> void:
