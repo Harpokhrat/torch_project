@@ -1,7 +1,7 @@
 [gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://resources/characters/NESS.png" type="Texture" id=2]
+[ext_resource path="res://resources/characters/janitor-run.png" type="Texture" id=2]
 [ext_resource path="res://sources/characters/player/hit.gd" type="Script" id=3]
 [ext_resource path="res://sources/characters/player/player.gd" type="Script" id=4]
 [ext_resource path="res://sources/characters/player/idle.gd" type="Script" id=5]
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 13 ]
+"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -48,7 +48,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 3 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -66,7 +66,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 3 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -84,7 +84,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 15 ]
+"values": [ 3 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -102,7 +102,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 4 ]
+"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -120,7 +120,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 13 ]
+"values": [ 6 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -138,7 +138,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 8 ]
+"values": [ 9 ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -156,7 +156,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 6 ]
+"values": [ 9 ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -174,7 +174,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 11 ]
+"values": [ 9 ]
 }
 
 [sub_resource type="AudioStreamRandomPitch" id=43]
@@ -196,7 +196,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 4, 5 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -226,7 +226,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 2, 3 ]
+"values": [ 4, 5 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -256,7 +256,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 15, 16 ]
+"values": [ 4, 5 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -286,7 +286,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 4, 5 ]
+"values": [ 1, 2 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -316,7 +316,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 13, 14 ]
+"values": [ 7, 8 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -346,7 +346,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 8, 9 ]
+"values": [ 10, 11 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -376,7 +376,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 6, 7 ]
+"values": [ 10, 11 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -406,7 +406,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 11, 12 ]
+"values": [ 10, 11 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Footsteps:stream")
@@ -590,8 +590,8 @@ script = ExtResource( 4 )
 [node name="Sprite" parent="." index="0"]
 position = Vector2( 0, -12 )
 texture = ExtResource( 2 )
-hframes = 17
-frame = 13
+hframes = 3
+vframes = 4
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0, -1 )
