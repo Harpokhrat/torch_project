@@ -165,7 +165,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Torch"
-run/main_scene="res://sources/scenes/intro.tscn"
+run/main_scene="res://sources/scenes/intro_godot.tscn"
 config/icon="res://icon.png"
 
 [autoload]
