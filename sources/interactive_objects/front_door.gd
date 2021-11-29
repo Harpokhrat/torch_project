@@ -5,6 +5,7 @@ onready var collision: = $CollisionShape2D
 onready var light_collision: = $LightCollider/CollisionShape2D
 onready var occluder: = $LightOccluder2D
 onready var sound_dooropen: = $OpenDoor
+onready var sound_closedoor: = $CloseDoor
 
 var closed: = true
 
@@ -23,3 +24,4 @@ func interact(_player: Node2D) -> void:
 		collision.disabled = false
 		light_collision.disabled = false
 		occluder.light_mask = 1
+		sound_closedoor.play()

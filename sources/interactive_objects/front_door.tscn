@@ -52,3 +52,11 @@ scale = Vector2( 1.2, 2.6 )
 
 [node name="OpenDoor" type="AudioStreamPlayer2D" parent="." index="6"]
 stream = ExtResource( 4 )
+volume_db = -2.0
+bus = "Reverb"
+
+[node name="CloseDoor" type="AudioStreamPlayer2D" parent="." index="7"]
+stream = ExtResource( 4 )
+volume_db = -4.0
+pitch_scale = 0.93
+bus = "Reverb"

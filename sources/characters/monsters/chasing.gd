@@ -20,7 +20,7 @@ func enter(msg:= {}) -> void:
 	old_particle_chance = monster.step_particle_chance
 	old_sound_chance = monster.step_sound_chance	
 	monster.step_particle_chance = 1.0
-	monster.step_sound_chance = 1.0
+	monster.step_sound_chance = 0.05
 	
 	target_position = monster.player.global_position
 	_update_path()

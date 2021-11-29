@@ -641,6 +641,7 @@ parameters/Walk/blend_position = Vector2( -0.360973, 0.368146 )
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="." index="4"]
 stream = SubResource( 43 )
 volume_db = 3.0
+bus = "Reverb"
 
 [node name="HurtBox" parent="." index="5" instance=ExtResource( 7 )]
 visible = false
@@ -708,10 +709,12 @@ joint_mode = 1
 
 [node name="CablePlugIn" type="AudioStreamPlayer2D" parent="VerletRope" index="3"]
 stream = ExtResource( 16 )
-volume_db = -3.0
+bus = "Reverb"
 
 [node name="CablePlugOut" type="AudioStreamPlayer2D" parent="VerletRope" index="4"]
 stream = ExtResource( 15 )
+volume_db = 2.0
+bus = "Reverb"
 
 [node name="RopeCollider" type="Area2D" parent="." index="12"]
 collision_layer = 4
@@ -753,6 +756,7 @@ __meta__ = {
 
 [node name="Died" type="AudioStreamPlayer" parent="StateMachine/Hit" index="2"]
 stream = ExtResource( 18 )
+volume_db = 3.0
 
 [connection signal="hit" from="HurtBox" to="StateMachine" method="_on_HurtBox_hit"]
 [connection signal="timeout" from="UnplugTimer" to="VerletRope" method="_on_UnplugTimer_timeout"]
