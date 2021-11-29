@@ -21,22 +21,27 @@ extents = Vector2( 1, 27 )
 script = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]
-position = Vector2( 0, -27 )
+position = Vector2( 0, -8 )
 texture = ExtResource( 2 )
 hframes = 2
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -9.5, -8.5 )
+position = Vector2( -9.5, 10.5 )
 shape = SubResource( 1 )
+
+[node name="InteractiveArea" parent="." index="2"]
+position = Vector2( 0, 19 )
 
 [node name="CollisionShape2D" parent="InteractiveArea" index="0"]
 position = Vector2( -9.5, -8.5 )
 shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="3"]
+position = Vector2( 0, 19 )
 occluder = SubResource( 3 )
 
 [node name="LightCollider" type="Area2D" parent="." index="4"]
+position = Vector2( 0, 19 )
 collision_layer = 2
 collision_mask = 0
 monitoring = false
@@ -46,15 +51,17 @@ position = Vector2( -9.5, -27 )
 shape = SubResource( 4 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="." index="5"]
-position = Vector2( -9.5, -27 )
+position = Vector2( -9.5, -8 )
 scale = Vector2( 0.95, 2.7 )
 
 [node name="OpenDoor" type="AudioStreamPlayer2D" parent="." index="6"]
+position = Vector2( 0, 19 )
 stream = ExtResource( 4 )
 volume_db = -2.0
 bus = "Reverb"
 
 [node name="CloseDoor" type="AudioStreamPlayer2D" parent="." index="7"]
+position = Vector2( 0, 19 )
 stream = ExtResource( 4 )
 volume_db = -4.0
 pitch_scale = 0.93
