@@ -5,6 +5,8 @@ func enter(msg:= {}) -> void:
 	.enter(msg)
 	
 	target_position = Vector2.ZERO
+	
+	monster.play_animation("Die")
 
 
 func get_move_direction() -> Vector2:
@@ -13,6 +15,10 @@ func get_move_direction() -> Vector2:
 
 func get_facing_direction() -> Vector2:
 	return Vector2.ZERO
+
+
+func state_process(_delta: float) -> void:
+	pass
 
 
 func state_physics_process(delta: float) -> void:
@@ -24,9 +30,13 @@ func state_physics_process(delta: float) -> void:
 
 func light_on(value: bool) -> void:
 	if value:
-		push_warning("Should not light on when in special state")
+		monster.play_animation("Die")
 	else:
-		if target_position == Vector2.ZERO:
-			transition_to("Stroll")
-		else:
-			transition_to("Wonder", {"position": target_position})
+		monster.play_animation("Rebirth")
+
+
+func rebirth_ok():
+	if target_position == Vector2.ZERO:
+		transition_to("Stroll")
+	else:
+		transition_to("Wonder", {"position": target_position})

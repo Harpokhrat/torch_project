@@ -8,6 +8,8 @@ var clockwise: = 0.0
 func enter(msg: Dictionary = {}) -> void:
 	.enter(msg)
 	
+	monster.play_animation("Idle")
+	
 	clockwise = sign(randf() - 0.5)
 	rot_count = 0
 	timer.start()
