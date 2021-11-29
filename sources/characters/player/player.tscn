@@ -1,21 +1,27 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
+
+
+[ext_resource path="res://resources/lights/Lamp.png" type="Texture" id=13]
+[ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player1.ogg" type="AudioStream" id=14]
+[ext_resource path="res://resources/sfx/Cable/CablePlugOut3.ogg" type="AudioStream" id=15]
+[ext_resource path="res://resources/sfx/Cable/CablePlugIn3.ogg" type="AudioStream" id=16]
+[ext_resource path="res://resources/characters/janitor-run.png" type="Texture" id=2]
+[ext_resource path="res://resources/lights/character_light.png" type="Texture" id=8]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://resources/characters/janitor-run.png" type="Texture" id=2]
 [ext_resource path="res://sources/characters/player/hit.gd" type="Script" id=3]
 [ext_resource path="res://sources/characters/player/player.gd" type="Script" id=4]
 [ext_resource path="res://sources/characters/player/idle.gd" type="Script" id=5]
 [ext_resource path="res://sources/characters/player/walk.gd" type="Script" id=6]
 [ext_resource path="res://sources/utils/colliders/hurt_box.tscn" type="PackedScene" id=7]
-[ext_resource path="res://resources/lights/character_light.png" type="Texture" id=8]
 [ext_resource path="res://sources/characters/player/Lamp.gd" type="Script" id=9]
 [ext_resource path="res://sources/characters/player/player_state_machine.gd" type="Script" id=10]
 [ext_resource path="res://sources/characters/player/rope/VerletRope2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sources/characters/player/player_hurt_box.gd" type="Script" id=12]
-[ext_resource path="res://resources/lights/Lamp.png" type="Texture" id=13]
-[ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player1.ogg" type="AudioStream" id=14]
-[ext_resource path="res://resources/sfx/Cable/CablePlugOut3.ogg" type="AudioStream" id=15]
-[ext_resource path="res://resources/sfx/Cable/CablePlugIn3.ogg" type="AudioStream" id=16]
+
+[sub_resource type="AudioStreamRandomPitch" id=43]
+audio_stream = ExtResource( 14 )
+random_pitch = 1.5
 
 [sub_resource type="CircleShape2D" id=46]
 radius = 5.09902
@@ -614,10 +620,6 @@ transitions = [ "Idle", "Walk", SubResource( 23 ), "Walk", "Idle", SubResource( 
 start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
-
-[sub_resource type="AudioStreamRandomPitch" id=43]
-audio_stream = ExtResource( 14 )
-random_pitch = 1.5
 
 [sub_resource type="CapsuleShape2D" id=41]
 radius = 5.0
