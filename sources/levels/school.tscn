@@ -504,7 +504,7 @@ position = Vector2( -220, 1775 )
 position = Vector2( 525, 1394 )
 
 [node name="RoofWindow14" parent="Navigation2D/YSort/RoofWindowPool" index="17" instance=ExtResource( 11 )]
-position = Vector2( 518, 1765 )
+position = Vector2( 361, 1832 )
 
 [node name="RoofWindow15" parent="Navigation2D/YSort/RoofWindowPool" index="18" instance=ExtResource( 11 )]
 position = Vector2( 525, 2118 )
