@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://sources/characters/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/characters/janitor-run.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://resources/sfx/Footsteps/Footsteps_Player1.ogg" type="AudioStream" id=14]
 [ext_resource path="res://resources/sfx/Cable/CablePlugOut3.ogg" type="AudioStream" id=15]
 [ext_resource path="res://resources/sfx/Cable/CablePlugIn3.ogg" type="AudioStream" id=16]
+[ext_resource path="res://resources/sfx/Students/StudentsLaughYou Died.ogg" type="AudioStream" id=18]
 
 [sub_resource type="CircleShape2D" id=46]
 radius = 5.09902
@@ -583,6 +584,18 @@ tracks/1/keys = {
 "method": "respawn"
 } ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Died:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="Player" instance=ExtResource( 1 )]
 collision_layer = 16
@@ -627,6 +640,8 @@ parameters/Walk/blend_position = Vector2( -0.360973, 0.368146 )
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="." index="4"]
 stream = SubResource( 43 )
+volume_db = 3.0
+bus = "Reverb"
 
 [node name="HurtBox" parent="." index="5" instance=ExtResource( 7 )]
 visible = false
@@ -660,6 +675,7 @@ shadow_filter_smooth = 5.0
 shadow_item_cull_mask = 3
 
 [node name="LampDetection" type="Area2D" parent="Lamp/LampFlare" index="0"]
+visible = false
 collision_layer = 0
 collision_mask = 512
 monitorable = false
@@ -694,10 +710,12 @@ joint_mode = 1
 
 [node name="CablePlugIn" type="AudioStreamPlayer2D" parent="VerletRope" index="3"]
 stream = ExtResource( 16 )
-volume_db = -3.0
+bus = "Reverb"
 
 [node name="CablePlugOut" type="AudioStreamPlayer2D" parent="VerletRope" index="4"]
 stream = ExtResource( 15 )
+volume_db = 2.0
+bus = "Reverb"
 
 [node name="RopeCollider" type="Area2D" parent="." index="12"]
 collision_layer = 4
@@ -736,6 +754,10 @@ color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Died" type="AudioStreamPlayer" parent="StateMachine/Hit" index="2"]
+stream = ExtResource( 18 )
+volume_db = 3.0
 
 [connection signal="hit" from="HurtBox" to="StateMachine" method="_on_HurtBox_hit"]
 [connection signal="timeout" from="UnplugTimer" to="VerletRope" method="_on_UnplugTimer_timeout"]

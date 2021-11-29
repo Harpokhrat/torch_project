@@ -92,7 +92,7 @@ one_shot = true
 
 [node name="TextAppear" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -18.992
+volume_db = -13.0
 
 [connection signal="timeout" from="DialogBox/LetterTimer" to="." method="_on_LetterTimer_timeout"]
 [connection signal="timeout" from="DialogBox/DialogTimer" to="." method="_on_DialogTimer_timeout"]

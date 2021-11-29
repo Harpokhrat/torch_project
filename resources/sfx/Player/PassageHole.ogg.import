@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PassageHole.ogg-78fc6ac89e31b239259c250ccd7687db.oggstr"
+
+[deps]
+
+source_file="res://resources/sfx/Player/PassageHole.ogg"
+dest_files=[ "res://.import/PassageHole.ogg-78fc6ac89e31b239259c250ccd7687db.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

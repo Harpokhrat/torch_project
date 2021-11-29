@@ -10,6 +10,6 @@ one_shot = true
 
 [node name="Thunder" type="AudioStreamPlayer" parent="."]
 process_priority = 2
-volume_db = -18.37
+volume_db = -16.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

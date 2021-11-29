@@ -26,7 +26,7 @@ func _ready() -> void:
 	timer.start()
 
 
-func setup(p_chance: float = 0.1, s_chance: float = 0.2) -> void:
+func setup(p_chance: float = 0.1, s_chance: float = 0.1) -> void:
 	particle_chance = p_chance
 	sound_chance = s_chance
 

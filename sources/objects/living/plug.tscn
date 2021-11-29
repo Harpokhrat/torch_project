@@ -49,9 +49,11 @@ texture = ExtResource( 2 )
 
 [node name="Electricity" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource( 6 )
+volume_db = 6.442
 autoplay = true
-max_distance = 200.0
-attenuation = 2.37841
+max_distance = 250.0
+attenuation = 1.86606
+bus = "Reverb"
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -9.53674e-07, -9.53674e-07 )

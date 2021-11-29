@@ -84,7 +84,6 @@ func _on_WatchArea_area_exited(_area: Area2D) -> void:
 
 func _on_LightArea_light(value) -> void:
 	state_machine.light_on(value)
-	hitbox_collision.set_deferred("disabled", value)
 	if not _globals.first_monster_lit_up:
 		_globals.first_monster_lit_up = true
 		_globals.emit_signal("dialog", "This monster seems less dangerous when I light it up!", {"center": ""})
