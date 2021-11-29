@@ -6,7 +6,7 @@
 extents = Vector2( 16.5, 17.5 )
 
 [node name="VerticalDesk" type="StaticBody2D"]
-collision_layer = 5
+collision_layer = 36
 collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
