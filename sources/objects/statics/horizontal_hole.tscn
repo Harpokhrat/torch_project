@@ -6,6 +6,7 @@
 extents = Vector2( 66, 63 )
 
 [node name="HorizontalHole" type="StaticBody2D"]
+collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

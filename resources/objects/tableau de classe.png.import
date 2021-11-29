@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/game-menu.png-a7a75f2f24c200e4686dfec720ad1026.stex"
+path="res://.import/tableau de classe.png-443cff26cb5e57b4f402f53a069ae767.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/objects/game-menu.png"
-dest_files=[ "res://.import/game-menu.png-a7a75f2f24c200e4686dfec720ad1026.stex" ]
+source_file="res://resources/objects/tableau de classe.png"
+dest_files=[ "res://.import/tableau de classe.png-443cff26cb5e57b4f402f53a069ae767.stex" ]
 
 [params]
 
