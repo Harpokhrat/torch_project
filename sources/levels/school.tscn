@@ -38,7 +38,7 @@ extents = Vector2( 47.5, 33 )
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 744, 141, -17.0089, -25.1984, 17.0089, 25.1984, 861, 156, 0, 0, 0, 0, 871, 438 )
+"points": PoolVector2Array( 0, 0, 0, 0, 862, 731, 0, 0, 0, 0, 906, 420, 0, 0, 0, 0, 820, 420, 0, 0, 0, 0, 860, 729 )
 }
 
 [node name="School" instance=ExtResource( 1 )]
@@ -584,7 +584,7 @@ position = Vector2( 101, 1776 )
 position = Vector2( 816, 102 )
 
 [node name="FrontPlug2" parent="Navigation2D/YSort/FrontPlugs" index="1" instance=ExtResource( 10 )]
-position = Vector2( 996, 36 )
+position = Vector2( 995, 101 )
 
 [node name="FrontPlug3" parent="Navigation2D/YSort/FrontPlugs" index="2" instance=ExtResource( 10 )]
 position = Vector2( 996, 300 )
@@ -647,7 +647,7 @@ position = Vector2( 799, 536 )
 position = Vector2( 778, -49 )
 
 [node name="Monster" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
-position = Vector2( 824, 158 )
+position = Vector2( 863, 740 )
 navigation_path = NodePath("../..")
 path_follow_path = NodePath("../../Paths/Path2D/PathFollow2D")
 
