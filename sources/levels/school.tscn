@@ -52,7 +52,41 @@ texture = ExtResource( 17 )
 
 [node name="Dialogs" type="Node2D" parent="Navigation2D" index="2"]
 
-[node name="DialogArea" parent="Navigation2D/Dialogs" index="0" instance=ExtResource( 12 )]
+[node name="DialogArea7" parent="Navigation2D/Dialogs" index="0" instance=ExtResource( 12 )]
+position = Vector2( 778, -54 )
+dialog = "It's so dark... I can plug my spotlight right here..."
+flags = {
+"center": ""
+}
+one_shoot = true
+
+[node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea7" index="0"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 2 )
+
+[node name="DialogArea8" parent="Navigation2D/Dialogs" index="1" instance=ExtResource( 12 )]
+position = Vector2( 766, -29 )
+dialog = "Interact with the plug to plug the spotlight in"
+flags = {
+"center": ""
+}
+
+[node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea8" index="0"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 2 )
+
+[node name="DialogArea9" parent="Navigation2D/Dialogs" index="2" instance=ExtResource( 12 )]
+position = Vector2( 847, 99 )
+dialog = "My cable is not long enough to go much further, I will have to switch plugs. So strange, the cable becomes red when it is too tight!"
+flags = {
+"center": ""
+}
+
+[node name="CollisionShape2D" parent="Navigation2D/Dialogs/DialogArea9" index="0"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 2 )
+
+[node name="DialogArea" parent="Navigation2D/Dialogs" index="3" instance=ExtResource( 12 )]
 position = Vector2( 846, 16 )
 dialog = "Better escape as fast as I can! I hope the plugs are working."
 
@@ -60,7 +94,7 @@ dialog = "Better escape as fast as I can! I hope the plugs are working."
 position = Vector2( 0, 1.5 )
 shape = SubResource( 2 )
 
-[node name="DialogArea2" parent="Navigation2D/Dialogs" index="1" instance=ExtResource( 12 )]
+[node name="DialogArea2" parent="Navigation2D/Dialogs" index="4" instance=ExtResource( 12 )]
 position = Vector2( 739, 122 )
 dialog = "I guess i have to take the long path to the exit."
 flags = {
@@ -71,7 +105,7 @@ flags = {
 position = Vector2( 17.75, 29 )
 shape = SubResource( 3 )
 
-[node name="DialogArea3" parent="Navigation2D/Dialogs" index="2" instance=ExtResource( 12 )]
+[node name="DialogArea3" parent="Navigation2D/Dialogs" index="5" instance=ExtResource( 12 )]
 position = Vector2( 2090, 2528 )
 dialog = "Well, shit... Maybe I can find a way in the library somewhere."
 
@@ -79,7 +113,7 @@ dialog = "Well, shit... Maybe I can find a way in the library somewhere."
 position = Vector2( 31, -1 )
 shape = SubResource( 4 )
 
-[node name="DialogArea4" parent="Navigation2D/Dialogs" index="3" instance=ExtResource( 12 )]
+[node name="DialogArea4" parent="Navigation2D/Dialogs" index="6" instance=ExtResource( 12 )]
 position = Vector2( 1949, 2528 )
 dialog = "Wrong way man."
 flags = {
@@ -90,7 +124,7 @@ flags = {
 position = Vector2( -0.25, -1 )
 shape = SubResource( 5 )
 
-[node name="DialogArea5" parent="Navigation2D/Dialogs" index="4" instance=ExtResource( 12 )]
+[node name="DialogArea5" parent="Navigation2D/Dialogs" index="7" instance=ExtResource( 12 )]
 position = Vector2( 128, 2071 )
 dialog = "Through the lockers and the gym just left!"
 flags = {
@@ -101,7 +135,7 @@ flags = {
 position = Vector2( 52, -25 )
 shape = SubResource( 7 )
 
-[node name="DialogArea6" parent="Navigation2D/Dialogs" index="5" instance=ExtResource( 12 )]
+[node name="DialogArea6" parent="Navigation2D/Dialogs" index="8" instance=ExtResource( 12 )]
 position = Vector2( 517, 55 )
 dialog = "The keys are in the dean's office. Never liked that man!"
 flags = {
@@ -641,6 +675,9 @@ navigation_path = NodePath("../..")
 position = Vector2( 829, 906 )
 navigation_path = NodePath("../..")
 
+[editable path="Navigation2D/Dialogs/DialogArea7"]
+[editable path="Navigation2D/Dialogs/DialogArea8"]
+[editable path="Navigation2D/Dialogs/DialogArea9"]
 [editable path="Navigation2D/Dialogs/DialogArea"]
 [editable path="Navigation2D/Dialogs/DialogArea2"]
 [editable path="Navigation2D/Dialogs/DialogArea3"]
