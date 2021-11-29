@@ -273,7 +273,10 @@ position = Vector2( 2124, 2524 )
 [node name="Checkpoint2" parent="Navigation2D/Checkpoints" index="3" instance=ExtResource( 16 )]
 position = Vector2( 1903, 1178 )
 
-[node name="Checkpoint3" parent="Navigation2D/Checkpoints" index="4" instance=ExtResource( 16 )]
+[node name="Checkpoint6" parent="Navigation2D/Checkpoints" index="4" instance=ExtResource( 16 )]
+position = Vector2( 1133, 1500 )
+
+[node name="Checkpoint3" parent="Navigation2D/Checkpoints" index="5" instance=ExtResource( 16 )]
 position = Vector2( 9, 2182 )
 
 [node name="FrontWindowPool" parent="Navigation2D/YSort" index="0" instance=ExtResource( 6 )]
@@ -750,7 +753,7 @@ rotation = -3.14159
 position = Vector2( 799, 536 )
 
 [node name="Player" parent="Navigation2D/YSort" index="8"]
-position = Vector2( 1136, 1512 )
+position = Vector2( 779, -53 )
 
 [node name="Monster" parent="Navigation2D/YSort" index="9" instance=ExtResource( 3 )]
 position = Vector2( 863, 740 )
