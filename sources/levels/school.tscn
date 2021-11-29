@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://sources/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sources/maps/school.tscn" type="PackedScene" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://sources/objects/statics/ladder.tscn" type="PackedScene" id=29]
 [ext_resource path="res://sources/objects/statics/vertical_desk.tscn" type="PackedScene" id=30]
 [ext_resource path="res://sources/objects/statics/table.tscn" type="PackedScene" id=31]
+[ext_resource path="res://sources/objects/statics/exit.tscn" type="PackedScene" id=32]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 11.5 )
@@ -75,8 +76,18 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 2348, 1119, 0, 0, 0, 0, 2344, 2521 )
 }
 
+[sub_resource type="Curve2D" id=13]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 616, 660, 0, 0, 0, 0, 615, 720, 0, 0, 0, 0, 617, 780, 0, 0, 0, 0, 620, 828, 0, 0, 0, 0, 724, 827, 0, 0, 0, 0, 670, 770, 0, 0, 0, 0, 682, 740, 0, 0, 0, 0, 669, 710, 0, 0, 0, 0, 688, 646 )
+}
+
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 20.125, 15.5 )
+
+[sub_resource type="Curve2D" id=14]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2511, 1527, 0, 0, 0, 0, 2435, 1523, 0, 0, 0, 0, 2434, 1690, 0, 0, 0, 0, 2605, 1690, 0, 0, 0, 0, 2603, 1524, 0, 0, 0, 0, 2527, 1522, 0, 0, 0, 0, 2526, 1509 )
+}
 
 [node name="School" instance=ExtResource( 1 )]
 
@@ -686,11 +697,42 @@ position = Vector2( 2238, 1076 )
 [node name="SidePlug12" parent="Navigation2D/YSort/SidePlugs" index="6" instance=ExtResource( 9 )]
 position = Vector2( 2238, 1292 )
 
-[node name="SidePlug4" parent="Navigation2D/YSort/SidePlugs" index="7" instance=ExtResource( 9 )]
+[node name="SidePlug13" parent="Navigation2D/YSort/SidePlugs" index="7" instance=ExtResource( 9 )]
+position = Vector2( 2417, 1209 )
+
+[node name="SidePlug14" parent="Navigation2D/YSort/SidePlugs" index="8" instance=ExtResource( 9 )]
+position = Vector2( 2370, 1438 )
+rotation = 3.14159
+
+[node name="SidePlug15" parent="Navigation2D/YSort/SidePlugs" index="9" instance=ExtResource( 9 )]
+position = Vector2( 2370, 1613 )
+rotation = 3.14159
+
+[node name="SidePlug16" parent="Navigation2D/YSort/SidePlugs" index="10" instance=ExtResource( 9 )]
+position = Vector2( 2369, 1767 )
+rotation = 3.14159
+
+[node name="SidePlug17" parent="Navigation2D/YSort/SidePlugs" index="11" instance=ExtResource( 9 )]
+position = Vector2( 2369, 2150 )
+rotation = 3.14159
+
+[node name="SidePlug18" parent="Navigation2D/YSort/SidePlugs" index="12" instance=ExtResource( 9 )]
+position = Vector2( 2370, 2352 )
+rotation = 3.14159
+
+[node name="SidePlug19" parent="Navigation2D/YSort/SidePlugs" index="13" instance=ExtResource( 9 )]
+position = Vector2( 2370, 2468 )
+rotation = 3.14159
+
+[node name="SidePlug20" parent="Navigation2D/YSort/SidePlugs" index="14" instance=ExtResource( 9 )]
+position = Vector2( 2183, 2568 )
+rotation = -1.5708
+
+[node name="SidePlug4" parent="Navigation2D/YSort/SidePlugs" index="15" instance=ExtResource( 9 )]
 position = Vector2( 930, 744 )
 rotation = -3.14159
 
-[node name="SidePlug5" parent="Navigation2D/YSort/SidePlugs" index="8" instance=ExtResource( 9 )]
+[node name="SidePlug5" parent="Navigation2D/YSort/SidePlugs" index="16" instance=ExtResource( 9 )]
 position = Vector2( 799, 536 )
 
 [node name="Player" parent="Navigation2D/YSort" index="8"]
@@ -876,7 +918,44 @@ position = Vector2( 618, 659 )
 navigation_path = NodePath("../../..")
 path_follow_path = NodePath("../../../Paths/Path2D3/PathFollow2D")
 
-[node name="CR4" type="YSort" parent="Navigation2D/YSort" index="22"]
+[node name="CR9" type="YSort" parent="Navigation2D/YSort" index="22"]
+position = Vector2( 1879, 541 )
+
+[node name="ChairTable" parent="Navigation2D/YSort/CR9" index="0" instance=ExtResource( 21 )]
+position = Vector2( 589, 694 )
+
+[node name="ChairTable2" parent="Navigation2D/YSort/CR9" index="1" instance=ExtResource( 21 )]
+position = Vector2( 590, 755 )
+
+[node name="ChairTable3" parent="Navigation2D/YSort/CR9" index="2" instance=ExtResource( 21 )]
+position = Vector2( 590, 814 )
+
+[node name="ChairTable4" parent="Navigation2D/YSort/CR9" index="3" instance=ExtResource( 21 )]
+position = Vector2( 649, 693 )
+
+[node name="ChairTable5" parent="Navigation2D/YSort/CR9" index="4" instance=ExtResource( 21 )]
+position = Vector2( 641, 755 )
+
+[node name="ChairTable6" parent="Navigation2D/YSort/CR9" index="5" instance=ExtResource( 21 )]
+position = Vector2( 652, 812 )
+
+[node name="ChairTable7" parent="Navigation2D/YSort/CR9" index="6" instance=ExtResource( 21 )]
+position = Vector2( 703, 781 )
+
+[node name="ChairTable8" parent="Navigation2D/YSort/CR9" index="7" instance=ExtResource( 21 )]
+position = Vector2( 699, 720 )
+
+[node name="Monster4" parent="Navigation2D/YSort/CR9" index="8" instance=ExtResource( 3 )]
+position = Vector2( 618, 659 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Path2D" type="Path2D" parent="Navigation2D/YSort/CR9" index="9"]
+curve = SubResource( 13 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Navigation2D/YSort/CR9/Path2D" index="0"]
+
+[node name="CR4" type="YSort" parent="Navigation2D/YSort" index="23"]
 
 [node name="Painting" parent="Navigation2D/YSort/CR4" index="0" instance=ExtResource( 22 )]
 position = Vector2( 1142, 621 )
@@ -925,7 +1004,7 @@ flags = {
 position = Vector2( -147.125, -12 )
 shape = SubResource( 10 )
 
-[node name="CR5" type="YSort" parent="Navigation2D/YSort" index="23"]
+[node name="CR5" type="YSort" parent="Navigation2D/YSort" index="24"]
 
 [node name="DialogArea6" parent="Navigation2D/YSort/CR5" index="0" instance=ExtResource( 12 )]
 position = Vector2( 1395, 662 )
@@ -1055,7 +1134,7 @@ position = Vector2( 1425, 647 )
 [node name="Position2D" parent="Navigation2D/YSort/CR5/PassageHole" index="3"]
 position = Vector2( 85, 2 )
 
-[node name="CR6" type="YSort" parent="Navigation2D/YSort" index="24"]
+[node name="CR6" type="YSort" parent="Navigation2D/YSort" index="25"]
 position = Vector2( 251, 1 )
 
 [node name="FrontLockedDoor" parent="Navigation2D/YSort/CR6" index="0" instance=ExtResource( 14 )]
@@ -1181,7 +1260,7 @@ position = Vector2( 1367, 748 )
 [node name="ChairTable6" parent="Navigation2D/YSort/CR6" index="38" instance=ExtResource( 21 )]
 position = Vector2( 1371, 789 )
 
-[node name="CR7" type="YSort" parent="Navigation2D/YSort" index="25"]
+[node name="CR7" type="YSort" parent="Navigation2D/YSort" index="26"]
 
 [node name="Bench15" parent="Navigation2D/YSort/CR7" index="0" instance=ExtResource( 18 )]
 position = Vector2( 1795, 676 )
@@ -1254,7 +1333,7 @@ position = Vector2( 1779, 649 )
 [node name="VerticalBench2" parent="Navigation2D/YSort/CR7" index="21" instance=ExtResource( 24 )]
 position = Vector2( 1779, 673 )
 
-[node name="CR8" type="YSort" parent="Navigation2D/YSort" index="26"]
+[node name="CR8" type="YSort" parent="Navigation2D/YSort" index="27"]
 
 [node name="Barricade" parent="Navigation2D/YSort/CR8" index="0" instance=ExtResource( 23 )]
 position = Vector2( 2155, 757 )
@@ -1287,7 +1366,7 @@ position = Vector2( 2076, 619 )
 [node name="Painting2" parent="Navigation2D/YSort/CR8" index="7" instance=ExtResource( 22 )]
 position = Vector2( 2107, 619 )
 
-[node name="Toilets" type="YSort" parent="Navigation2D/YSort" index="27"]
+[node name="Toilets" type="YSort" parent="Navigation2D/YSort" index="28"]
 
 [node name="BucketSign" parent="Navigation2D/YSort/Toilets" index="0" instance=ExtResource( 26 )]
 position = Vector2( 1190, 178 )
@@ -1301,7 +1380,7 @@ position = Vector2( 780, -75 )
 [node name="Chair" parent="Navigation2D/YSort/Toilets" index="3" instance=ExtResource( 20 )]
 position = Vector2( 799, -11 )
 
-[node name="CRRight" type="YSort" parent="Navigation2D/YSort" index="28"]
+[node name="CRRight" type="YSort" parent="Navigation2D/YSort" index="29"]
 
 [node name="Bench" parent="Navigation2D/YSort/CRRight" index="0" instance=ExtResource( 18 )]
 position = Vector2( 1997, 1190 )
@@ -1488,6 +1567,194 @@ position = Vector2( 2018, 1590 )
 
 [node name="Chair3" parent="Navigation2D/YSort/CRRight" index="57" instance=ExtResource( 20 )]
 position = Vector2( 2028, 1628 )
+
+[node name="CRRight2" type="YSort" parent="Navigation2D/YSort" index="30"]
+
+[node name="Monster" parent="Navigation2D/YSort/CRRight2" index="0" instance=ExtResource( 3 )]
+position = Vector2( 2520, 1532 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Monster2" parent="Navigation2D/YSort/CRRight2" index="1" instance=ExtResource( 3 )]
+position = Vector2( 2603, 1534 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Monster3" parent="Navigation2D/YSort/CRRight2" index="2" instance=ExtResource( 3 )]
+position = Vector2( 2607, 1688 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Monster4" parent="Navigation2D/YSort/CRRight2" index="3" instance=ExtResource( 3 )]
+position = Vector2( 2437, 1691 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Monster5" parent="Navigation2D/YSort/CRRight2" index="4" instance=ExtResource( 3 )]
+position = Vector2( 2527, 1691 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="Monster6" parent="Navigation2D/YSort/CRRight2" index="5" instance=ExtResource( 3 )]
+position = Vector2( 2606, 1614 )
+navigation_path = NodePath("../../..")
+path_follow_path = NodePath("../Path2D/PathFollow2D")
+
+[node name="HorizontalHole" parent="Navigation2D/YSort/CRRight2" index="6" instance=ExtResource( 25 )]
+position = Vector2( 2520, 1606 )
+
+[node name="Path2D" type="Path2D" parent="Navigation2D/YSort/CRRight2" index="7"]
+curve = SubResource( 14 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Navigation2D/YSort/CRRight2/Path2D" index="0"]
+
+[node name="CRRight3" type="YSort" parent="Navigation2D/YSort" index="31"]
+
+[node name="Barricade" parent="Navigation2D/YSort/CRRight3" index="0" instance=ExtResource( 23 )]
+position = Vector2( 2457, 1955 )
+
+[node name="Barricade2" parent="Navigation2D/YSort/CRRight3" index="1" instance=ExtResource( 23 )]
+position = Vector2( 2532, 1956 )
+
+[node name="Barricade3" parent="Navigation2D/YSort/CRRight3" index="2" instance=ExtResource( 23 )]
+position = Vector2( 2587, 1934 )
+
+[node name="Barricade4" parent="Navigation2D/YSort/CRRight3" index="3" instance=ExtResource( 23 )]
+position = Vector2( 2585, 2010 )
+
+[node name="Barricade5" parent="Navigation2D/YSort/CRRight3" index="4" instance=ExtResource( 23 )]
+position = Vector2( 2510, 2011 )
+
+[node name="Barricade6" parent="Navigation2D/YSort/CRRight3" index="5" instance=ExtResource( 23 )]
+position = Vector2( 2457, 2026 )
+
+[node name="Desk" parent="Navigation2D/YSort/CRRight3" index="6" instance=ExtResource( 19 )]
+position = Vector2( 2514, 1877 )
+
+[node name="SidePlug18" parent="Navigation2D/YSort/CRRight3" index="7" instance=ExtResource( 9 )]
+position = Vector2( 1988, 2019 )
+
+[node name="Sprite" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="4" instance=ExtResource( 32 )]
+position = Vector2( 58, -124 )
+rotation = 1.5708
+
+[node name="Sprite2" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="5" instance=ExtResource( 32 )]
+position = Vector2( 57, -98 )
+rotation = -1.5708
+frame = 1
+
+[node name="Sprite3" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="6" instance=ExtResource( 32 )]
+position = Vector2( 57, -71 )
+rotation = 3.14159
+frame = 2
+
+[node name="Sprite4" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="7" instance=ExtResource( 32 )]
+position = Vector2( 57, -40 )
+frame = 3
+
+[node name="StaticBody2D" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="8" instance=ExtResource( 28 )]
+position = Vector2( 19, -109 )
+
+[node name="StaticBody2D2" parent="Navigation2D/YSort/CRRight3/SidePlug18" index="9" instance=ExtResource( 28 )]
+position = Vector2( 20, -49 )
+
+[node name="CRRight4" type="YSort" parent="Navigation2D/YSort" index="32"]
+
+[node name="Ladder" parent="Navigation2D/YSort/CRRight4" index="0" instance=ExtResource( 29 )]
+position = Vector2( 2088, 2797 )
+
+[node name="FrontPlug" parent="Navigation2D/YSort/CRRight4" index="1" instance=ExtResource( 10 )]
+position = Vector2( 2067, 2676 )
+
+[node name="Painting" parent="Navigation2D/YSort/CRRight4" index="2" instance=ExtResource( 22 )]
+position = Vector2( 2003, 2664 )
+
+[node name="VerticalBench" parent="Navigation2D/YSort/CRRight4" index="3" instance=ExtResource( 24 )]
+position = Vector2( 2037, 2770 )
+
+[node name="VerticalBench2" parent="Navigation2D/YSort/CRRight4" index="4" instance=ExtResource( 24 )]
+position = Vector2( 2037, 2794 )
+
+[node name="VerticalBench3" parent="Navigation2D/YSort/CRRight4" index="5" instance=ExtResource( 24 )]
+position = Vector2( 2037, 2819 )
+
+[node name="VerticalBench4" parent="Navigation2D/YSort/CRRight4" index="6" instance=ExtResource( 24 )]
+position = Vector2( 2150, 2771 )
+
+[node name="VerticalBench5" parent="Navigation2D/YSort/CRRight4" index="7" instance=ExtResource( 24 )]
+position = Vector2( 2150, 2795 )
+
+[node name="VerticalBench6" parent="Navigation2D/YSort/CRRight4" index="8" instance=ExtResource( 24 )]
+position = Vector2( 2150, 2820 )
+
+[node name="Monster" parent="Navigation2D/YSort/CRRight4" index="9" instance=ExtResource( 3 )]
+position = Vector2( 2005, 2805 )
+
+[node name="Chair" parent="Navigation2D/YSort/CRRight4" index="10" instance=ExtResource( 20 )]
+position = Vector2( 2040, 2759 )
+
+[node name="Chair2" parent="Navigation2D/YSort/CRRight4" index="11" instance=ExtResource( 20 )]
+position = Vector2( 2050, 2759 )
+
+[node name="Chair3" parent="Navigation2D/YSort/CRRight4" index="12" instance=ExtResource( 20 )]
+position = Vector2( 2061, 2759 )
+
+[node name="Chair4" parent="Navigation2D/YSort/CRRight4" index="13" instance=ExtResource( 20 )]
+position = Vector2( 2072, 2761 )
+
+[node name="Chair5" parent="Navigation2D/YSort/CRRight4" index="14" instance=ExtResource( 20 )]
+position = Vector2( 2082, 2757 )
+
+[node name="Chair6" parent="Navigation2D/YSort/CRRight4" index="15" instance=ExtResource( 20 )]
+position = Vector2( 2094, 2761 )
+
+[node name="Chair7" parent="Navigation2D/YSort/CRRight4" index="16" instance=ExtResource( 20 )]
+position = Vector2( 2104, 2753 )
+
+[node name="Chair8" parent="Navigation2D/YSort/CRRight4" index="17" instance=ExtResource( 20 )]
+position = Vector2( 2113, 2762 )
+
+[node name="Chair9" parent="Navigation2D/YSort/CRRight4" index="18" instance=ExtResource( 20 )]
+position = Vector2( 2124, 2758 )
+
+[node name="Chair10" parent="Navigation2D/YSort/CRRight4" index="19" instance=ExtResource( 20 )]
+position = Vector2( 2115, 2751 )
+
+[node name="Chair11" parent="Navigation2D/YSort/CRRight4" index="20" instance=ExtResource( 20 )]
+position = Vector2( 2134, 2758 )
+
+[node name="Chair12" parent="Navigation2D/YSort/CRRight4" index="21" instance=ExtResource( 20 )]
+position = Vector2( 2144, 2761 )
+
+[node name="Chair13" parent="Navigation2D/YSort/CRRight4" index="22" instance=ExtResource( 20 )]
+position = Vector2( 2155, 2761 )
+
+[node name="Chair14" parent="Navigation2D/YSort/CRRight4" index="23" instance=ExtResource( 20 )]
+position = Vector2( 2145, 2836 )
+
+[node name="Chair15" parent="Navigation2D/YSort/CRRight4" index="24" instance=ExtResource( 20 )]
+position = Vector2( 2078, 2833 )
+
+[node name="Chair16" parent="Navigation2D/YSort/CRRight4" index="25" instance=ExtResource( 20 )]
+position = Vector2( 2070, 2839 )
+
+[node name="ChairTable" parent="Navigation2D/YSort/CRRight4" index="26" instance=ExtResource( 21 )]
+position = Vector2( 2052, 2842 )
+
+[node name="ChairTable2" parent="Navigation2D/YSort/CRRight4" index="27" instance=ExtResource( 21 )]
+position = Vector2( 2093, 2840 )
+
+[node name="ChairTable3" parent="Navigation2D/YSort/CRRight4" index="28" instance=ExtResource( 21 )]
+position = Vector2( 2093, 2840 )
+
+[node name="Table" parent="Navigation2D/YSort/CRRight4" index="29" instance=ExtResource( 31 )]
+position = Vector2( 2105, 2841 )
+
+[node name="Table2" parent="Navigation2D/YSort/CRRight4" index="30" instance=ExtResource( 31 )]
+position = Vector2( 2122, 2840 )
+
+[node name="BucketSign" parent="." index="3" instance=ExtResource( 26 )]
+position = Vector2( 2092, 1942 )
 
 [editable path="Navigation2D/Dialogs/DialogArea7"]
 [editable path="Navigation2D/Dialogs/DialogArea8"]
