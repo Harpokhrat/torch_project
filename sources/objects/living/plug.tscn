@@ -31,6 +31,7 @@ color_ramp = SubResource( 5 )
 
 [sub_resource type="AudioStreamRandomPitch" id=6]
 audio_stream = ExtResource( 3 )
+random_pitch = 1.0
 
 [node name="Plug" type="Area2D"]
 collision_layer = 1024
@@ -48,8 +49,8 @@ process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="Electricity" type="AudioStreamPlayer2D" parent="."]
+process_priority = -5
 stream = SubResource( 6 )
-volume_db = 6.442
 autoplay = true
 max_distance = 250.0
 attenuation = 1.86606
