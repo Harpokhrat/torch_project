@@ -21,6 +21,7 @@ func _new_facing_direction() -> Vector2:
 
 
 func reset_position() -> void:
+	player.unplug()
 	player.global_position = _globals.respawn_position
 
 
