@@ -1,5 +1,7 @@
 extends Node
 
+# warning-ignore:unused_signal
+signal game_over
 signal effect_to_add(effect)
 signal node_in_level_to_add(node)
 # warning-ignore:unused_signal

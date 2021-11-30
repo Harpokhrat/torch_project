@@ -11,7 +11,7 @@ RichTextLabel/fonts/italics_font = ExtResource( 3 )
 RichTextLabel/fonts/mono_font = ExtResource( 3 )
 RichTextLabel/fonts/normal_font = ExtResource( 3 )
 
-[node name="SchoolTopRight" instance=ExtResource( 2 )]
+[node name="School" instance=ExtResource( 2 )]
 
 [node name="School" parent="ViewportContainer/Viewport" index="2" instance=ExtResource( 1 )]
 

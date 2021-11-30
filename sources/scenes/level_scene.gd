@@ -6,6 +6,8 @@ onready var letter_timer: = $DialogBox/LetterTimer
 onready var dialog_timer: = $DialogBox/DialogTimer
 onready var sound_textappear: = $TextAppear
 
+const final_screen: = preload("res://sources/scenes/final.tscn")
+
 var dialog: = ""
 var flags: = {}
 var current_text = ""
@@ -15,7 +17,16 @@ func _ready() -> void:
 	_globals.viewport_container = $ViewportContainer
 	_globals.viewport = $ViewportContainer/Viewport
 	
-	var _a: = _globals.connect("dialog", self, "new_dialog")
+	var _a: = _globals.connect("game_over", self, "_on_game_over")
+	var _b: = _globals.connect("dialog", self, "new_dialog")
+
+
+func _on_game_over() -> void:
+	get_tree().paused = true
+	Music.stop()
+	
+	var final: = final_screen.instance()
+	add_child(final)
 
 
 func new_dialog(d: String, f: Dictionary) -> void:

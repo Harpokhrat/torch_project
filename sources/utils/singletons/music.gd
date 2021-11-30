@@ -13,3 +13,8 @@ func play(name: String) -> void:
 		ambiant_music.stop()
 		if not menu_music.playing:
 			menu_music.play()
+
+
+func stop() -> void:
+	menu_music.stop()
+	ambiant_music.stop()
