@@ -9,7 +9,8 @@ var audio_resource_array: Array = [
 	"res://resources/sfx/Thunder/Thunder5.ogg","res://resources/sfx/Thunder/Thunder6.ogg"
 ]
 var window_list: Array = []
-
+export(int) var min_time: = 7
+export(int) var max_time: = 21
 
 
 func _ready() -> void:
@@ -35,7 +36,7 @@ func _randomize_thunder() -> void:
 		window.play_thunder()
 		thunder.play()
 	
-	timer.start(rand_range(7, 21))
+	timer.start(rand_range(min_time, max_time))
 
 
 func _on_Timer_timeout() -> void:

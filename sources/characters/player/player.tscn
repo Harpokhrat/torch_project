@@ -773,7 +773,7 @@ one_shot = true
 [node name="Light2D" type="Light2D" parent="." index="7"]
 position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
-energy = 0.3
+energy = 0.4
 mode = 2
 
 [node name="Lamp" type="Node2D" parent="." index="8"]
