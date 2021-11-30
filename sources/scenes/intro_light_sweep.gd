@@ -11,4 +11,4 @@ func _process(_delta: float) -> void:
 
 
 func load_menu() -> void:
-	var _a: = get_tree().change_scene("res://sources/scenes/intro_light_sweep.tscn")
+	var _a: = get_tree().change_scene("res://sources/scenes/main_menu.tscn")
