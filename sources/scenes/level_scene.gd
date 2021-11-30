@@ -7,8 +7,6 @@ onready var dialog_timer: = $DialogBox/DialogTimer
 onready var sound_textappear: = $TextAppear
 onready var pause_screen: = $CanvasLayer/PauseScreen
 
-const final_screen: = preload("res://sources/scenes/final.tscn")
-
 var dialog: = ""
 var flags: = {}
 var current_text = ""
@@ -23,11 +21,7 @@ func _ready() -> void:
 
 
 func _on_game_over() -> void:
-	get_tree().paused = true
-	Music.stop()
-	
-	var final: = final_screen.instance()
-	add_child(final)
+	get_tree().change_scene("res://sources/scenes/final.tscn")
 
 
 func _input(event: InputEvent) -> void:
