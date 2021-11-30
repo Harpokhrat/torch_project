@@ -1,14 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://sources/objects/living/plug.gd" type="Script" id=1]
-[ext_resource path="res://resources/particles/lightning.png" type="Texture" id=2]
+[ext_resource path="res://resources/particles/spark-5.png" type="Texture" id=2]
 [ext_resource path="res://resources/sfx/Electricity/ElectricCrackles1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://resources/particles/spark-4.png" type="Texture" id=4]
+[ext_resource path="res://resources/particles/spark-2.png" type="Texture" id=5]
+[ext_resource path="res://resources/particles/spark-6.png" type="Texture" id=6]
+[ext_resource path="res://resources/particles/spark-1.png" type="Texture" id=7]
+[ext_resource path="res://resources/particles/spark-3.png" type="Texture" id=8]
+[ext_resource path="res://resources/particles/spark-7.png" type="Texture" id=9]
 
 [sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
 
 [sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0, 0.824916, 1 )
+offsets = PoolRealArray( 0, 0.683502, 1 )
 colors = PoolColorArray( 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [sub_resource type="GradientTexture" id=5]
@@ -17,17 +23,42 @@ width = 8
 
 [sub_resource type="ParticlesMaterial" id=3]
 lifetime_randomness = 1.0
-emission_shape = 5
-emission_ring_radius = 12.0
-emission_ring_inner_radius = 5.0
-emission_ring_height = 1.0
 flag_disable_z = true
-direction = Vector3( 0, 0, 0 )
+direction = Vector3( 0, 1, 0 )
+spread = 180.0
 gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 1.0
+angular_velocity = 10.0
+angular_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 radial_accel = 20.0
+radial_accel_random = 1.0
+damping = 0.2
+angle = 360.0
+angle_random = 1.0
 color_ramp = SubResource( 5 )
+anim_speed = 1.0
+anim_speed_random = 0.25
+anim_offset_random = 0.5
+
+[sub_resource type="AnimatedTexture" id=7]
+frames = 7
+fps = 7.0
+frame_0/texture = ExtResource( 7 )
+frame_1/texture = ExtResource( 5 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 8 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 4 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 2 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 6 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 9 )
+frame_6/delay_sec = 0.0
 
 [sub_resource type="AudioStreamRandomPitch" id=6]
 audio_stream = ExtResource( 3 )
@@ -46,7 +77,7 @@ amount = 5
 lifetime = 0.5
 explosiveness = 0.25
 process_material = SubResource( 3 )
-texture = ExtResource( 2 )
+texture = SubResource( 7 )
 
 [node name="Electricity" type="AudioStreamPlayer2D" parent="."]
 process_priority = -5
