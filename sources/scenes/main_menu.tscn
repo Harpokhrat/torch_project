@@ -81,11 +81,11 @@ __meta__ = {
 
 [node name="ClickMenu" type="AudioStreamPlayer" parent="DiscordLink"]
 stream = ExtResource( 6 )
-volume_db = -6.0
+volume_db = 12.0
 
 [node name="ClickMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -6.0
+volume_db = 12.0
 
 [node name="MusicMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
