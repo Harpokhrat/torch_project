@@ -7,7 +7,7 @@ signal length_limit_reached(direction)
 
 enum { LOOSE, TIGHT, LASSO, CHECK_LONE_KINEMATIC, LONE_KINEMATIC, LAST_FIXED }
 
-var verlet_pos_constraints := preload("res://sources/characters/player/rope/VerletPosConstraints.gdns").new()
+var verlet_pos_constraints := VerletPosConstraints.new()
 
 onready var area := $Area
 onready var last_particle := $LastParticle
@@ -61,12 +61,12 @@ func set_debug(value: bool) -> void:
 
 func set_iterations(value) -> void:
 	iterations = value
-	verlet_pos_constraints.iterations = iterations
+	verlet_pos_constraints.set_iterations(iterations)
 
 
 func set_impulse_factor(value: float) -> void:
 	impulse_factor = value
-	verlet_pos_constraints.impulse_factor = impulse_factor
+	verlet_pos_constraints.set_impulse_factor(impulse_factor)
 
 
 func get_segment_length() -> float:
@@ -93,20 +93,20 @@ func _create_rope() -> void:
 		else:
 # warning-ignore:integer_division
 			areas.append(areas[i / nb_particles_sharing_area * nb_particles_sharing_area])
-	verlet_pos_constraints.areas = areas
+	verlet_pos_constraints.set_areas(areas)
 	area.queue_free()
 
 	# past this point all those arrays are consumed and should not be used	
 	verlet_pos_constraints.set_arrays(pos_curr, pos_prev)
 	verlet_pos_constraints.set_initial_positions(global_transform.origin)
 	
-	verlet_pos_constraints.max_length = max_length
-	verlet_pos_constraints.segment_length = get_segment_length()
-	verlet_pos_constraints.stiffness = stiffness
-	verlet_pos_constraints.iterations = iterations
-	verlet_pos_constraints.simulation_particles = simulation_particles
-	verlet_pos_constraints.goal_radius = goal_radius
-	verlet_pos_constraints.nb_particles_sharing_area = nb_particles_sharing_area
+	verlet_pos_constraints.set_max_length(max_length)
+	verlet_pos_constraints.set_segment_length(get_segment_length())
+	verlet_pos_constraints.set_stiffness(stiffness)
+	verlet_pos_constraints.set_iterations(iterations)
+	verlet_pos_constraints.set_simulation_particles(simulation_particles)
+	verlet_pos_constraints.set_goal_radius(goal_radius)
+	verlet_pos_constraints.set_nb_particles_sharing_area(nb_particles_sharing_area)
 	verlet_pos_constraints.set_last_particle_pointer(last_particle.area)
 	
 	verlet_pos_constraints.connect("hit", self, "_on_verlet_pos_constraints_hit")
@@ -168,9 +168,7 @@ func end() -> void:
 
 func activate_areas(enable: bool):
 	last_particle.enabled = enable
-	for a in verlet_pos_constraints.areas:
-		a.monitorable = enable
-		a.monitoring = enable
+	verlet_pos_constraints.activate_areas(enable)
 
 
 func _ready() -> void:
@@ -186,7 +184,7 @@ func _on_rope_state_changed(new_state: int) -> void:
 	if new_state == CHECK_LONE_KINEMATIC or new_state == LASSO or new_state == LAST_FIXED:
 		last_particle.enabled = false
 	elif new_state == TIGHT:
-		if verlet_pos_constraints.clockwise == 0:
+		if verlet_pos_constraints.get_clockwise() == 0:
 			emit_signal("hit")
 
 
@@ -218,7 +216,7 @@ func _physics_process(delta: float) -> void:
 			var limit_length_ratio := limit_rope_length_size / max_length
 			length_limit.scale = Vector2.ONE * limit_length_ratio
 			
-			limit_length_ratio = clamp((verlet_pos_constraints.total_length / max_length - 0.9) / 0.1, 0, 1)
+			limit_length_ratio = clamp((verlet_pos_constraints.get_total_length() / max_length - 0.9) / 0.1, 0, 1)
 			
 			default_color = lerp(orig_color, Color(5, 0.5, 0.5), limit_length_ratio)
 			

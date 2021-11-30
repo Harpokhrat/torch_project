@@ -1,16 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sources/characters/player/rope/VerletRope.gd" type="Script" id=1]
 [ext_resource path="res://sources/characters/player/rope/LastParticle.gd" type="Script" id=2]
-[ext_resource path="res://sources/characters/player/rope/VerletParticleArea.gdns" type="Script" id=3]
 [ext_resource path="res://addons/donut_collision_polygon2D/donut_collision_polygon2D.gd" type="Script" id=4]
 [ext_resource path="res://resources/sfx/Cable/CableMaxLength.ogg" type="AudioStream" id=5]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 20.0
-
 [sub_resource type="CircleShape2D" id=2]
 radius = 1.0
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.0
 
 [node name="VerletRope" type="Line2D"]
 width = 1.0
@@ -26,15 +25,6 @@ iterations = 75
 impulse_factor = 200.0
 simulate = false
 draw = false
-
-[node name="Area" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 4
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
-visible = false
-shape = SubResource( 1 )
 
 [node name="LastParticle" type="Node2D" parent="."]
 script = ExtResource( 2 )
@@ -70,6 +60,17 @@ width = 200.0
 [node name="CableMaxLength" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 volume_db = -6.442
+
+[node name="Area" type="VerletParticleArea" parent="."]
+collision_layer = 0
+collision_mask = 4
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+visible = false
+shape = SubResource( 1 )
 
 [connection signal="collision" from="LastParticle" to="." method="_on_LastParticle_collision"]
 [connection signal="area_entered" from="LastParticle/Area2D" to="LastParticle" method="_on_Area2D_area_entered"]
