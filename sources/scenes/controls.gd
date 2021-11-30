@@ -1,8 +1,8 @@
 extends Control
 
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_cancel"):
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel"):
 		load_game()
 
 
