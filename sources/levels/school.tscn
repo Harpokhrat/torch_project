@@ -1021,10 +1021,10 @@ rotation = 1.58746
 [node name="CR4" type="YSort" parent="Navigation2D/YSort" index="23"]
 
 [node name="Painting" parent="Navigation2D/YSort/CR4" index="0" instance=ExtResource( 22 )]
-position = Vector2( 1142, 621 )
+position = Vector2( 1141, 619 )
 
 [node name="Painting2" parent="Navigation2D/YSort/CR4" index="1" instance=ExtResource( 22 )]
-position = Vector2( 1063, 620 )
+position = Vector2( 1063, 619 )
 
 [node name="Chair" parent="Navigation2D/YSort/CR4" index="2" instance=ExtResource( 20 )]
 position = Vector2( 1029, 771 )
@@ -2023,7 +2023,7 @@ position = Vector2( 1793, 1681 )
 rotation = 3.14159
 
 [node name="SideDoor" parent="Navigation2D/YSort/Library" index="34" instance=ExtResource( 5 )]
-position = Vector2( 1197, 1513 )
+position = Vector2( 1197, 1494 )
 
 [node name="Painting2" parent="Navigation2D/YSort/Library" index="35" instance=ExtResource( 22 )]
 position = Vector2( 993, 1477 )
