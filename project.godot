@@ -166,7 +166,7 @@ _global_script_class_icons={
 
 config/name="Torch"
 run/main_scene="res://sources/scenes/intro_godot.tscn"
-config/icon="res://icon.png"
+config/icon="res://resources/illustrations/LightSweep-splash.PNG"
 
 [autoload]
 
