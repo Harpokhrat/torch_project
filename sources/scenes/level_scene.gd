@@ -5,6 +5,7 @@ onready var dialog_label: = $DialogBox/DialogLabel
 onready var letter_timer: = $DialogBox/LetterTimer
 onready var dialog_timer: = $DialogBox/DialogTimer
 onready var sound_textappear: = $TextAppear
+onready var pause_screen: = $CanvasLayer/PauseScreen
 
 const final_screen: = preload("res://sources/scenes/final.tscn")
 
@@ -27,6 +28,12 @@ func _on_game_over() -> void:
 	
 	var final: = final_screen.instance()
 	add_child(final)
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().paused = not get_tree().paused
+		pause_screen.visible = get_tree().paused
 
 
 func new_dialog(d: String, f: Dictionary) -> void:
