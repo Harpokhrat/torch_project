@@ -2316,7 +2316,7 @@ frame = 1
 position = Vector2( 2214, 2461 )
 frame = 2
 
-[node name="BucketSign" parent="." index="3" instance=ExtResource( 26 )]
+[node name="BucketSign" parent="Navigation2D/YSort" index="39" instance=ExtResource( 26 )]
 position = Vector2( 2092, 1942 )
 
 [connection signal="went_through" from="Navigation2D/YSort/CR5/PassageHole" to="Navigation2D/YSort/RoofWindowPool" method="_on_PassageHole_went_through"]
