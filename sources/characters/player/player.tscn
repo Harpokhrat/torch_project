@@ -775,6 +775,7 @@ position = Vector2( 0, -11 )
 texture = ExtResource( 8 )
 energy = 0.4
 mode = 2
+shadow_enabled = true
 
 [node name="Lamp" type="Node2D" parent="." index="8"]
 position = Vector2( 0, -1 )
